@@ -1,0 +1,6 @@
+[
+	{"id":"p1","label":"Aspirational Aesthete","revenueShare":0.34,"ltv":420,"paybackDays":32,"profitIndex":1.25},
+	{"id":"p2","label":"Practical Minimalist","revenueShare":0.27,"ltv":310,"paybackDays":24,"profitIndex":1.10},
+	{"id":"p3","label":"Status Seeker","revenueShare":0.21,"ltv":560,"paybackDays":45,"profitIndex":1.32},
+	{"id":"p4","label":"Gift Buyer","revenueShare":0.18,"ltv":190,"paybackDays":18,"profitIndex":0.92}
+]

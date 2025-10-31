@@ -1,0 +1,22 @@
+{
+	"p1": {
+		"brief": {
+			"angles": ["Design as daily ritual", "Elevated basics"],
+			"hooks": ["Form meets function", "Quiet luxury"],
+			"pairings": ["Cashmere + Stoneware", "Linen + Oak"]
+		},
+		"copy": [
+			"The piece you’ll reach for every morning.",
+			"Crafted for rooms where light matters."
+		],
+		"imagePrompts": ["soft window light, neutral palette, tactile close-ups"]
+	},
+	"p2": {
+		"brief": {
+			"angles": ["Less, but better", "Built to last"],
+			"hooks": ["No logos. No noise.", "Thoughtful materials."]
+		},
+		"copy": ["Strong enough for everyday. Quiet enough for anywhere."],
+		"imagePrompts": ["flat lay, slate tones, clean lines"]
+	}
+}
