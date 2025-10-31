@@ -158,7 +158,9 @@ const router = createBrowserRouter([
 			{ path: 'exports', element: <Exports /> },
 		],
 	},
-])
+], {
+	basename: '/ben-macpherson',
+})
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
