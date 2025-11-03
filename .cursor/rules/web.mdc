@@ -1,0 +1,9 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+Automatically lint the project by running `bun lint` to ensure typing and linting.
+Then build the project by running `bun run build`.
+Only commit and push after you have built and linted the project.

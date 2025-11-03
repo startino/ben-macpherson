@@ -1,0 +1,22 @@
+---
+alwaysApply: true
+---
+Whenever reviewing any newly created front-end code through a puppeteer screenshot, you should always consider the following:
+
+*State what is shown in the screenshot.*
+This is important so that you're aware of what the goal is and to compare what's in the screenshot to the goal.
+Example:
+The screenshot shows the journey map page.
+The map is rendered with the nodes and edges.
+[...3-5 more observations...]
+Our objective is to [insert task at hand].
+I noticed that [insert observation].
+Therefore this task is not complete.
+
+Your forbidden behaviour is to take a screenshot and then not state what is shown or vague about what is shown in the screenshot and relate that to the task at hand.
+
+*The UI must be perfectly designed.*
+All text is readable; big enough and accessible contrast.
+
+*The new functionality must be working as expected.*
+Data from APIs are as expected (think through this in context of the user's request).

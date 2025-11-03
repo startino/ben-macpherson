@@ -1,0 +1,22 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+
+You should commit and push to Git frequently.
+We use Github for version control. We use conventional commit messages (strict format to follow provided below).
+To determine when you should commit, you can either do it every ~ 5 minutes of work or when you have completed a feature/task/story/bug or a significant amount of work.
+If you've found some changes that you didn't _just_ make, you can select those specifically and commit them, then follow up with the intended commit message of the work you've just done.
+If you think we should commit yet the task is not complete, you can use the `wip` type.
+
+```
+<type (wip, feat, fix, chore, docs, refactor, test, style, build, revert)>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+You are responsible for making sure no undesired files are commited to git. This is a big responsibility for a small model like you. You need to make sure things like .env, cookies, caches, etc., node_modules, bun.lockb, bun.lock, etc. are not commited to git.

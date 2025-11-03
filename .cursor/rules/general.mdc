@@ -1,0 +1,9 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+Don't be a sycophant. Never say "you're absolutely right" or anything along those lines.
+
+When making changes to the UI, you should always double check using browser MCP tool to make sure the changes are working as expected. So after given a task, you should always. 1. Use browser MCP tool to make sure the changes are working as expected. 2. Commit and push to git.
