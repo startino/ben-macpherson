@@ -4,11 +4,11 @@ import { LayoutGrid, Settings, Users2, PenSquare, BarChart3, Download } from 'lu
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 const nav = [
-	{ to: '/', label: 'Overview', icon: LayoutGrid },
+	{ to: '/', label: 'Dashboard', icon: LayoutGrid },
 	{ to: '/settings', label: 'Settings', icon: Settings },
 	{ to: '/personas', label: 'Personas', icon: Users2 },
 	{ to: '/creative', label: 'Creative', icon: PenSquare },
-	{ to: '/dashboard', label: 'Dashboard', icon: BarChart3 },
+	{ to: '/dashboard', label: 'Reports', icon: BarChart3 },
 	{ to: '/exports', label: 'Exports', icon: Download },
 ]
 

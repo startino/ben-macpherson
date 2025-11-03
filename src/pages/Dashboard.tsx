@@ -1,12 +1,15 @@
+import { Link, useLocation } from 'react-router-dom'
 import mixOverTime from '@/data/mock/mixOverTime.json'
 import revenueHealth from '@/data/mock/revenueHealth.json'
 import profitabilityBridge from '@/data/mock/profitabilityBridge.json'
-import personaAcquisition from '@/data/mock/personaAcquisition.json'
 import { ResponsiveContainer, LineChart, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, Bar, ComposedChart, Cell } from 'recharts'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import { ArrowUpRight, ArrowDownRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import CustomerHealth from './CustomerHealth'
+import MerchandiseHealth from './MerchandiseHealth'
+import SiteHealth from './SiteHealth'
+import Competitors from './Competitors'
 
 function KPICard({ label, value, change, format }: { label: string; value: number; change: number; format?: (v: number) => string }) {
 	const isPositive = change > 0
@@ -41,10 +44,17 @@ function KPICard({ label, value, change, format }: { label: string; value: numbe
 	)
 }
 
-export default function Dashboard() {
+const reports = [
+	{ id: 'revenue', label: 'Revenue Health', path: '/dashboard' },
+	{ id: 'customer', label: 'Customer Health', path: '/dashboard/customer' },
+	{ id: 'merchandise', label: 'Merchandise Health', path: '/dashboard/merchandise' },
+	{ id: 'site', label: 'Site Health', path: '/dashboard/site' },
+	{ id: 'competitors', label: 'Competitors', path: '/dashboard/competitors' },
+]
+
+function RevenueHealthReport() {
 	const { kpis, salesTrend, contributionTrend, ordersTrend, acquisitionTrend } = revenueHealth as any
 	const { components } = profitabilityBridge as any
-	const { acquisitionByPersona, acquisitionByChannel, efficiency } = personaAcquisition as any
 
 	// Calculate cumulative values for waterfall chart
 	const waterfallData = components.reduce((acc: any[], comp: any, idx: number) => {
@@ -54,12 +64,7 @@ export default function Dashboard() {
 	}, [])
 
 	return (
-		<section className="grid gap-6">
-			<div>
-				<h2 className="text-2xl font-bold tracking-tight">Revenue Health Dashboard</h2>
-				<p className="mt-1 text-sm text-muted-foreground">Track key performance indicators and revenue trends</p>
-			</div>
-
+		<>
 			{/* KPI Cards */}
 			<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 				<KPICard label="Sales" value={kpis.sales.value} change={kpis.sales.change} />
@@ -86,7 +91,7 @@ export default function Dashboard() {
 								<CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted))" />
 								<XAxis dataKey="date" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border))', color: 'hsl(var(--foreground))', borderRadius: '0.5rem' }} />
+								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
 								<Bar dataKey="totalSales" name="Total Sales" fill="hsl(var(--primary))" />
 								<Bar dataKey="salesComparison" name="Sales Comparison" fill="hsl(var(--muted))" />
@@ -110,7 +115,7 @@ export default function Dashboard() {
 								<XAxis dataKey="date" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<YAxis yAxisId="left" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border))', color: 'hsl(var(--foreground))', borderRadius: '0.5rem' }} />
+								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
 								<Bar yAxisId="left" dataKey="contribution" name="Contribution" fill="hsl(var(--muted))" />
 								<Line yAxisId="right" type="monotone" dataKey="contributionPercent" name="Contribution %" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))' }} />
@@ -134,7 +139,7 @@ export default function Dashboard() {
 								<XAxis dataKey="date" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<YAxis yAxisId="left" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border))', color: 'hsl(var(--foreground))', borderRadius: '0.5rem' }} />
+								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
 								<Bar yAxisId="left" dataKey="totalOrders" name="Total Orders" fill="hsl(var(--muted))" />
 								<Bar yAxisId="left" dataKey="newOrders" name="New Orders" fill="hsl(var(--primary))" />
@@ -160,7 +165,7 @@ export default function Dashboard() {
 								<XAxis dataKey="date" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<YAxis yAxisId="left" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border))', color: 'hsl(var(--foreground))', borderRadius: '0.5rem' }} />
+								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
 								<Bar yAxisId="left" dataKey="cac" name="CAC" fill="hsl(var(--muted))" />
 								<Line yAxisId="right" type="monotone" dataKey="newCustomers" name="New Customers" stroke="#a3e635" strokeWidth={2} dot={{ fill: '#a3e635' }} />
@@ -183,8 +188,8 @@ export default function Dashboard() {
 								<CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted))" />
 								<XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }} />
 								<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<Tooltip 
-									contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} 
+								<Tooltip
+									contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
 									formatter={(value: number) => `$${value.toLocaleString()}`}
 								/>
 								<Legend />
@@ -219,76 +224,6 @@ export default function Dashboard() {
 				</CardContent>
 			</Card>
 
-			{/* Enhanced Persona Acquisition Tracking */}
-			<Card>
-				<CardHeader>
-					<CardTitle>Persona Acquisition Tracking</CardTitle>
-					<CardDescription>How many of what personas are you acquiring over time? (Ben specifically mentioned)</CardDescription>
-				</CardHeader>
-				<CardContent>
-					<div className="h-72 w-full mb-4">
-						<ResponsiveContainer>
-							<LineChart data={acquisitionByPersona} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
-								<CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted))" />
-								<XAxis dataKey="date" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
-								<Legend />
-								<Line type="monotone" dataKey="p1" name="Aspirational Aesthete" stroke="#a3e635" strokeWidth={2} dot={{ fill: '#a3e635', r: 3 }} />
-								<Line type="monotone" dataKey="p2" name="Practical Minimalist" stroke="#22d3ee" strokeWidth={2} dot={{ fill: '#22d3ee', r: 3 }} />
-								<Line type="monotone" dataKey="p3" name="Status Seeker" stroke="#f472b6" strokeWidth={2} dot={{ fill: '#f472b6', r: 3 }} />
-								<Line type="monotone" dataKey="p4" name="Gift Buyer" stroke="#f59e0b" strokeWidth={2} dot={{ fill: '#f59e0b', r: 3 }} />
-							</LineChart>
-						</ResponsiveContainer>
-					</div>
-					<div className="grid gap-4 md:grid-cols-2">
-						<div>
-							<div className="text-sm font-medium mb-2">Acquisition Efficiency</div>
-							<div className="space-y-2">
-								{efficiency.map((eff: any, idx: number) => {
-									const personaNames: Record<string, string> = { p1: 'Aspirational', p2: 'Minimalist', p3: 'Status', p4: 'Gift' }
-									const isOnTarget = eff.cac <= eff.targetCac && eff.acquisitionRate >= eff.targetRate
-									return (
-										<div key={idx} className="bg-surface rounded-lg p-3">
-											<div className="flex items-center justify-between mb-1">
-												<span className="text-sm font-medium">{personaNames[eff.persona]}</span>
-												<Badge variant={isOnTarget ? 'success' : 'warning'}>
-													{isOnTarget ? 'On Target' : 'Off Target'}
-												</Badge>
-											</div>
-											<div className="text-xs text-muted-foreground">
-												CAC: ${eff.cac} / Target: ${eff.targetCac} • Rate: {(eff.acquisitionRate * 100).toFixed(0)}% / Target: {(eff.targetRate * 100).toFixed(0)}%
-											</div>
-										</div>
-									)
-								})}
-							</div>
-						</div>
-						<div>
-							<div className="text-sm font-medium mb-2">Acquisition by Channel</div>
-							<div className="space-y-2">
-								{Object.entries(acquisitionByChannel).map(([channel, data]: [string, any]) => (
-									<div key={channel} className="bg-surface rounded-lg p-3">
-										<div className="font-medium text-sm mb-2">{channel}</div>
-										<div className="space-y-1">
-											{Object.entries(data).map(([persona, share]: [string, any]) => {
-												const personaNames: Record<string, string> = { p1: 'Aspirational', p2: 'Minimalist', p3: 'Status', p4: 'Gift' }
-												return (
-													<div key={persona} className="flex items-center justify-between text-xs">
-														<span className="text-muted-foreground">{personaNames[persona]}</span>
-														<span className="font-medium">{(share * 100).toFixed(0)}%</span>
-													</div>
-												)
-											})}
-										</div>
-									</div>
-								))}
-							</div>
-						</div>
-					</div>
-				</CardContent>
-			</Card>
-
 			{/* Persona Share Chart */}
 			<Card>
 				<CardHeader>
@@ -313,6 +248,89 @@ export default function Dashboard() {
 					</div>
 				</CardContent>
 			</Card>
-		</section>
+		</>
+	)
+}
+
+export default function Dashboard() {
+	const location = useLocation()
+	
+	// Determine active report from URL
+	const getActiveReport = () => {
+		if (location.pathname.includes('/customer')) return 'customer'
+		if (location.pathname.includes('/merchandise')) return 'merchandise'
+		if (location.pathname.includes('/site')) return 'site'
+		if (location.pathname.includes('/competitors')) return 'competitors'
+		return 'revenue'
+	}
+
+	const activeReport = getActiveReport()
+
+	const renderReport = () => {
+		switch (activeReport) {
+			case 'customer':
+				return <CustomerHealth />
+			case 'merchandise':
+				return <MerchandiseHealth />
+			case 'site':
+				return <SiteHealth />
+			case 'competitors':
+				return <Competitors />
+			default:
+				return <RevenueHealthReport />
+		}
+	}
+
+	return (
+		<div className="flex gap-6">
+			{/* Nested Sidebar */}
+			<aside className="hidden md:block w-56 flex-shrink-0">
+				<Card>
+					<CardHeader>
+						<CardTitle className="text-base">Reports</CardTitle>
+					</CardHeader>
+					<CardContent className="p-0">
+						<nav className="space-y-1 p-2">
+							{reports.map((report) => {
+								const isActive = activeReport === report.id
+								return (
+									<Link
+										key={report.id}
+										to={report.path}
+										className={cn(
+											'flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors',
+											isActive
+												? 'bg-accent text-foreground'
+												: 'text-muted-foreground hover:bg-accent/50 hover:text-foreground'
+										)}
+									>
+										{report.label}
+									</Link>
+								)
+							})}
+						</nav>
+					</CardContent>
+				</Card>
+			</aside>
+
+			{/* Report Content */}
+			<div className="flex-1 min-w-0">
+				<section className="grid gap-6">
+					<div>
+						<h2 className="text-2xl font-bold tracking-tight">
+							{reports.find(r => r.id === activeReport)?.label || 'Reports'}
+						</h2>
+						<p className="mt-1 text-sm text-muted-foreground">
+							{activeReport === 'revenue' && 'Track key performance indicators and revenue trends'}
+							{activeReport === 'customer' && 'LTV analysis, churn risk, and product trends per customer segment'}
+							{activeReport === 'merchandise' && 'Product performance, mix analysis, and profitability'}
+							{activeReport === 'site' && 'Conversion funnel, page performance, and site speed metrics'}
+							{activeReport === 'competitors' && 'Competitive analysis and market benchmarks'}
+						</p>
+					</div>
+					{renderReport()}
+				</section>
+			</div>
+		</div>
 	)
 }

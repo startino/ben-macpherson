@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ArrowUpRight, ArrowDownRight, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb, ExternalLink, Users2, BarChart3, PenSquare } from 'lucide-react'
+import { ArrowUpRight, ArrowDownRight, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import revenueHealth from '@/data/mock/revenueHealth.json'
 import personasData from '@/data/mock/personas.json'
@@ -22,7 +22,7 @@ function KPICard({ label, value, change, format, href }: { label: string; value:
 	}
 
 	const content = (
-		<Card className="hover:shadow-md transition-shadow">
+		<Card className="transition-shadow">
 			<CardHeader className="pb-3">
 				<CardDescription className="text-xs">{label}</CardDescription>
 				<CardTitle className="text-2xl">{formatValueWithUnit(value)}</CardTitle>
@@ -96,7 +96,7 @@ export default function Landing() {
 		<section className="grid gap-6">
 			<div className="flex items-end justify-between">
 				<div>
-					<h1 className="text-3xl font-bold tracking-tight">Overview</h1>
+					<h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
 					<p className="mt-1 text-sm text-muted-foreground">Key metrics, insights, and quick actions at a glance</p>
 				</div>
 				<Badge variant={connectedCount === totalConnections ? 'success' : 'warning'}>
@@ -112,74 +112,33 @@ export default function Landing() {
 				<KPICard label="CAC" value={kpis.cac.value} change={kpis.cac.change} format={(v) => `$${v}`} href="/dashboard" />
 			</div>
 
-			{/* Key Insights & Quick Actions */}
-			<div className="grid gap-6 md:grid-cols-2">
-				{/* Insights */}
-				<Card>
-					<CardHeader>
-						<div className="flex items-center gap-2">
-							<Lightbulb className="h-5 w-5 text-amber-500" />
-							<CardTitle>Key Insights</CardTitle>
-						</div>
-						<CardDescription>AI-powered recommendations and alerts</CardDescription>
-					</CardHeader>
-					<CardContent className="space-y-3">
-						{insights.map((insight, idx) => (
-							<div key={idx} className="bg-surface rounded-lg p-4">
-								<div className="flex items-start gap-3">
-									{insight.type === 'success' && <CheckCircle2 className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />}
-									{insight.type === 'warning' && <AlertTriangle className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />}
-									{insight.type === 'info' && <Lightbulb className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />}
-									<div className="flex-1 min-w-0">
-										<div className="font-medium text-sm mb-1">{insight.title}</div>
-										<p className="text-xs text-muted-foreground mb-2">{insight.message}</p>
-										<Button variant="ghost" size="sm" asChild className="h-7 text-xs">
-											<Link to={insight.action.href}>
-												{insight.action.label}
-												<ExternalLink className="h-3 w-3 ml-1" />
-											</Link>
-										</Button>
-									</div>
+			{/* Key Insights */}
+			<Card>
+				<CardHeader>
+					<CardTitle>Key Insights</CardTitle>
+					<CardDescription>AI-powered recommendations and alerts</CardDescription>
+				</CardHeader>
+				<CardContent className="space-y-3">
+					{insights.map((insight, idx) => (
+						<div key={idx} className="bg-surface rounded-lg p-4">
+							<div className="flex items-start gap-3">
+								{insight.type === 'success' && <CheckCircle2 className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />}
+								{insight.type === 'warning' && <AlertTriangle className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />}
+								{insight.type === 'info' && <Lightbulb className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />}
+								<div className="flex-1 min-w-0">
+									<div className="font-medium text-sm mb-1">{insight.title}</div>
+									<p className="text-xs text-muted-foreground mb-2">{insight.message}</p>
+									<Button variant="outline" size="sm" asChild className="h-7 text-xs">
+										<Link to={insight.action.href}>
+											{insight.action.label}
+										</Link>
+									</Button>
 								</div>
 							</div>
-						))}
-					</CardContent>
-				</Card>
-
-				{/* Quick Actions */}
-				<Card>
-					<CardHeader>
-						<CardTitle>Quick Actions</CardTitle>
-						<CardDescription>Navigate to key features</CardDescription>
-					</CardHeader>
-					<CardContent className="space-y-2">
-						<Button variant="outline" className="w-full justify-start" asChild>
-							<Link to="/personas">
-								<Users2 className="h-4 w-4 mr-2" />
-								Manage Persona Mix
-							</Link>
-						</Button>
-						<Button variant="outline" className="w-full justify-start" asChild>
-							<Link to="/dashboard">
-								<BarChart3 className="h-4 w-4 mr-2" />
-								View Full Dashboard
-							</Link>
-						</Button>
-						<Button variant="outline" className="w-full justify-start" asChild>
-							<Link to="/creative">
-								<PenSquare className="h-4 w-4 mr-2" />
-								Creative & Strategy
-							</Link>
-						</Button>
-						<Button variant="outline" className="w-full justify-start" asChild>
-							<Link to="/settings">
-								<CheckCircle2 className="h-4 w-4 mr-2" />
-								Data Connections
-							</Link>
-						</Button>
-					</CardContent>
-				</Card>
-			</div>
+						</div>
+					))}
+				</CardContent>
+			</Card>
 
 			{/* Persona Mix Summary */}
 			<Card>
