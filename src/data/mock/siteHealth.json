@@ -1,0 +1,33 @@
+{
+	"conversionFunnel": {
+		"visitors": 125000,
+		"addToCart": 8500,
+		"checkout": 4200,
+		"purchases": 1478,
+		"conversionRate": 1.18
+	},
+	"pagePerformance": [
+		{ "page": "/", "views": 45000, "bounceRate": 0.42, "avgTime": 145 },
+		{ "page": "/products", "views": 32000, "bounceRate": 0.35, "avgTime": 210 },
+		{ "page": "/collections/yoga", "views": 18500, "bounceRate": 0.28, "avgTime": 280 },
+		{ "page": "/collections/luxury", "views": 12000, "bounceRate": 0.38, "avgTime": 195 },
+		{ "page": "/cart", "views": 8500, "bounceRate": 0.45, "avgTime": 125 },
+		{ "page": "/checkout", "views": 4200, "bounceRate": 0.52, "avgTime": 180 }
+	],
+	"siteSpeed": {
+		"firstContentfulPaint": 1.2,
+		"largestContentfulPaint": 2.1,
+		"timeToInteractive": 3.4,
+		"totalBlockingTime": 120
+	},
+	"trends": [
+		{ "date": "2025-10-19", "conversionRate": 1.12, "avgSessionDuration": 185 },
+		{ "date": "2025-10-20", "conversionRate": 1.15, "avgSessionDuration": 192 },
+		{ "date": "2025-10-21", "conversionRate": 1.18, "avgSessionDuration": 198 },
+		{ "date": "2025-10-22", "conversionRate": 1.16, "avgSessionDuration": 195 },
+		{ "date": "2025-10-23", "conversionRate": 1.20, "avgSessionDuration": 201 },
+		{ "date": "2025-10-24", "conversionRate": 1.19, "avgSessionDuration": 199 },
+		{ "date": "2025-10-25", "conversionRate": 1.17, "avgSessionDuration": 187 }
+	]
+}
+

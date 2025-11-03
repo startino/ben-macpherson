@@ -15,9 +15,9 @@ export default function Exports() {
 		<section className="grid gap-6">
 			<h2 className="text-xl font-semibold">Exports</h2>
 			<div className="flex flex-wrap gap-3">
-				<button className="rounded-md border border-border bg-card px-4 py-2 text-sm hover:bg-accent/30" onClick={() => downloadJSON('personas.json', personas)}>Personas (JSON)</button>
-				<button className="rounded-md border border-border bg-card px-4 py-2 text-sm hover:bg-accent/30" onClick={() => downloadCSV('personas.csv', personas as any)}>Personas (CSV)</button>
-				<button className="rounded-md border border-border bg-card px-4 py-2 text-sm hover:bg-accent/30" onClick={exportTargetMix}>Target Mix (CSV)</button>
+				<button className="rounded-md bg-surface px-4 py-2 text-sm hover:bg-accent/50 transition-colors" onClick={() => downloadJSON('personas.json', personas)}>Personas (JSON)</button>
+				<button className="rounded-md bg-surface px-4 py-2 text-sm hover:bg-accent/50 transition-colors" onClick={() => downloadCSV('personas.csv', personas as any)}>Personas (CSV)</button>
+				<button className="rounded-md bg-surface px-4 py-2 text-sm hover:bg-accent/50 transition-colors" onClick={exportTargetMix}>Target Mix (CSV)</button>
 			</div>
 		</section>
 	)

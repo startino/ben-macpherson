@@ -1,0 +1,45 @@
+{
+	"ltv": {
+		"average": 365,
+		"trend": [
+			{ "date": "2025-06-01", "ltv": 340 },
+			{ "date": "2025-07-01", "ltv": 352 },
+			{ "date": "2025-08-01", "ltv": 358 },
+			{ "date": "2025-09-01", "ltv": 365 }
+		],
+		"byPersona": [
+			{ "persona": "Aspirational Aesthete", "ltv": 420 },
+			{ "persona": "Status Seeker", "ltv": 560 },
+			{ "persona": "Practical Minimalist", "ltv": 310 },
+			{ "persona": "Gift Buyer", "ltv": 190 }
+		]
+	},
+	"churnRisk": {
+		"high": 245,
+		"medium": 892,
+		"low": 341,
+		"trend": [
+			{ "date": "2025-10-19", "high": 23, "medium": 85, "low": 32 },
+			{ "date": "2025-10-20", "high": 25, "medium": 88, "low": 34 },
+			{ "date": "2025-10-21", "high": 24, "medium": 87, "low": 33 },
+			{ "date": "2025-10-22", "high": 26, "medium": 89, "low": 35 },
+			{ "date": "2025-10-23", "high": 25, "medium": 90, "low": 36 },
+			{ "date": "2025-10-24", "high": 27, "medium": 91, "low": 37 },
+			{ "date": "2025-10-25", "high": 22, "medium": 84, "low": 31 }
+		]
+	},
+	"productTrends": [
+		{ "product": "Yoga Mat", "trend": "up", "change": 15.3, "persona": "Aspirational Aesthete" },
+		{ "product": "Organic Basics", "trend": "up", "change": 12.7, "persona": "Aspirational Aesthete" },
+		{ "product": "Designer Handbag", "trend": "up", "change": 8.2, "persona": "Status Seeker" },
+		{ "product": "Classic Tees", "trend": "stable", "change": 2.1, "persona": "Practical Minimalist" },
+		{ "product": "Gift Sets", "trend": "down", "change": -5.4, "persona": "Gift Buyer" }
+	],
+	"cohorts": [
+		{ "cohort": "Oct 2025", "customers": 1478, "ltv": 365, "retention": 0.68 },
+		{ "cohort": "Sep 2025", "customers": 1320, "ltv": 358, "retention": 0.72 },
+		{ "cohort": "Aug 2025", "customers": 1180, "ltv": 352, "retention": 0.75 },
+		{ "cohort": "Jul 2025", "customers": 1050, "ltv": 340, "retention": 0.78 }
+	]
+}
+

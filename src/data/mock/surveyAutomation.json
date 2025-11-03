@@ -1,0 +1,49 @@
+{
+	"workflows": [
+		{
+			"id": "wf1",
+			"name": "Post-Purchase Survey",
+			"trigger": "Order Complete",
+			"delay": "2 days",
+			"status": "active",
+			"responseRate": 0.42,
+			"totalSent": 1250,
+			"totalResponses": 525
+		},
+		{
+			"id": "wf2",
+			"name": "Repeat Customer Survey",
+			"trigger": "Second Purchase",
+			"delay": "1 day",
+			"status": "active",
+			"responseRate": 0.38,
+			"totalSent": 680,
+			"totalResponses": 258
+		},
+		{
+			"id": "wf3",
+			"name": "High-Value Customer Survey",
+			"trigger": "Order > $200",
+			"delay": "3 days",
+			"status": "active",
+			"responseRate": 0.52,
+			"totalSent": 420,
+			"totalResponses": 218
+		}
+	],
+	"recentSurveys": [
+		{ "date": "2025-10-25", "sent": 145, "responses": 62, "completionRate": 0.43 },
+		{ "date": "2025-10-24", "sent": 158, "responses": 68, "completionRate": 0.43 },
+		{ "date": "2025-10-23", "sent": 162, "responses": 71, "completionRate": 0.44 },
+		{ "date": "2025-10-22", "sent": 148, "responses": 64, "completionRate": 0.43 },
+		{ "date": "2025-10-21", "sent": 152, "responses": 66, "completionRate": 0.43 }
+	],
+	"automationStats": {
+		"totalWorkflows": 3,
+		"activeWorkflows": 3,
+		"totalSurveysSent": 2350,
+		"totalResponses": 1001,
+		"avgResponseRate": 0.426
+	}
+}
+

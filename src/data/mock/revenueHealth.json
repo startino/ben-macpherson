@@ -1,0 +1,48 @@
+{
+	"kpis": {
+		"sales": { "value": 651000, "change": 79.5, "period": "lastWeek" },
+		"contribution": { "value": 205300, "change": 90.9, "period": "lastWeek" },
+		"newCustomers": { "value": 1478, "change": 109.3, "period": "lastWeek" },
+		"spend": { "value": 151000, "change": 56.7, "period": "lastWeek" },
+		"cac": { "value": 102, "change": -25.4, "period": "lastWeek" },
+		"aov": { "value": 264, "change": -28.8, "period": "lastWeek" },
+		"cvr": { "value": 1.07, "change": -13.8, "period": "lastWeek" }
+	},
+	"salesTrend": [
+		{ "date": "2025-10-19", "totalSales": 85000, "salesComparison": 45000 },
+		{ "date": "2025-10-20", "totalSales": 92000, "salesComparison": 48000 },
+		{ "date": "2025-10-21", "totalSales": 105000, "salesComparison": 52000 },
+		{ "date": "2025-10-22", "totalSales": 98000, "salesComparison": 50000 },
+		{ "date": "2025-10-23", "totalSales": 112000, "salesComparison": 55000 },
+		{ "date": "2025-10-24", "totalSales": 108000, "salesComparison": 53000 },
+		{ "date": "2025-10-25", "totalSales": 61000, "salesComparison": 32000 }
+	],
+	"contributionTrend": [
+		{ "date": "2025-10-19", "contribution": 44200, "contributionPercent": 52 },
+		{ "date": "2025-10-20", "contribution": 31280, "contributionPercent": 34 },
+		{ "date": "2025-10-21", "contribution": 44100, "contributionPercent": 42 },
+		{ "date": "2025-10-22", "contribution": 43120, "contributionPercent": 44 },
+		{ "date": "2025-10-23", "contribution": 50400, "contributionPercent": 45 },
+		{ "date": "2025-10-24", "contribution": 48600, "contributionPercent": 45 },
+		{ "date": "2025-10-25", "contribution": 26840, "contributionPercent": 44 }
+	],
+	"ordersTrend": [
+		{ "date": "2025-10-19", "totalOrders": 320, "newOrders": 180, "repeatOrders": 140, "repeatPercent": 44 },
+		{ "date": "2025-10-20", "totalOrders": 348, "newOrders": 216, "repeatOrders": 132, "repeatPercent": 38 },
+		{ "date": "2025-10-21", "totalOrders": 398, "newOrders": 215, "repeatOrders": 183, "repeatPercent": 46 },
+		{ "date": "2025-10-22", "totalOrders": 371, "newOrders": 215, "repeatOrders": 156, "repeatPercent": 42 },
+		{ "date": "2025-10-23", "totalOrders": 424, "newOrders": 267, "repeatOrders": 157, "repeatPercent": 37 },
+		{ "date": "2025-10-24", "totalOrders": 409, "newOrders": 262, "repeatOrders": 147, "repeatPercent": 36 },
+		{ "date": "2025-10-25", "totalOrders": 231, "newOrders": 148, "repeatOrders": 83, "repeatPercent": 36 }
+	],
+	"acquisitionTrend": [
+		{ "date": "2025-10-19", "cac": 118, "newCustomers": 115 },
+		{ "date": "2025-10-20", "cac": 112, "newCustomers": 112 },
+		{ "date": "2025-10-21", "cac": 114, "newCustomers": 114 },
+		{ "date": "2025-10-22", "cac": 112, "newCustomers": 112 },
+		{ "date": "2025-10-23", "cac": 108, "newCustomers": 108 },
+		{ "date": "2025-10-24", "cac": 101, "newCustomers": 101 },
+		{ "date": "2025-10-25", "cac": 97, "newCustomers": 97 }
+	]
+}
+

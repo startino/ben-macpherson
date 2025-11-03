@@ -1,0 +1,30 @@
+{
+	"competitors": [
+		{ "name": "Everlane", "marketShare": 0.18, "avgPrice": 85, "strengths": ["Sustainability", "Transparency"], "weaknesses": ["Limited Selection"] },
+		{ "name": "Reformation", "marketShare": 0.15, "avgPrice": 120, "strengths": ["Eco-friendly", "Fashion-forward"], "weaknesses": ["Price Point"] },
+		{ "name": "Outdoor Voices", "marketShare": 0.12, "avgPrice": 68, "strengths": ["Activewear Focus", "Community"], "weaknesses": ["Niche Market"] },
+		{ "name": "Allbirds", "marketShare": 0.10, "avgPrice": 95, "strengths": ["Comfort", "Materials"], "weaknesses": ["Style Variety"] }
+	],
+	"benchmarks": {
+		"avgCAC": 115,
+		"avgLTV": 380,
+		"avgConversionRate": 1.25,
+		"avgAOV": 248
+	},
+	"ourMetrics": {
+		"cac": 102,
+		"ltv": 365,
+		"conversionRate": 1.18,
+		"aov": 264
+	},
+	"trends": [
+		{ "date": "2025-10-19", "ourMarketShare": 0.08, "topCompetitor": 0.18 },
+		{ "date": "2025-10-20", "ourMarketShare": 0.08, "topCompetitor": 0.18 },
+		{ "date": "2025-10-21", "ourMarketShare": 0.09, "topCompetitor": 0.18 },
+		{ "date": "2025-10-22", "ourMarketShare": 0.08, "topCompetitor": 0.17 },
+		{ "date": "2025-10-23", "ourMarketShare": 0.09, "topCompetitor": 0.17 },
+		{ "date": "2025-10-24", "ourMarketShare": 0.09, "topCompetitor": 0.17 },
+		{ "date": "2025-10-25", "ourMarketShare": 0.08, "topCompetitor": 0.18 }
+	]
+}
+

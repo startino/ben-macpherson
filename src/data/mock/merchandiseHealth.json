@@ -1,0 +1,28 @@
+{
+	"topProducts": [
+		{ "product": "Yoga Mat Pro", "revenue": 125000, "units": 1250, "aov": 100, "profitMargin": 0.52 },
+		{ "product": "Organic Cotton Basics", "revenue": 98000, "units": 1400, "aov": 70, "profitMargin": 0.48 },
+		{ "product": "Designer Handbag", "revenue": 156000, "units": 260, "aov": 600, "profitMargin": 0.65 },
+		{ "product": "Classic Tees Pack", "revenue": 84000, "units": 1200, "aov": 70, "profitMargin": 0.45 }
+	],
+	"bottomProducts": [
+		{ "product": "Gift Set Standard", "revenue": 32000, "units": 400, "aov": 80, "profitMargin": 0.28 },
+		{ "product": "Accessory Pack", "revenue": 18000, "units": 300, "aov": 60, "profitMargin": 0.25 }
+	],
+	"productMix": [
+		{ "category": "Activewear", "revenueShare": 0.35, "profitShare": 0.38 },
+		{ "category": "Basics", "revenueShare": 0.27, "profitShare": 0.25 },
+		{ "category": "Luxury", "revenueShare": 0.24, "profitShare": 0.28 },
+		{ "category": "Gifts", "revenueShare": 0.14, "profitShare": 0.09 }
+	],
+	"trends": [
+		{ "date": "2025-10-19", "totalProducts": 45, "avgProfitMargin": 0.48 },
+		{ "date": "2025-10-20", "totalProducts": 45, "avgProfitMargin": 0.49 },
+		{ "date": "2025-10-21", "totalProducts": 46, "avgProfitMargin": 0.50 },
+		{ "date": "2025-10-22", "totalProducts": 45, "avgProfitMargin": 0.49 },
+		{ "date": "2025-10-23", "totalProducts": 46, "avgProfitMargin": 0.51 },
+		{ "date": "2025-10-24", "totalProducts": 46, "avgProfitMargin": 0.50 },
+		{ "date": "2025-10-25", "totalProducts": 45, "avgProfitMargin": 0.48 }
+	]
+}
+

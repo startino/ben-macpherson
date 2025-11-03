@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
 
 export default function Admin() {
 	const [baselineHours, setBaselineHours] = useState('20')
@@ -24,25 +26,37 @@ export default function Admin() {
 
 	return (
 		<section className="grid gap-6">
-			<h2 className="text-xl font-semibold">Admin</h2>
+			<div>
+				<h2 className="text-2xl font-bold tracking-tight">Admin</h2>
+				<p className="mt-1 text-sm text-muted-foreground">Manage system settings and track value metrics</p>
+			</div>
 			<div className="grid gap-4 md:grid-cols-2">
-				<div className="rounded-lg border border-border bg-card p-4">
-					<div className="mb-3 text-sm text-muted-foreground">ValueTracker (hours saved)</div>
-					<label className="mb-2 grid gap-1">
-						<span className="text-xs text-muted-foreground">Baseline hours/month (pre‑MVP)</span>
-						<input value={baselineHours} onChange={(e) => setBaselineHours(e.target.value)} className="rounded-md border border-border bg-background px-3 py-2 text-sm outline-none" />
-					</label>
-					<label className="mb-4 grid gap-1">
-						<span className="text-xs text-muted-foreground">Hours/month with MVP</span>
-						<input value={postHours} onChange={(e) => setPostHours(e.target.value)} className="rounded-md border border-border bg-background px-3 py-2 text-sm outline-none" />
-					</label>
-					<Button variant="outline" onClick={save}>Save</Button>
-				</div>
-				<div className="rounded-lg border border-border bg-card p-4">
-					<div className="text-xs text-muted-foreground">Estimated hours saved</div>
-					<div className="text-3xl font-semibold">{savedHours}</div>
-					<div className="text-xs text-muted-foreground">per brand per month</div>
-				</div>
+				<Card>
+					<CardHeader>
+						<CardTitle>ValueTracker</CardTitle>
+						<CardDescription>Calculate hours saved per month</CardDescription>
+					</CardHeader>
+					<CardContent className="space-y-4">
+						<label className="grid gap-1.5">
+							<span className="text-sm font-medium">Baseline hours/month (pre‑MVP)</span>
+							<Input type="number" value={baselineHours} onChange={(e) => setBaselineHours(e.target.value)} />
+						</label>
+						<label className="grid gap-1.5">
+							<span className="text-sm font-medium">Hours/month with MVP</span>
+							<Input type="number" value={postHours} onChange={(e) => setPostHours(e.target.value)} />
+						</label>
+						<Button variant="outline" onClick={save}>Save</Button>
+					</CardContent>
+				</Card>
+				<Card>
+					<CardHeader>
+						<CardDescription>Estimated hours saved</CardDescription>
+						<CardTitle className="text-4xl">{savedHours}</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<p className="text-sm text-muted-foreground">per brand per month</p>
+					</CardContent>
+				</Card>
 			</div>
 		</section>
 	)

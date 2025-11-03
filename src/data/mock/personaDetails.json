@@ -1,0 +1,95 @@
+[
+	{
+		"id": "p1",
+		"label": "Aspirational Aesthete",
+		"revenueShare": 0.34,
+		"ltv": 420,
+		"paybackDays": 32,
+		"profitIndex": 1.25,
+		"qualitative": {
+			"likes": ["Yoga", "Sustainable fashion", "Mindful consumption", "Artisanal products", "Wellness lifestyle"],
+			"dislikes": ["Fast fashion", "Mass-produced items", "Overt branding", "Excessive packaging"],
+			"competitiveBrands": ["Everlane", "Reformation", "Outdoor Voices", "Allbirds"],
+			"firstPurchase": ["Yoga mat", "Organic cotton basics", "Sustainable activewear"],
+			"messaging": "Focus on sustainability, mindfulness, and artisanal quality. Emphasize post-yoga comfort and conscious consumption.",
+			"influencers": ["Yoga instructors", "Wellness bloggers", "Sustainable fashion advocates"],
+			"emailTone": "Mindful, supportive, community-focused"
+		},
+		"acquisitionTrend": [
+			{ "date": "2025-06-01", "count": 115, "cac": 95 },
+			{ "date": "2025-07-01", "count": 128, "cac": 92 },
+			{ "date": "2025-08-01", "count": 142, "cac": 88 },
+			{ "date": "2025-09-01", "count": 156, "cac": 85 }
+		]
+	},
+	{
+		"id": "p2",
+		"label": "Practical Minimalist",
+		"revenueShare": 0.27,
+		"ltv": 310,
+		"paybackDays": 24,
+		"profitIndex": 1.10,
+		"qualitative": {
+			"likes": ["Functionality", "Quality essentials", "Versatile pieces", "Timeless design", "Value for money"],
+			"dislikes": ["Trendy items", "Excessive options", "Complex designs", "High maintenance"],
+			"competitiveBrands": ["Uniqlo", "Everlane", "Cuyana", "Patagonia"],
+			"firstPurchase": ["Basic tees", "Classic jeans", "Multi-purpose accessories"],
+			"messaging": "Highlight durability, versatility, and timeless design. Focus on capsule wardrobe essentials.",
+			"influencers": ["Minimalist lifestyle bloggers", "Productivity experts", "Capsule wardrobe creators"],
+			"emailTone": "Practical, straightforward, value-focused"
+		},
+		"acquisitionTrend": [
+			{ "date": "2025-06-01", "count": 92, "cac": 78 },
+			{ "date": "2025-07-01", "count": 98, "cac": 76 },
+			{ "date": "2025-08-01", "count": 105, "cac": 74 },
+			{ "date": "2025-09-01", "count": 112, "cac": 72 }
+		]
+	},
+	{
+		"id": "p3",
+		"label": "Status Seeker",
+		"revenueShare": 0.21,
+		"ltv": 560,
+		"paybackDays": 45,
+		"profitIndex": 1.32,
+		"qualitative": {
+			"likes": ["Premium brands", "Luxury materials", "Exclusive designs", "Status symbols", "Social recognition"],
+			"dislikes": ["Generic products", "Mass market items", "Budget options", "Common designs"],
+			"competitiveBrands": ["Gucci", "Louis Vuitton", "Hermès", "Chanel"],
+			"firstPurchase": ["Designer handbags", "Premium accessories", "Limited edition items"],
+			"messaging": "Emphasize exclusivity, premium quality, and status. Highlight limited availability and luxury positioning.",
+			"influencers": ["Luxury lifestyle influencers", "Fashion editors", "Celebrities", "High-end fashion bloggers"],
+			"emailTone": "Exclusive, premium, aspirational"
+		},
+		"acquisitionTrend": [
+			{ "date": "2025-06-01", "count": 68, "cac": 145 },
+			{ "date": "2025-07-01", "count": 72, "cac": 142 },
+			{ "date": "2025-08-01", "count": 75, "cac": 140 },
+			{ "date": "2025-09-01", "count": 78, "cac": 138 }
+		]
+	},
+	{
+		"id": "p4",
+		"label": "Gift Buyer",
+		"revenueShare": 0.18,
+		"ltv": 190,
+		"paybackDays": 18,
+		"profitIndex": 0.92,
+		"qualitative": {
+			"likes": ["Gift-ready packaging", "Thoughtful presents", "Occasion-based shopping", "Personalization options", "Gift cards"],
+			"dislikes": ["Self-focused messaging", "Seasonal limitations", "Complex gifting process"],
+			"competitiveBrands": ["Etsy", "Uncommon Goods", "GiftTree", "Personalization Mall"],
+			"firstPurchase": ["Gift sets", "Personalized items", "Gift cards", "Holiday collections"],
+			"messaging": "Focus on gifting occasions, thoughtful presents, and gift-ready options. Highlight personalization and gift wrapping.",
+			"influencers": ["Gift guide creators", "Lifestyle bloggers", "Holiday content creators"],
+			"emailTone": "Celebratory, thoughtful, occasion-focused"
+		},
+		"acquisitionTrend": [
+			{ "date": "2025-06-01", "count": 85, "cac": 65 },
+			{ "date": "2025-07-01", "count": 88, "cac": 64 },
+			{ "date": "2025-08-01", "count": 91, "cac": 63 },
+			{ "date": "2025-09-01", "count": 94, "cac": 62 }
+		]
+	}
+]
+

@@ -1,0 +1,30 @@
+{
+	"acquisitionByPersona": [
+		{ "date": "2025-10-19", "p1": 115, "p2": 92, "p3": 68, "p4": 85 },
+		{ "date": "2025-10-20", "p1": 112, "p2": 98, "p3": 72, "p4": 88 },
+		{ "date": "2025-10-21", "p1": 114, "p2": 105, "p3": 75, "p4": 91 },
+		{ "date": "2025-10-22", "p1": 112, "p2": 98, "p3": 72, "p4": 88 },
+		{ "date": "2025-10-23", "p1": 108, "p2": 105, "p3": 78, "p4": 94 },
+		{ "date": "2025-10-24", "p1": 101, "p2": 112, "p3": 78, "p4": 94 },
+		{ "date": "2025-10-25", "p1": 97, "p2": 112, "p3": 78, "p4": 94 }
+	],
+	"acquisitionByChannel": {
+		"Meta": { "p1": 0.42, "p2": 0.28, "p3": 0.18, "p4": 0.32 },
+		"Google": { "p1": 0.35, "p2": 0.38, "p3": 0.45, "p4": 0.28 },
+		"Email": { "p1": 0.15, "p2": 0.22, "p3": 0.25, "p4": 0.30 },
+		"Organic": { "p1": 0.08, "p2": 0.12, "p3": 0.12, "p4": 0.10 }
+	},
+	"efficiency": [
+		{ "persona": "p1", "cac": 95, "targetCac": 85, "acquisitionRate": 0.34, "targetRate": 0.40 },
+		{ "persona": "p2", "cac": 78, "targetCac": 72, "acquisitionRate": 0.27, "targetRate": 0.30 },
+		{ "persona": "p3", "cac": 145, "targetCac": 138, "acquisitionRate": 0.21, "targetRate": 0.25 },
+		{ "persona": "p4", "cac": 65, "targetCac": 62, "acquisitionRate": 0.18, "targetRate": 0.15 }
+	],
+	"targetMix": {
+		"p1": 0.40,
+		"p2": 0.30,
+		"p3": 0.25,
+		"p4": 0.15
+	}
+}
+

@@ -2,9 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
+import { ThemeProvider } from './contexts/ThemeContext'
 import App from './App'
 import Landing from '@/pages/Landing'
-import Inputs from '@/pages/Inputs'
+import Settings from '@/pages/Settings'
 import Personas from '@/pages/Personas'
 import Creative from '@/pages/Creative'
 import Dashboard from '@/pages/Dashboard'
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
 		element: <App />,
 		children: [
 			{ index: true, element: <Landing /> },
-			{ path: 'inputs', element: <Inputs /> },
+			{ path: 'settings', element: <Settings /> },
 			{ path: 'personas', element: <Personas /> },
 			{ path: 'creative', element: <Creative /> },
 			{ path: 'dashboard', element: <Dashboard /> },
@@ -31,6 +32,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<RouterProvider router={router} />
+		<ThemeProvider>
+			<RouterProvider router={router} />
+		</ThemeProvider>
 	</StrictMode>,
 )

@@ -1,0 +1,257 @@
+0:01 - Ben Macpherson I D.LUX
+How are you?
+
+0:03 - Jorge
+I can't hear you. It might be my cellular check. Yeah, it's my cell.
+
+0:06 - Unidentified Speaker
+Can you hear me?
+
+0:07 - Jorge
+There we go, yeah. Hey, thanks Ben again for meeting me.
+
+0:10 - Ben Macpherson I D.LUX
+It's a pleasure. Thanks a lot. Thanks for rolling with me on the change.
+
+0:15 - Jorge
+No, of course, of course. So yeah, so I grew up in Hong Kong, but at the moment I'm in Mexico. Nice.
+
+0:24 - Ben Macpherson I D.LUX
+I grew up in Hong Kong as well.
+
+0:26 - Jorge
+No way. Yeah, I actually saw that you were I couldn't, there was very vague information that you were in Hong Kong. You grew up there.
+
+0:35 - Ben Macpherson I D.LUX
+I did. I grew up there for a mom, not to like 10 years. You know what I mean? I was born in Australia. I moved there when I was like about eight and then I left when I was like 16. So eight years, but yeah, no, it was great. It's great fun.
+
+0:50 - Jorge
+That's cool. Yeah. I moved there when I was six and then moved out. I've been traveling for the past, years when I was like 18.
+
+0:58 - Ben Macpherson I D.LUX
+Wow. Amazing. How old are you now?
+
+1:01 - Jorge
+I'm 19. About to turn 20 in three days.
+
+1:04 - Ben Macpherson I D.LUX
+Dude, that's awesome.
+
+1:07 - Jorge
+How good is that? It's a funny coincidence because I'm finding that a lot of people are actually like have been through Hong Kong, even though it's a tiny little place.
+
+1:19 - Ben Macpherson I D.LUX
+Man, I tell you, I loved it. It's changed a lot now. I don't know if you've for a while, but yeah. Oh, you were just there. Yeah, no, it's I was there like five years ago, it changed a lot. But, and I love- For the better? Huh?
+
+1:37 - Jorge
+For the better? No?
+
+1:38 - Ben Macpherson I D.LUX
+I don't think so. It was amazing. Back in the like 80s, dude, it was unreal. I mean, I'm 54, so. The other thing is I love Mexico. Mexico, where Where are you based?
+
+1:53 - Jorge
+Right now I'm in Hermosillo, Sonora, up north.
+
+1:56 - Jorge
+Where's that?
+
+1:57 - Jorge
+It's right next to Arizona. It's like very hot, nothing to do here. It's just because my grandma lives here, so I'm visiting her for a bit.
+
+2:06 - Unidentified Speaker
+Oh, nice, nice. Oh, nothing to do but make money, so that's good.
+
+2:10 - Jorge
+Yep, exactly. No, I've been locked in.
+
+2:12 - Ben Macpherson I D.LUX
+That's great. Yeah, no, I love... I went to a mate's 50th in Mexico City a little It was unbelievable. That city is insane. So good.
+
+2:24 - Jorge
+Whereabouts in Mexico, Mexico city?
+
+2:25 - Unidentified Speaker
+Yeah.
+
+2:26 - Ben Macpherson I D.LUX
+Oh yeah. I was, I was there for a couple of months before this as well. It's, it's, it's a, it's a nice place.
+
+2:30 - Ben Macpherson I D.LUX
+It's great. The food's great. Yeah.
+
+2:34 - Jorge
+Yeah. But anyway, so yeah, I kind of want to understand like, why'd you hop in this call?
+
+2:39 - Ben Macpherson I D.LUX
+Well, you tell me, what do you do?
+
+2:42 - Jorge
+Um, so I want to know actually before that, what do you think we do? I want to know what kind of, How prepared are we for this call?
+
+2:50 - Ben Macpherson I D.LUX
+Well, my understanding is that you productize, you know, kind of IP within businesses, leveraging AI. That's my vague memory.
+
+3:02 - Jorge
+Okay, that's pretty close. So yeah, our main goal is to work with agencies and help them use their IP to build a tech product and work with them to scale it. That's kind of what our focus is right now.
+
+3:13 - Unidentified Speaker
+Is it your business?
+
+3:15 - Jorge
+Yeah, so it's me and my co-founder that we started it. We started off as a general SaaS development company two years ago, and we were like, just development alone, it's tough, especially with AI, to compete on prices. You have these Indian dev houses charging so much less, and we're like, okay, we need a competitive advantage. So we kind of found a niche, which is agency owners, and we also kind of shifted the offer to be more of partners rather than just tech hands. So working with them on the go to market and the strategy and all that.
+
+3:49 - Ben Macpherson I D.LUX
+Do you have many, have you sort of got many clients or you've done it before?
+
+3:55 - Jorge
+So for the, before our kind of pivot, we were working with nine to five entrepreneurs and small scale startups. And after our pivot, we stopped for like six months while we were trying to figure out, okay, what can we do? We stopped taking all of our new clients and we just kept one of our big clients, our biggest clients. And we've been with them for the past, I guess almost a year now. And they've been paying our bills while we enter this new niche. So.
+
+4:20 - Ben Macpherson I D.LUX
+Great. That's good. Yeah, yeah, yeah. Yeah, no. And so tell me like a little bit more about like how you see it work. I mean, how do you work? Maybe that's a good way to kind of start.
+
+4:30 - Jorge
+So we really like we envision and this is where I can get your input because you've done this a lot is we want to come into these projects like an internal team member and work thumb to actually build it out. Like, like they're hiring someone full time just for this specific job. And you having, you know, kind of an operator investor type of model. I think you have a lot of experience with that. Because it's hard to get right. Like, if you're paying someone, any agency or any contractor, it's hard to, to feel like they're actually integrated in the team.
+
+5:01 - Ben Macpherson I D.LUX
+So yeah, yeah, no, I agree. I agree. I agree. Yeah. I mean, do you do you sort of how do you kind of structure it?
+
+5:09 - Jorge
+Like what what's The process that we're looking to do is we start off with, we have a tool called Valley Tracker, which allows us to scan their team's computers and identify automations. So it starts off with automating their entire business so that we can have time with them to work with. And it's also a smaller step compared to building an entire SaaS product. It's like an easier yes for them. And once we built automations, we built a little bit of trust. Then we look at validating a SaaS product. So figuring out within their business, what IP can we use? What problems, what processes can we use to turn into a tech product? And we want to go for a revenue share. We're thinking somewhere like 10 to 30%. And our first step is to get like three case studies. We don't care if we make any cash off these three case studies, as long as we can get the results that we're after. And so that's why we're pulling out all the risk reversals in the book. To just charge like basically nothing upfront and do it all off performance-based, just risk-free. That's kind of our idea.
+
+6:13 - Ben Macpherson I D.LUX
+Interesting. So I'll tell a little bit about us because it's pretty opportunistic timing. So our model is, well, the history is that we started out as investors in direct-to-consumer, in e-commerce brands, direct-to-consumer brands. And we partnered with a large private equity firm to make financial investments, we did that. And then what we found is we spoke to like 450 leading direct-to-consumer brands or emerging direct-to-consumer brands. And we identified that there's a real need, provide deeper data insights, particularly focused around the customer. Who are your most valuable customers? How do you attract them? How do you acquire them and maintain them? And then the second is provide really good strategy. And then later, we worked out, hey, this is really cool. We can provide all the insights and the strategy, but unless we can actually execute it for them, typically the value is not added. So we have this kind of unique value chain, which starts at insights, strategy to execution, which is paid media, creative, and all the different components within a paid media, within an agency. What's unique though, what we've done, which we just haven't found anyone else doing it, we think it's really unique. And we think there's a place to take we think it actually gets more valuable in an AI world, which is we do these customer personas where we cluster all of the, well, where we take all the transaction data from a company. We then survey all of the customers. We then cluster all of that quality of information. You know, what are their likes, dislikes, competitive brands, et cetera. We create these customer personas Who are these personas? How valuable are they? How much, how profitable are they?
+
+8:02 - Jorge
+Where does that data come from Like for like, like qualitative data?
+
+8:06 - Ben Macpherson I D.LUX
+Yeah, we, so we have a data warehouse. So, okay. We're two, all of the hard data comes from a data warehouse. We, we pipe in Shopify, Facebook, Google, um, Clavio, you know.
+
+8:19 - Jorge
+and that gives you all of the qualitative data?
+
+8:22 - Ben Macpherson I D.LUX
+No. The qualitative data, um, comes from surveys. Okay. So we then cluster all the quality of data with the transaction data. It tells us who the most valuable customers are, and it tells us a decent amount about them. Then what we do is we then go and say, OK, cool, strategy. Let's acquire these customers and stop acquiring these customers. So we now make creative into paid media to essentially acquire those customers and not acquire the other customers, the unprofitable So that model is really sharp. And then as Meta and all of those other guys sort of, you know, remove, because now it's like punching keys. It's kind of like, really, there's not really a thing there. It does it itself. It's really around creative and not just creative and ads. It's like, which influencer do I choose? What, you know, kind of emails do I send, et cetera. So yeah, well, it's no, it's, it's messaging. To acquire the right customers. Because what we've found is, is that just by shifting the creative, so that we're saying, hey, rather than sort of trying to appeal to everyone, we're saying to, we know our highest value customers love yoga. And we say, specifically for yoga, hangover, whatever it is, or after yoga workout, and that then, you know, we now use that creative tool quite just those customers who are most likely to, and we also pair it with what are their first purchase. So we know that when we market it with that product, with that thing, we then have all the testing. We say, oh, blonde is better than dark hair, and dark background is better than da, da, da. Now we're acquiring those customers and we're not acquiring the bad customers. And we've essentially shifted our budget into high quality customers instead of low quality. So that has, our average profit improvement after 12 months is over 100%, versus, and that's not revenue, that's actually profit. So that's the way we think about the business. We have developed just a Looker Studio reporting platform. But the one thing that we're about to do is to implement persona tracking in the back end of that, so that we've now got a report within that that tracks how many of what personas are you acquiring over time?
+
+10:54 - Jorge
+Just curious, by the way, are you technical? Because I saw that you built, I can't remember the name, something voice like related a while back in the 90s.
+
+11:02 - Ben Macpherson I D.LUX
+Oh, yeah, yeah, I did. Yeah, I was I didn't go to university. I just like I was obsessed with technology. And I yeah, so I developed I actually patented some voice response, interactive voice response technology. And along with that, I patented a number of use case products for it.
+
+11:25 - Jorge
+Yeah. I mean, back in the nineties, like this was, that was, that was probably like industry breaking nowadays. It's like nothing, but I mean, you put it in perspective, it's, it's insane.
+
+11:36 - Ben Macpherson I D.LUX
+Yeah. Yeah. It was really super natural language is way better than anything was out there. And then ultimately it got sold to a telco. And so anyway, yeah, that, but, that. And then, you know, I was involved in a company here in the US and then I moved in. So it's kind of like being around tech, but look, I'm not, I totally understand tech. I totally get how it works. I'm not a product manager. I don't know how to build shit.
+
+11:56 - Jorge
+You know, you're a big tech, you're a big data guy.
+
+11:58 - Unidentified Speaker
+Yeah.
+
+12:00 - Ben Macpherson I D.LUX
+I mean, look, that's there anyway. So that's what we're looking to do. We're looking to commercialize that product. We, the clear, the closest competitor, which doesn't do it as well as we do, is a company called Decile. Dessal.
+
+12:14 - Unidentified Speaker
+D-E-S-S-A?
+
+12:17 - Ben Macpherson I D.LUX
+Dessal. D-E-C-I-L-E.co. I'll find it. Anyway, that company charges about two and a half grand a month and companies happily, happily, happily pay for it.
+
+12:34 - Jorge
+and it's just software?
+
+12:36 - Unidentified Speaker
+Correct.
+
+12:38 - Ben Macpherson I D.LUX
+I love those products. And when you're charging four figures for a software business, that's like, that's where it gets fun.
+
+12:47 - Ben Macpherson I D.LUX
+Yeah. Yeah. I'll show you this company here. I'm going to share my screen.
+
+12:52 - Jorge
+Yeah. Go for it. And so just, just to get a high level understanding it just to make sure I'm correct. So you right now have an, it's a, it's an operator investor model kind of where you offer strategy and then also execution, but also in some companies you offer, you invest in them, right? Right.
+
+13:09 - Ben Macpherson I D.LUX
+Yeah. Yeah. We, we don't do as much investment now, but we, we still do it. So here's, um, here's what Decile do. So they, they, um, they kind of like do this, like, which is like third party data, which is like using credit card data and other things. Okay. What they don't do is first, the first party data around the quality they could, but we, we kind of like, this is fully automated. There is an element here of manual, but I actually think it can be fully automated. So the actual sending of the emails and the surveys, the building of them, like, I actually think there's a totally, you know, SAS model here. Um, that is, so this, this is just to give you an idea of this works out to be about, um, this says about 1500 uh but there's some add-ons that they charge yeah I don't know how they charge anyway yeah so there's some add-ons that charge gets about two and a half gamma it's better um where is that oh yeah no I got it I got an absolute I got a quote on the floor are you familiar with um lead sourcing No, what's that?
+
+14:40 - Jorge
+It's a SaaS product that turns your website visitors and it gets their LinkedIn data. It's able to identify them. And you're able to just use that data to kind of reverse engineer. Yeah. So something in a similar regard, but instead of like it's kind of all automated, you take all these personas and you do some outbound.
+
+15:03 - Ben Macpherson I D.LUX
+Yeah, yeah. Yeah, this is good too. Yeah, there's a few of these companies, but this is actually interesting because it's showing their intent. Yeah, this is interesting.
+
+15:19 - Jorge
+The founders of this company are actually in Hong Kong right now.
+
+15:24 - Ben Macpherson I D.LUX
+Yeah, this is cool. This is super cool.
+
+15:32 - Jorge
+I love these data things. Just finding these, this data that doesn't seem easily available and then leveraging that to kind of get like on what feels surreal, um, campaigns and stuff like that. Yeah.
+
+15:45 - Ben Macpherson I D.LUX
+Have you set up, like, have you set up much of the kind of automated, have you set up a lot of like automated flows and have you done any work around that around retention flows and those sorts of retention? So for example, I mean, is it, Is your kind of process like, we're going to dive in and try and understand the business and find automation opportunities. And then we're going to sort of see whether some of those are actually, we could commercialize.
+
+16:13 - Jorge
+Yeah. So the, the tool I mentioned at the start, Value Tracker, that's, I think that's our key, our key play, because it allows us to easily, like, because it records the entire team screens for like one to two weeks, we're able to get like real data on what processes are taking the most time. And, um, and what's repeated the most. And after we implement automations, we can charge performance-based because we can see an hour reduction from the automations. And it just kind of gives us such a clear map of what we can automate, what we can spin out. Like for example, if the process that you're describing right now is something that you guys do for every client, we'd see it in that map. And we'd be like, okay, this is taking 20, 30 hours to do for each client. If we spin this out as a tech product, you know, that's kind of the idea.
+
+17:00 - Ben Macpherson I D.LUX
+Yeah. Yeah. So would you do, so would you still do it in a couple of ways? Like one is products of commercialize, take to market because you found a unique IP in a business there. And two, internal automations that save time that you would then charge for based on the amount of time saved.
+
+17:21 - Jorge
+Yeah, exactly.
+
+17:22 - Ben Macpherson I D.LUX
+So it's almost like, it's almost like you would go, hey, I'll find you a way to save time. And then I'm going to sell you the SAS product back to you. And we're going to charge you a monthly fee. That's one option. So let's just say that you sort of say, hey, guys, we found these seven processes that you've burned through 100 hours a month. We'll implement automation for those. And we'll charge you x thousand a month. To sort of leave it in the business. How does it work?
+
+18:01 - Jorge
+I would say we want it to be their IP, just so that they can then turn it into their own product. So let's say we build out these seven automations, and one of them, we can wrap it up so that it's self-serve for customers. And so customers can use this and we work with the clients, the agency, so for example, you guys, and we take a revenue share get it out to users. Another idea is an internal automation. Let's say something that you guys only do on the backend. We can also spin it out as a product to other agencies and can white label it. So kind of things like that.
+
+18:35 - Ben Macpherson I D.LUX
+Yeah. Yeah. There's so many opportunities there. Like other things like churn risk analysis, right, for clients. There's, you know, the SAS product that I mentioned, the reporting, actually, that whole product. So for example, like this whole product needs to be productized. I'll show you.
+
+19:00 - Jorge
+After this, I also want to touch on the, you guys have a tool or some sort of technology. I think it's digital, yeah, digital RX that we can, that I found.
+
+19:11 - Ben Macpherson I D.LUX
+Yeah, the digital RX is actually, is actually the part of that process. So I'll just share with you. So this is really pretty basic. It's in Looker dashboard, but we'll take a brand and we pipe in all of the data. And then what we do is we have like, this is like a very basic sort of reporting platform, but done in a way that you know, really, really helps. I don't know what's going on here.
+
+19:51 - Jorge
+Yeah, just looking at the data makes it, from here, it makes it a lot easier.
+
+19:54 - Ben Macpherson I D.LUX
+My internet's slow.
+
+20:01 - Jorge
+All good. Are you not, you're in LA right now, right?
+
+20:04 - Unidentified Speaker
+Yeah.
+
+20:06 - Jorge
+Is that where you live full time now or?
+
+20:08 - Ben Macpherson I D.LUX
+Yeah, yeah, yeah. I don't know why that's not coming up. But yeah, so basically, we kind of have all of these, you know, sort of things that we track around, you know, efficiency and sales and CAC and profitability. And, you know, and then what we do, and we have like this really interesting profitability bridge chart, and then we track, you know, all the paid media performance, you know, that kind of dovetails into it and, you know, customer health. So we could tell you all about their, you know, their LTV and, you know, what, product trends are. So, you know, like, yeah.
+
+20:44 - Jorge
+How do you guys charge your clients?
+
+20:47 - Ben Macpherson I D.LUX
+What's the, we, we basically include this as, as part of our package. We do charge separately for it. Like, okay. Really that they, they're not, it's not like, it's not like we've got, we haven't gone out and sold this. We've done a couple of, and we do, we have five clients using this that are paying separately, but So anyway, you can kind of keep going through merchandise, site, competitors. So this is like a very kind of like, this is like a very basic kind of like reporting platform, analytics platform, nothing really intelligent about it.
+
+21:28 - Jorge
+It's 2020 and you want to make it 2025. Yeah.
+
+21:31 - Ben Macpherson I D.LUX
+Other than, the only thing that's unique about it is our methodology approach, right? So what I'm going to do is I'm going to show you something else.
+
+21:42 - Jorge
+and that, and that methodology is, is inside your guys's head.
+
+21:46 - Ben Macpherson I D.LUX
+Well, it's, it's, it's more or less on the page there and it's the way that we present it. So I'm going to show you here's an example of, you know,
