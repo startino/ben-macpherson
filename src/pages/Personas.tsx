@@ -228,8 +228,8 @@ export default function Personas() {
 																		<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 10 }} />
 																		<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border))', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', fontSize: '12px' }} />
 																		<Legend />
-																		<Line yAxisId="left" type="monotone" dataKey="count" name="New Customers" stroke="#a3e635" strokeWidth={2} dot={{ fill: '#a3e635', r: 3 }} />
-																		<Line yAxisId="right" type="monotone" dataKey="cac" name="CAC" stroke="#f472b6" strokeWidth={2} dot={{ fill: '#f472b6', r: 3 }} />
+																		<Line yAxisId="left" type="monotone" dataKey="count" name="New Customers" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 3 }} />
+																		<Line yAxisId="right" type="monotone" dataKey="cac" name="CAC" stroke="hsl(var(--accent))" strokeWidth={2} dot={{ fill: 'hsl(var(--accent))', r: 3 }} />
 																	</LineChart>
 																</ResponsiveContainer>
 															</div>

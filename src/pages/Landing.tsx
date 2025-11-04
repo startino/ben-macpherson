@@ -212,8 +212,8 @@ export default function Landing() {
 								<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Line type="monotone" dataKey="profit" name="Profit" stroke="#a3e635" strokeWidth={2} dot={{ fill: '#a3e635', r: 4 }} />
-								<Line type="monotone" dataKey="contribution" name="Contribution" stroke="#22d3ee" strokeWidth={2} dot={{ fill: '#22d3ee', r: 4 }} />
+								<Line type="monotone" dataKey="profit" name="Profit" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 4 }} />
+								<Line type="monotone" dataKey="contribution" name="Contribution" stroke="hsl(var(--accent))" strokeWidth={2} dot={{ fill: 'hsl(var(--accent))', r: 4 }} />
 							</LineChart>
 						</ResponsiveContainer>
 					</div>

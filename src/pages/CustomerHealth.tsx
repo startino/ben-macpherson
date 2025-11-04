@@ -69,7 +69,7 @@ export default function CustomerHealth() {
 								<YAxis label={{ value: 'Net Sales LTV', angle: -90, position: 'insideLeft' }} stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar dataKey="ltv" name="Net Sales LTV" fill="#404040" />
+								<Bar dataKey="ltv" name="Net Sales LTV" fill="hsl(var(--primary))" />
 							</BarChart>
 						</ResponsiveContainer>
 					</div>
@@ -91,9 +91,9 @@ export default function CustomerHealth() {
 								<YAxis yAxisId="right" orientation="right" label={{ value: '%', angle: 90, position: 'insideRight' }} stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="netSalesLtv" name="Net Sales LTV" fill="#404040" />
-								<Bar yAxisId="left" dataKey="contributionLtv" name="Contribution LTV" fill="#a0a0a0" />
-								<Line yAxisId="right" type="monotone" dataKey="repeatRate" name="Repeat Rate" stroke="#000" strokeWidth={2} dot={{ fill: '#000', r: 3 }} />
+								<Bar yAxisId="left" dataKey="netSalesLtv" name="Net Sales LTV" fill="hsl(var(--primary))" />
+								<Bar yAxisId="left" dataKey="contributionLtv" name="Contribution LTV" fill="hsl(var(--muted))" />
+								<Line yAxisId="right" type="monotone" dataKey="repeatRate" name="Repeat Rate" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 3 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>

@@ -120,8 +120,8 @@ export default function Competitors() {
 									formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
 								/>
 								<Legend />
-								<Line type="monotone" dataKey="ourMarketShare" name="Our Market Share" stroke="#a3e635" strokeWidth={2} dot={{ fill: '#a3e635', r: 4 }} />
-								<Line type="monotone" dataKey="topCompetitor" name="Top Competitor" stroke="#f472b6" strokeWidth={2} dot={{ fill: '#f472b6', r: 4 }} />
+								<Line type="monotone" dataKey="ourMarketShare" name="Our Market Share" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 4 }} />
+								<Line type="monotone" dataKey="topCompetitor" name="Top Competitor" stroke="hsl(var(--accent))" strokeWidth={2} dot={{ fill: 'hsl(var(--accent))', r: 4 }} />
 							</LineChart>
 						</ResponsiveContainer>
 					</div>

@@ -86,8 +86,8 @@ function RevenueHealthReport() {
 								<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar dataKey="totalSales" name="Total Sales" fill="#404040" />
-								<Bar dataKey="salesComparison" name="Sales Comparison" fill="#a0a0a0" />
+								<Bar dataKey="totalSales" name="Total Sales" fill="hsl(var(--primary))" />
+								<Bar dataKey="salesComparison" name="Sales Comparison" fill="hsl(var(--muted))" />
 							</BarChart>
 						</ResponsiveContainer>
 					</div>
@@ -110,8 +110,8 @@ function RevenueHealthReport() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="contribution" name="TY Contribution" fill="#404040" />
-								<Line yAxisId="right" type="monotone" dataKey="contributionPercent" name="Contribution %" stroke="#404040" strokeWidth={2} dot={{ fill: '#404040', r: 4 }} />
+								<Bar yAxisId="left" dataKey="contribution" name="TY Contribution" fill="hsl(var(--primary))" />
+								<Line yAxisId="right" type="monotone" dataKey="contributionPercent" name="Contribution %" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
@@ -134,10 +134,10 @@ function RevenueHealthReport() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="totalOrders" name="Total Orders" fill="#404040" />
-								<Bar yAxisId="left" dataKey="newOrders" name="New Orders" fill="#a0a0a0" />
-								<Bar yAxisId="left" dataKey="repeatOrders" name="Repeat Orders" fill="#d0d0d0" />
-								<Line yAxisId="right" type="monotone" dataKey="repeatPercent" name="% Repeat Orders" stroke="#1e40af" strokeWidth={2} dot={{ fill: '#1e40af', r: 4 }} />
+								<Bar yAxisId="left" dataKey="totalOrders" name="Total Orders" fill="hsl(var(--primary))" />
+								<Bar yAxisId="left" dataKey="newOrders" name="New Orders" fill="hsl(var(--accent))" />
+								<Bar yAxisId="left" dataKey="repeatOrders" name="Repeat Orders" fill="hsl(var(--muted))" />
+								<Line yAxisId="right" type="monotone" dataKey="repeatPercent" name="% Repeat Orders" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
@@ -160,8 +160,8 @@ function RevenueHealthReport() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="right" dataKey="newCustomers" name="New Customers" fill="#404040" />
-								<Line yAxisId="left" type="monotone" dataKey="cac" name="CAC" stroke="#404040" strokeWidth={2} dot={{ fill: '#404040', r: 4 }} />
+								<Bar yAxisId="right" dataKey="newCustomers" name="New Customers" fill="hsl(var(--primary))" />
+								<Line yAxisId="left" type="monotone" dataKey="cac" name="CAC" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>

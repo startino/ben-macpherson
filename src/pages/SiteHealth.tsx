@@ -158,8 +158,8 @@ export default function SiteHealth() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Line yAxisId="left" type="monotone" dataKey="conversionRate" name="Conversion Rate %" stroke="#a3e635" strokeWidth={2} dot={{ fill: '#a3e635', r: 4 }} />
-								<Bar yAxisId="right" dataKey="avgSessionDuration" name="Avg Session Duration (s)" fill="#22d3ee" />
+								<Line yAxisId="left" type="monotone" dataKey="conversionRate" name="Conversion Rate %" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 4 }} />
+								<Bar yAxisId="right" dataKey="avgSessionDuration" name="Avg Session Duration (s)" fill="hsl(var(--accent))" />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>

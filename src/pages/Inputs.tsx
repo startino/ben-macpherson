@@ -173,8 +173,8 @@ export default function Inputs() {
 									<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 10 }} />
 									<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', fontSize: '12px' }} />
 									<Legend />
-									<Line type="monotone" dataKey="sent" name="Surveys Sent" stroke="#22d3ee" strokeWidth={2} dot={{ fill: '#22d3ee', r: 3 }} />
-									<Line type="monotone" dataKey="responses" name="Responses" stroke="#a3e635" strokeWidth={2} dot={{ fill: '#a3e635', r: 3 }} />
+									<Line type="monotone" dataKey="sent" name="Surveys Sent" stroke="hsl(var(--accent))" strokeWidth={2} dot={{ fill: 'hsl(var(--accent))', r: 3 }} />
+									<Line type="monotone" dataKey="responses" name="Responses" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 3 }} />
 								</LineChart>
 							</ResponsiveContainer>
 						</div>

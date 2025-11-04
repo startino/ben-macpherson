@@ -71,9 +71,9 @@ export default function Profitability() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="contribution" name="TY Contribution" fill="#404040" />
-								<Line yAxisId="right" type="monotone" dataKey="contributionPercent" name="Contribution %" stroke="#404040" strokeWidth={2} dot={{ fill: '#404040', r: 4 }} />
-								<Line yAxisId="right" type="monotone" dataKey="contributionComparison" name="Contribution Comparison" stroke="#a0a0a0" strokeWidth={2} strokeDasharray="5 5" dot={{ fill: '#a0a0a0', r: 3 }} />
+								<Bar yAxisId="left" dataKey="contribution" name="TY Contribution" fill="hsl(var(--primary))" />
+								<Line yAxisId="right" type="monotone" dataKey="contributionPercent" name="Contribution %" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 4 }} />
+								<Line yAxisId="right" type="monotone" dataKey="contributionComparison" name="Contribution Comparison" stroke="hsl(var(--muted))" strokeWidth={2} strokeDasharray="5 5" dot={{ fill: 'hsl(var(--muted))', r: 3 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
@@ -96,8 +96,8 @@ export default function Profitability() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="netSales" name="Net Sales" fill="#404040" />
-								<Line yAxisId="right" type="monotone" dataKey="grossMarginPercent" name="Gross Margin %" stroke="#404040" strokeWidth={2} dot={{ fill: '#404040', r: 4 }} />
+								<Bar yAxisId="left" dataKey="netSales" name="Net Sales" fill="hsl(var(--primary))" />
+								<Line yAxisId="right" type="monotone" dataKey="grossMarginPercent" name="Gross Margin %" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
@@ -120,8 +120,8 @@ export default function Profitability() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="poas" name="POAS" fill="#a0a0a0" />
-								<Line yAxisId="right" type="monotone" dataKey="spendToNetPercent" name="Spend to Net %" stroke="#404040" strokeWidth={2} dot={{ fill: '#404040', r: 4 }} />
+								<Bar yAxisId="left" dataKey="poas" name="POAS" fill="hsl(var(--muted))" />
+								<Line yAxisId="right" type="monotone" dataKey="spendToNetPercent" name="Spend to Net %" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
@@ -143,9 +143,9 @@ export default function Profitability() {
 								<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Line type="monotone" dataKey="cac" name="CAC" stroke="#404040" strokeWidth={2} dot={{ fill: '#404040', r: 4 }} />
-								<Line type="monotone" dataKey="firstOrderProfit" name="First Order Profit" stroke="#10b981" strokeWidth={2} dot={{ fill: '#10b981', r: 4 }} />
-								<Line type="monotone" dataKey="lyFirstOrderProfit" name="LY First Order Profit" stroke="#3b82f6" strokeWidth={2} dot={{ fill: '#3b82f6', r: 4 }} />
+								<Line type="monotone" dataKey="cac" name="CAC" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 4 }} />
+								<Line type="monotone" dataKey="firstOrderProfit" name="First Order Profit" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 4 }} />
+								<Line type="monotone" dataKey="lyFirstOrderProfit" name="LY First Order Profit" stroke="hsl(var(--accent))" strokeWidth={2} dot={{ fill: 'hsl(var(--accent))', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>

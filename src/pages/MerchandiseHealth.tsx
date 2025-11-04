@@ -89,8 +89,8 @@ export default function MerchandiseHealth() {
 								<YAxis unit="%" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar dataKey="revenueShare" name="Revenue Share" fill="#a3e635" />
-								<Bar dataKey="profitShare" name="Profit Share" fill="#22d3ee" />
+								<Bar dataKey="revenueShare" name="Revenue Share" fill="hsl(var(--primary))" />
+								<Bar dataKey="profitShare" name="Profit Share" fill="hsl(var(--accent))" />
 							</BarChart>
 						</ResponsiveContainer>
 					</div>
@@ -115,7 +115,7 @@ export default function MerchandiseHealth() {
 									formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
 								/>
 								<Legend />
-								<Line type="monotone" dataKey="avgProfitMargin" name="Avg Profit Margin" stroke="#22d3ee" strokeWidth={2} dot={{ fill: '#22d3ee', r: 4 }} />
+								<Line type="monotone" dataKey="avgProfitMargin" name="Avg Profit Margin" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 4 }} />
 							</LineChart>
 						</ResponsiveContainer>
 					</div>
