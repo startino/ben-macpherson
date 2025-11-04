@@ -3,6 +3,7 @@ import ltvWaterfallData from '@/data/mock/ltvWaterfall.json'
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, ReferenceLine } from 'recharts'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { FilterBar } from '@/components/layout/FilterBar'
+import { Slider } from '@/components/ui/slider'
 
 export default function LTVWaterfall() {
 	const { cohorts } = ltvWaterfallData as any
@@ -54,13 +55,13 @@ export default function LTVWaterfall() {
 				</CardHeader>
 				<CardContent>
 					<div className="space-y-4">
-						<input
-							type="range"
-							min="0"
-							max="30"
-							value={selectedMonth}
-							onChange={(e) => setSelectedMonth(Number(e.target.value))}
-							className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer"
+						<Slider
+							min={0}
+							max={30}
+							step={1}
+							value={[selectedMonth]}
+							onValueChange={(value) => setSelectedMonth(value[0])}
+							className="w-full"
 						/>
 						<div className="flex justify-between text-xs text-muted-foreground">
 							<span>0</span>

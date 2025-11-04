@@ -8,6 +8,7 @@ import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, L
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { WordCloud } from '@/components/ui/word-cloud'
+import { Slider } from '@/components/ui/slider'
 
 interface Persona {
 	id: string
@@ -145,7 +146,14 @@ export default function Personas() {
 											<td className="px-3 py-3 text-muted-foreground">{suggestedMix[p.id] ?? 0}%</td>
 											<td className="px-3 py-3">
 												<div className="flex items-center gap-3">
-													<input type="range" min={0} max={60} step={1} value={targetMix[p.id] ?? 0} onChange={(e) => updateMix(p.id, Number(e.target.value))} className="w-24" />
+													<Slider
+														min={0}
+														max={60}
+														step={1}
+														value={[targetMix[p.id] ?? 0]}
+														onValueChange={(value) => updateMix(p.id, value[0])}
+														className="w-24"
+													/>
 													<span className="text-xs font-medium w-10">{targetMix[p.id] ?? 0}%</span>
 												</div>
 											</td>
