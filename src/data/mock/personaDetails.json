@@ -13,7 +13,21 @@
 			"firstPurchase": ["Yoga mat", "Organic cotton basics", "Sustainable activewear"],
 			"messaging": "Focus on sustainability, mindfulness, and artisanal quality. Emphasize post-yoga comfort and conscious consumption.",
 			"influencers": ["Yoga instructors", "Wellness bloggers", "Sustainable fashion advocates"],
-			"emailTone": "Mindful, supportive, community-focused"
+			"emailTone": "Mindful, supportive, community-focused",
+			"wordCloud": [
+				{"text": "Mindful", "value": 85},
+				{"text": "Sustainable", "value": 80},
+				{"text": "Wellness", "value": 75},
+				{"text": "Authentic", "value": 70},
+				{"text": "Quality", "value": 65},
+				{"text": "Ethical", "value": 60},
+				{"text": "Comfort", "value": 55},
+				{"text": "Community", "value": 50},
+				{"text": "Natural", "value": 45},
+				{"text": "Balance", "value": 40},
+				{"text": "Conscious", "value": 35},
+				{"text": "Harmony", "value": 30}
+			]
 		},
 		"acquisitionTrend": [
 			{ "date": "2025-06-01", "count": 115, "cac": 95 },
@@ -36,7 +50,21 @@
 			"firstPurchase": ["Basic tees", "Classic jeans", "Multi-purpose accessories"],
 			"messaging": "Highlight durability, versatility, and timeless design. Focus on capsule wardrobe essentials.",
 			"influencers": ["Minimalist lifestyle bloggers", "Productivity experts", "Capsule wardrobe creators"],
-			"emailTone": "Practical, straightforward, value-focused"
+			"emailTone": "Practical, straightforward, value-focused",
+			"wordCloud": [
+				{"text": "Functional", "value": 90},
+				{"text": "Durable", "value": 85},
+				{"text": "Simple", "value": 80},
+				{"text": "Efficient", "value": 75},
+				{"text": "Practical", "value": 70},
+				{"text": "Essential", "value": 65},
+				{"text": "Clean", "value": 60},
+				{"text": "Value", "value": 55},
+				{"text": "Timeless", "value": 50},
+				{"text": "Uncluttered", "value": 45},
+				{"text": "Streamlined", "value": 40},
+				{"text": "Purposeful", "value": 35}
+			]
 		},
 		"acquisitionTrend": [
 			{ "date": "2025-06-01", "count": 92, "cac": 78 },
@@ -59,7 +87,21 @@
 			"firstPurchase": ["Designer handbags", "Premium accessories", "Limited edition items"],
 			"messaging": "Emphasize exclusivity, premium quality, and status. Highlight limited availability and luxury positioning.",
 			"influencers": ["Luxury lifestyle influencers", "Fashion editors", "Celebrities", "High-end fashion bloggers"],
-			"emailTone": "Exclusive, premium, aspirational"
+			"emailTone": "Exclusive, premium, aspirational",
+			"wordCloud": [
+				{"text": "Exclusive", "value": 95},
+				{"text": "Premium", "value": 90},
+				{"text": "Luxury", "value": 85},
+				{"text": "Status", "value": 80},
+				{"text": "Elite", "value": 75},
+				{"text": "Prestige", "value": 70},
+				{"text": "Sophisticated", "value": 65},
+				{"text": "Refined", "value": 60},
+				{"text": "Distinguished", "value": 55},
+				{"text": "Aspirational", "value": 50},
+				{"text": "Rare", "value": 45},
+				{"text": "Opulent", "value": 40}
+			]
 		},
 		"acquisitionTrend": [
 			{ "date": "2025-06-01", "count": 68, "cac": 145 },
@@ -82,7 +124,21 @@
 			"firstPurchase": ["Gift sets", "Personalized items", "Gift cards", "Holiday collections"],
 			"messaging": "Focus on gifting occasions, thoughtful presents, and gift-ready options. Highlight personalization and gift wrapping.",
 			"influencers": ["Gift guide creators", "Lifestyle bloggers", "Holiday content creators"],
-			"emailTone": "Celebratory, thoughtful, occasion-focused"
+			"emailTone": "Celebratory, thoughtful, occasion-focused",
+			"wordCloud": [
+				{"text": "Thoughtful", "value": 88},
+				{"text": "Celebration", "value": 82},
+				{"text": "Personal", "value": 78},
+				{"text": "Joy", "value": 75},
+				{"text": "Gift", "value": 72},
+				{"text": "Special", "value": 68},
+				{"text": "Memorable", "value": 65},
+				{"text": "Caring", "value": 60},
+				{"text": "Meaningful", "value": 55},
+				{"text": "Cherished", "value": 50},
+				{"text": "Heartfelt", "value": 45},
+				{"text": "Appreciation", "value": 40}
+			]
 		},
 		"acquisitionTrend": [
 			{ "date": "2025-06-01", "count": 85, "cac": 65 },

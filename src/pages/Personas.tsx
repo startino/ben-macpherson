@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { WordCloud } from '@/components/ui/word-cloud'
 
 interface Persona {
 	id: string
@@ -26,6 +27,7 @@ interface PersonaDetails extends Persona {
 		messaging: string
 		influencers: string[]
 		emailTone: string
+		wordCloud?: Array<{ text: string; value: number }>
 	}
 	acquisitionTrend?: Array<{ date: string; count: number; cac: number }>
 }
@@ -159,7 +161,18 @@ export default function Personas() {
 													<div className="grid gap-4 md:grid-cols-2">
 														<div>
 															<h4 className="mb-2 text-sm font-semibold">Qualitative Insights</h4>
-															<div className="space-y-2 text-sm">
+															<div className="space-y-4 text-sm">
+																{p.qualitative.wordCloud && p.qualitative.wordCloud.length > 0 && (
+																	<Card>
+																		<CardHeader className="pb-3">
+																			<CardTitle className="text-sm">Emotional Triggers</CardTitle>
+																			<CardDescription className="text-xs">Words that resonate most with this persona</CardDescription>
+																		</CardHeader>
+																		<CardContent className="pt-0">
+																			<WordCloud words={p.qualitative.wordCloud} />
+																		</CardContent>
+																	</Card>
+																)}
 																<div>
 																	<span className="font-medium text-muted-foreground">Likes: </span>
 																	<div className="mt-1 flex flex-wrap gap-1">
