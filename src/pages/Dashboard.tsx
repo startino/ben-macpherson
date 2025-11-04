@@ -1,11 +1,10 @@
 import { useLocation } from 'react-router-dom'
-import mixOverTime from '@/data/mock/mixOverTime.json'
 import revenueHealth from '@/data/mock/revenueHealth.json'
-import profitabilityBridge from '@/data/mock/profitabilityBridge.json'
-import { ResponsiveContainer, LineChart, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, Bar, ComposedChart, Cell } from 'recharts'
+import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, Bar, ComposedChart } from 'recharts'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { ArrowUpRight, ArrowDownRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { FilterBar } from '@/components/layout/FilterBar'
 import CustomerHealth from './CustomerHealth'
 import MerchandiseHealth from './MerchandiseHealth'
 import SiteHealth from './SiteHealth'
@@ -54,18 +53,12 @@ const reports = [
 
 function RevenueHealthReport() {
 	const { kpis, salesTrend, contributionTrend, ordersTrend, acquisitionTrend } = revenueHealth as any
-	const { components } = profitabilityBridge as any
-
-	// Calculate cumulative values for waterfall chart
-	const waterfallData = components.reduce((acc: any[], comp: any, idx: number) => {
-		const prevValue = idx === 0 ? 0 : acc[idx - 1].end
-		const endValue = prevValue + comp.value
-		return [...acc, { ...comp, start: prevValue, end: endValue }]
-	}, [])
 
 	return (
 		<>
-			{/* KPI Cards */}
+			<FilterBar />
+			
+			{/* KPI Cards - 7 cards matching Looker Studio layout */}
 			<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 				<KPICard label="Sales" value={kpis.sales.value} change={kpis.sales.change} />
 				<KPICard label="Contribution" value={kpis.contribution.value} change={kpis.contribution.change} />
@@ -93,8 +86,8 @@ function RevenueHealthReport() {
 								<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar dataKey="totalSales" name="Total Sales" fill="hsl(var(--primary))" />
-								<Bar dataKey="salesComparison" name="Sales Comparison" fill="hsl(var(--muted))" />
+								<Bar dataKey="totalSales" name="Total Sales" fill="#404040" />
+								<Bar dataKey="salesComparison" name="Sales Comparison" fill="#a0a0a0" />
 							</BarChart>
 						</ResponsiveContainer>
 					</div>
@@ -117,8 +110,8 @@ function RevenueHealthReport() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="contribution" name="Contribution" fill="hsl(var(--muted))" />
-								<Line yAxisId="right" type="monotone" dataKey="contributionPercent" name="Contribution %" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))' }} />
+								<Bar yAxisId="left" dataKey="contribution" name="TY Contribution" fill="#404040" />
+								<Line yAxisId="right" type="monotone" dataKey="contributionPercent" name="Contribution %" stroke="#404040" strokeWidth={2} dot={{ fill: '#404040', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
@@ -141,10 +134,10 @@ function RevenueHealthReport() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="totalOrders" name="Total Orders" fill="hsl(var(--muted))" />
-								<Bar yAxisId="left" dataKey="newOrders" name="New Orders" fill="hsl(var(--primary))" />
-								<Bar yAxisId="left" dataKey="repeatOrders" name="Repeat Orders" fill="hsl(var(--accent))" />
-								<Line yAxisId="right" type="monotone" dataKey="repeatPercent" name="% Repeat Orders" stroke="#22d3ee" strokeWidth={2} dot={{ fill: '#22d3ee' }} />
+								<Bar yAxisId="left" dataKey="totalOrders" name="Total Orders" fill="#404040" />
+								<Bar yAxisId="left" dataKey="newOrders" name="New Orders" fill="#a0a0a0" />
+								<Bar yAxisId="left" dataKey="repeatOrders" name="Repeat Orders" fill="#d0d0d0" />
+								<Line yAxisId="right" type="monotone" dataKey="repeatPercent" name="% Repeat Orders" stroke="#1e40af" strokeWidth={2} dot={{ fill: '#1e40af', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
@@ -154,7 +147,7 @@ function RevenueHealthReport() {
 			{/* Customer Acquisition Trend */}
 			<Card>
 				<CardHeader>
-					<CardTitle>Customers Trended over Time</CardTitle>
+					<CardTitle>CAC and New Customers Trended over Time</CardTitle>
 					<CardDescription>CAC and New Customers acquisition trends</CardDescription>
 				</CardHeader>
 				<CardContent>
@@ -167,87 +160,22 @@ function RevenueHealthReport() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="cac" name="CAC" fill="hsl(var(--muted))" />
-								<Line yAxisId="right" type="monotone" dataKey="newCustomers" name="New Customers" stroke="#a3e635" strokeWidth={2} dot={{ fill: '#a3e635' }} />
+								<Bar yAxisId="right" dataKey="newCustomers" name="New Customers" fill="#404040" />
+								<Line yAxisId="left" type="monotone" dataKey="cac" name="CAC" stroke="#404040" strokeWidth={2} dot={{ fill: '#404040', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
 				</CardContent>
 			</Card>
 
-			{/* Profitability Bridge Chart */}
-			<Card>
-				<CardHeader>
-					<CardTitle>Profitability Bridge</CardTitle>
-					<CardDescription>Revenue breakdown showing path to profit (Ben specifically mentioned this)</CardDescription>
-				</CardHeader>
-				<CardContent>
-					<div className="h-72 w-full">
-						<ResponsiveContainer>
-							<BarChart data={waterfallData} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
-								<CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted))" />
-								<XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }} />
-								<YAxis stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<Tooltip
-									contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
-									formatter={(value: number) => `$${value.toLocaleString()}`}
-								/>
-								<Legend />
-								<Bar dataKey="value" name="Amount">
-									{waterfallData.map((entry: any, index: number) => (
-										<Cell key={`cell-${index}`} fill={entry.color} />
-									))}
-								</Bar>
-							</BarChart>
-						</ResponsiveContainer>
-					</div>
-					<div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-						<div>
-							<div className="text-muted-foreground">Revenue</div>
-							<div className="text-lg font-semibold text-emerald-500">${components[0].value.toLocaleString()}</div>
-						</div>
-						<div>
-							<div className="text-muted-foreground">Total Costs</div>
-							<div className="text-lg font-semibold text-red-500">
-								${(components[1].value + components[2].value + components[3].value).toLocaleString()}
-							</div>
-						</div>
-						<div>
-							<div className="text-muted-foreground">Contribution</div>
-							<div className="text-lg font-semibold text-cyan-500">${components[4].value.toLocaleString()}</div>
-						</div>
-						<div>
-							<div className="text-muted-foreground">Profit</div>
-							<div className="text-lg font-semibold text-emerald-500">${components[6].value.toLocaleString()}</div>
-						</div>
-					</div>
-				</CardContent>
-			</Card>
-
-			{/* Persona Share Chart */}
-			<Card>
-				<CardHeader>
-					<CardTitle>Persona share over time</CardTitle>
-					<CardDescription>Tracking persona mix trends</CardDescription>
-				</CardHeader>
-				<CardContent>
-					<div className="h-72 w-full">
-						<ResponsiveContainer>
-							<LineChart data={mixOverTime as any[]} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
-								<CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted))" />
-								<XAxis dataKey="date" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<YAxis unit="%" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
-								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
-								<Legend />
-								<Line type="monotone" dataKey="p1" name="Aspirational" stroke="#a3e635" strokeWidth={2} dot={false} />
-								<Line type="monotone" dataKey="p2" name="Minimalist" stroke="#22d3ee" strokeWidth={2} dot={false} />
-								<Line type="monotone" dataKey="p3" name="Status" stroke="#f472b6" strokeWidth={2} dot={false} />
-								<Line type="monotone" dataKey="p4" name="Gift" stroke="#f59e0b" strokeWidth={2} dot={false} />
-							</LineChart>
-						</ResponsiveContainer>
-					</div>
-				</CardContent>
-			</Card>
+			{/* Footer */}
+			<div className="mt-6 pt-4 border-t border-muted/30 flex items-center justify-between text-xs text-muted-foreground">
+				<div>
+					<span className="font-semibold">REVENUE HEALTH - OVERVIEW</span>
+					<span className="ml-2">Data last updated: 10/29/2025 1:27 PM | Data Source: Google Analytics</span>
+				</div>
+				<div>Ben Macpherson</div>
+			</div>
 		</>
 	)
 }
@@ -261,6 +189,9 @@ export default function Dashboard() {
 		if (location.pathname.includes('/merchandise')) return 'merchandise'
 		if (location.pathname.includes('/site')) return 'site'
 		if (location.pathname.includes('/competitors')) return 'competitors'
+		if (location.pathname.includes('/profitability')) return 'profitability'
+		if (location.pathname.includes('/profit-impacts')) return 'profit-impacts'
+		if (location.pathname.includes('/ltv-waterfall')) return 'ltv-waterfall'
 		return 'revenue'
 	}
 

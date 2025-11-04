@@ -1,6 +1,12 @@
 {
 	"ltv": {
-		"average": 365,
+		"average": 278,
+		"netSalesLtv": 278,
+		"customers": 44500,
+		"repeatRate": 14.2,
+		"frequency": 1.19,
+		"ltvCac": 1.66,
+		"contributionLtv": 28,
 		"trend": [
 			{ "date": "2025-06-01", "ltv": 340 },
 			{ "date": "2025-07-01", "ltv": 352 },
@@ -12,6 +18,24 @@
 			{ "persona": "Status Seeker", "ltv": 560 },
 			{ "persona": "Practical Minimalist", "ltv": 310 },
 			{ "persona": "Gift Buyer", "ltv": 190 }
+		],
+		"oneTimeVsRepeat": {
+			"oneTime": 200,
+			"repeat": 525
+		},
+		"byCohortGrouping": [
+			{ "cohort": "FY24-M01", "netSalesLtv": 210, "contributionLtv": 25, "repeatRate": 12.9 },
+			{ "cohort": "FY24-M02", "netSalesLtv": 215, "contributionLtv": 26, "repeatRate": 13.2 },
+			{ "cohort": "FY24-M03", "netSalesLtv": 220, "contributionLtv": 27, "repeatRate": 13.8 },
+			{ "cohort": "FY24-M04", "netSalesLtv": 235, "contributionLtv": 28, "repeatRate": 14.5 },
+			{ "cohort": "FY24-M05", "netSalesLtv": 245, "contributionLtv": 29, "repeatRate": 15.2 },
+			{ "cohort": "FY24-M06", "netSalesLtv": 260, "contributionLtv": 30, "repeatRate": 16.1 },
+			{ "cohort": "FY24-M07", "netSalesLtv": 270, "contributionLtv": 31, "repeatRate": 15.8 },
+			{ "cohort": "FY24-M08", "netSalesLtv": 265, "contributionLtv": 30, "repeatRate": 15.0 },
+			{ "cohort": "FY24-M09", "netSalesLtv": 255, "contributionLtv": 29, "repeatRate": 14.5 },
+			{ "cohort": "FY24-M10", "netSalesLtv": 250, "contributionLtv": 28, "repeatRate": 14.2 },
+			{ "cohort": "FY24-M11", "netSalesLtv": 245, "contributionLtv": 27, "repeatRate": 14.0 },
+			{ "cohort": "FY24-M12", "netSalesLtv": 240, "contributionLtv": 26, "repeatRate": 13.8 }
 		]
 	},
 	"churnRisk": {
@@ -36,10 +60,18 @@
 		{ "product": "Gift Sets", "trend": "down", "change": -5.4, "persona": "Gift Buyer" }
 	],
 	"cohorts": [
-		{ "cohort": "Oct 2025", "customers": 1478, "ltv": 365, "retention": 0.68 },
-		{ "cohort": "Sep 2025", "customers": 1320, "ltv": 358, "retention": 0.72 },
-		{ "cohort": "Aug 2025", "customers": 1180, "ltv": 352, "retention": 0.75 },
-		{ "cohort": "Jul 2025", "customers": 1050, "ltv": 340, "retention": 0.78 }
+		{ "cohortGroup": "FY24-M01", "customers": 1426, "customersPercentVar": 22, "netSalesLtv": 210, "netSalesPercentVar": 12, "repeatRate": 12.9, "repeatRatePercentVar": 1, "frequency": 1.17, "frequencyPercentVar": 2, "ltvCac": 1.40, "ltvCacPercentVar": -15, "cac": 201, "cacPercentVar": 20, "averageDaysTo2ndPurchase": 230 },
+		{ "cohortGroup": "FY24-M02", "customers": 1580, "customersPercentVar": 18, "netSalesLtv": 215, "netSalesPercentVar": 10, "repeatRate": 13.2, "repeatRatePercentVar": 2, "frequency": 1.18, "frequencyPercentVar": 3, "ltvCac": 1.45, "ltvCacPercentVar": -12, "cac": 195, "cacPercentVar": 18, "averageDaysTo2ndPurchase": 225 },
+		{ "cohortGroup": "FY24-M03", "customers": 1720, "customersPercentVar": 15, "netSalesLtv": 220, "netSalesPercentVar": 8, "repeatRate": 13.8, "repeatRatePercentVar": 3, "frequency": 1.19, "frequencyPercentVar": 4, "ltvCac": 1.50, "ltvCacPercentVar": -10, "cac": 190, "cacPercentVar": 15, "averageDaysTo2ndPurchase": 220 },
+		{ "cohortGroup": "FY24-M04", "customers": 1850, "customersPercentVar": 12, "netSalesLtv": 235, "netSalesPercentVar": 6, "repeatRate": 14.5, "repeatRatePercentVar": 4, "frequency": 1.20, "frequencyPercentVar": 5, "ltvCac": 1.55, "ltvCacPercentVar": -8, "cac": 185, "cacPercentVar": 12, "averageDaysTo2ndPurchase": 215 },
+		{ "cohortGroup": "FY24-M05", "customers": 1980, "customersPercentVar": 10, "netSalesLtv": 245, "netSalesPercentVar": 4, "repeatRate": 15.2, "repeatRatePercentVar": 5, "frequency": 1.21, "frequencyPercentVar": 6, "ltvCac": 1.60, "ltvCacPercentVar": -5, "cac": 180, "cacPercentVar": 10, "averageDaysTo2ndPurchase": 210 },
+		{ "cohortGroup": "FY24-M06", "customers": 2100, "customersPercentVar": 8, "netSalesLtv": 260, "netSalesPercentVar": 2, "repeatRate": 16.1, "repeatRatePercentVar": 6, "frequency": 1.22, "frequencyPercentVar": 7, "ltvCac": 1.65, "ltvCacPercentVar": -3, "cac": 175, "cacPercentVar": 8, "averageDaysTo2ndPurchase": 205 },
+		{ "cohortGroup": "FY24-M07", "customers": 2200, "customersPercentVar": 6, "netSalesLtv": 270, "netSalesPercentVar": 0, "repeatRate": 15.8, "repeatRatePercentVar": 5, "frequency": 1.21, "frequencyPercentVar": 6, "ltvCac": 1.68, "ltvCacPercentVar": -2, "cac": 172, "cacPercentVar": 6, "averageDaysTo2ndPurchase": 200 },
+		{ "cohortGroup": "FY24-M08", "customers": 2150, "customersPercentVar": 5, "netSalesLtv": 265, "netSalesPercentVar": -2, "repeatRate": 15.0, "repeatRatePercentVar": 4, "frequency": 1.20, "frequencyPercentVar": 5, "ltvCac": 1.62, "ltvCacPercentVar": -4, "cac": 178, "cacPercentVar": 7, "averageDaysTo2ndPurchase": 205 },
+		{ "cohortGroup": "FY24-M09", "customers": 2080, "customersPercentVar": 4, "netSalesLtv": 255, "netSalesPercentVar": -4, "repeatRate": 14.5, "repeatRatePercentVar": 3, "frequency": 1.19, "frequencyPercentVar": 4, "ltvCac": 1.58, "ltvCacPercentVar": -6, "cac": 182, "cacPercentVar": 9, "averageDaysTo2ndPurchase": 210 },
+		{ "cohortGroup": "FY24-M10", "customers": 2020, "customersPercentVar": 3, "netSalesLtv": 250, "netSalesPercentVar": -6, "repeatRate": 14.2, "repeatRatePercentVar": 2, "frequency": 1.18, "frequencyPercentVar": 3, "ltvCac": 1.55, "ltvCacPercentVar": -8, "cac": 185, "cacPercentVar": 11, "averageDaysTo2ndPurchase": 215 },
+		{ "cohortGroup": "FY24-M11", "customers": 1950, "customersPercentVar": 2, "netSalesLtv": 245, "netSalesPercentVar": -8, "repeatRate": 14.0, "repeatRatePercentVar": 1, "frequency": 1.17, "frequencyPercentVar": 2, "ltvCac": 1.52, "ltvCacPercentVar": -10, "cac": 188, "cacPercentVar": 13, "averageDaysTo2ndPurchase": 220 },
+		{ "cohortGroup": "FY24-M12", "customers": 1900, "customersPercentVar": 1, "netSalesLtv": 240, "netSalesPercentVar": -10, "repeatRate": 13.8, "repeatRatePercentVar": 0, "frequency": 1.16, "frequencyPercentVar": 1, "ltvCac": 1.48, "ltvCacPercentVar": -12, "cac": 192, "cacPercentVar": 15, "averageDaysTo2ndPurchase": 225 }
 	]
 }
 

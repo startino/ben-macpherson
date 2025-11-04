@@ -1,0 +1,47 @@
+{
+	"kpis": {
+		"netSales": { "value": 479100, "change": 74.7 },
+		"contribution": { "value": 205300, "change": 90.9 },
+		"firstOrderProfit": { "value": 32.82, "change": -51.0 },
+		"spend": { "value": 151000, "change": 56.2 },
+		"poas": { "value": 1.36, "change": 0 },
+		"spendToNet": { "value": 31.52, "change": 0 }
+	},
+	"contributionTrend": [
+		{ "date": "2025-10-19", "contribution": 44200, "contributionPercent": 52, "contributionComparison": 28000 },
+		{ "date": "2025-10-20", "contribution": 31280, "contributionPercent": 34, "contributionComparison": 19000 },
+		{ "date": "2025-10-21", "contribution": 44100, "contributionPercent": 42, "contributionComparison": 25000 },
+		{ "date": "2025-10-22", "contribution": 43120, "contributionPercent": 44, "contributionComparison": 24000 },
+		{ "date": "2025-10-23", "contribution": 50400, "contributionPercent": 45, "contributionComparison": 28000 },
+		{ "date": "2025-10-24", "contribution": 48600, "contributionPercent": 45, "contributionComparison": 27000 },
+		{ "date": "2025-10-25", "contribution": 26840, "contributionPercent": 44, "contributionComparison": 15000 }
+	],
+	"grossMarginTrend": [
+		{ "date": "2025-10-19", "netSales": 85000, "grossMarginPercent": 52 },
+		{ "date": "2025-10-20", "netSales": 92000, "grossMarginPercent": 34 },
+		{ "date": "2025-10-21", "netSales": 105000, "grossMarginPercent": 42 },
+		{ "date": "2025-10-22", "netSales": 98000, "grossMarginPercent": 44 },
+		{ "date": "2025-10-23", "netSales": 112000, "grossMarginPercent": 45 },
+		{ "date": "2025-10-24", "netSales": 108000, "grossMarginPercent": 45 },
+		{ "date": "2025-10-25", "netSales": 61000, "grossMarginPercent": 44 }
+	],
+	"spendToNetTrend": [
+		{ "date": "2025-10-19", "poas": 1.4, "spendToNetPercent": 28 },
+		{ "date": "2025-10-20", "poas": 1.3, "spendToNetPercent": 30 },
+		{ "date": "2025-10-21", "poas": 1.45, "spendToNetPercent": 29 },
+		{ "date": "2025-10-22", "poas": 1.38, "spendToNetPercent": 31 },
+		{ "date": "2025-10-23", "poas": 1.42, "spendToNetPercent": 28 },
+		{ "date": "2025-10-24", "poas": 1.36, "spendToNetPercent": 32 },
+		{ "date": "2025-10-25", "poas": 1.35, "spendToNetPercent": 33 }
+	],
+	"firstOrderProfitability": [
+		{ "date": "2025-10-19", "cac": 111, "firstOrderProfit": 45, "lyFirstOrderProfit": 68 },
+		{ "date": "2025-10-20", "cac": 112, "firstOrderProfit": 38, "lyFirstOrderProfit": 72 },
+		{ "date": "2025-10-21", "cac": 114, "firstOrderProfit": 42, "lyFirstOrderProfit": 65 },
+		{ "date": "2025-10-22", "cac": 102, "firstOrderProfit": 40, "lyFirstOrderProfit": 70 },
+		{ "date": "2025-10-23", "cac": 101, "firstOrderProfit": 48, "lyFirstOrderProfit": 75 },
+		{ "date": "2025-10-24", "cac": 97, "firstOrderProfit": 46, "lyFirstOrderProfit": 73 },
+		{ "date": "2025-10-25", "cac": 95, "firstOrderProfit": 32, "lyFirstOrderProfit": 67 }
+	]
+}
+

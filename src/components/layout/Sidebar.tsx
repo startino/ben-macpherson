@@ -14,7 +14,10 @@ const nav = [
 
 const reportsGroup = [
 	{ to: '/dashboard', label: 'Revenue Health' },
+	{ to: '/dashboard/profitability', label: 'Profitability' },
+	{ to: '/dashboard/profit-impacts', label: 'Profit Impacts' },
 	{ to: '/dashboard/customer', label: 'Customer Health' },
+	{ to: '/dashboard/ltv-waterfall', label: 'LTV Waterfall' },
 	{ to: '/dashboard/merchandise', label: 'Merchandise Health' },
 	{ to: '/dashboard/site', label: 'Site Health' },
 	{ to: '/dashboard/competitors', label: 'Competitors' },

@@ -1,0 +1,19 @@
+{
+	"kpis": {
+		"profit": { "value": 205300, "change": 90.9 },
+		"totalSessions": { "value": 229600, "change": 192.4 },
+		"paidSessions": { "value": 118700, "change": 223.9 },
+		"unpaidSessions": { "value": 110900, "change": 164.9 },
+		"cvr": { "value": 1.1, "change": -13.8 },
+		"aovGross": { "value": 284, "change": -26.5 },
+		"newAovGross": { "value": 271, "change": -28.5 },
+		"repeatAovGross": { "value": 304, "change": -25.3 },
+		"spend": { "value": 151000, "change": 56.2 },
+		"newCustomers": { "value": 1000, "change": 109.3 },
+		"cac": { "value": 102, "change": -25.4 },
+		"repeatOrders": { "value": 985, "change": 253.5 },
+		"discountRate": { "value": 7.0, "change": -75.1 },
+		"returnRate": { "value": 24.5, "change": 4.9 }
+	}
+}
+
