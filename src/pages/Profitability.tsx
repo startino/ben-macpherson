@@ -73,7 +73,7 @@ export default function Profitability() {
 								<Legend />
 								<Bar yAxisId="left" dataKey="contribution" name="TY Contribution" fill="hsl(var(--primary))" />
 								<Line yAxisId="right" type="monotone" dataKey="contributionPercent" name="Contribution %" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 4 }} />
-								<Line yAxisId="right" type="monotone" dataKey="contributionComparison" name="Contribution Comparison" stroke="hsl(var(--muted))" strokeWidth={2} strokeDasharray="5 5" dot={{ fill: 'hsl(var(--muted))', r: 3 }} />
+								<Line yAxisId="right" type="monotone" dataKey="contributionComparison" name="Contribution Comparison" stroke="hsl(var(--muted-foreground) / 0.5)" strokeWidth={2} strokeDasharray="5 5" dot={{ fill: 'hsl(var(--muted-foreground) / 0.5)', r: 3 }} />
 							</ComposedChart>
 						</ResponsiveContainer>
 					</div>
@@ -120,7 +120,7 @@ export default function Profitability() {
 								<YAxis yAxisId="right" orientation="right" stroke="hsl(var(--muted-foreground))" tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} />
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
-								<Bar yAxisId="left" dataKey="poas" name="POAS" fill="hsl(var(--muted))" />
+								<Bar yAxisId="left" dataKey="poas" name="POAS" fill="hsl(var(--muted-foreground) / 0.3)" />
 								<Line yAxisId="right" type="monotone" dataKey="spendToNetPercent" name="Spend to Net %" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>

@@ -87,7 +87,7 @@ function RevenueHealthReport() {
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
 								<Bar dataKey="totalSales" name="Total Sales" fill="hsl(var(--primary))" />
-								<Bar dataKey="salesComparison" name="Sales Comparison" fill="hsl(var(--muted))" />
+								<Bar dataKey="salesComparison" name="Sales Comparison" fill="hsl(var(--muted-foreground) / 0.4)" />
 							</BarChart>
 						</ResponsiveContainer>
 					</div>
@@ -136,7 +136,7 @@ function RevenueHealthReport() {
 								<Legend />
 								<Bar yAxisId="left" dataKey="totalOrders" name="Total Orders" fill="hsl(var(--primary))" />
 								<Bar yAxisId="left" dataKey="newOrders" name="New Orders" fill="hsl(var(--accent))" />
-								<Bar yAxisId="left" dataKey="repeatOrders" name="Repeat Orders" fill="hsl(var(--muted))" />
+								<Bar yAxisId="left" dataKey="repeatOrders" name="Repeat Orders" fill="hsl(var(--muted-foreground) / 0.3)" />
 								<Line yAxisId="right" type="monotone" dataKey="repeatPercent" name="% Repeat Orders" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))', r: 4 }} />
 							</ComposedChart>
 						</ResponsiveContainer>

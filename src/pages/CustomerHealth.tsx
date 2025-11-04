@@ -92,7 +92,7 @@ export default function CustomerHealth() {
 								<Tooltip contentStyle={{ background: 'hsl(var(--card))', border: 'none', color: 'hsl(var(--foreground))', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
 								<Legend />
 								<Bar yAxisId="left" dataKey="netSalesLtv" name="Net Sales LTV" fill="hsl(var(--primary))" />
-								<Bar yAxisId="left" dataKey="contributionLtv" name="Contribution LTV" fill="hsl(var(--muted))" />
+								<Bar yAxisId="left" dataKey="contributionLtv" name="Contribution LTV" fill="hsl(var(--muted-foreground) / 0.3)" />
 								<Line yAxisId="right" type="monotone" dataKey="repeatRate" name="Repeat Rate" stroke="hsl(var(--foreground))" strokeWidth={2} dot={{ fill: 'hsl(var(--foreground))', r: 3 }} />
 							</ComposedChart>
 						</ResponsiveContainer>

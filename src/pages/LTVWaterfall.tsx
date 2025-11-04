@@ -106,7 +106,7 @@ export default function LTVWaterfall() {
 								<Legend />
 								<ReferenceLine x={selectedMonth} stroke="hsl(var(--muted-foreground))" strokeDasharray="3 3" />
 								{Object.keys(cohorts).map((year, idx) => {
-									const colors = ['hsl(var(--muted))', 'hsl(var(--primary))', 'hsl(var(--accent))']
+									const colors = ['hsl(var(--muted-foreground) / 0.5)', 'hsl(var(--primary))', 'hsl(var(--accent))']
 									return (
 										<Line
 											key={year}
