@@ -35,6 +35,7 @@ interface PersonaDetails extends Persona {
 
 export default function Personas() {
 	const [targetMix, setTargetMix] = useState<Record<string, number>>({})
+	const [savedTargetMix, setSavedTargetMix] = useState<Record<string, number>>({})
 	const [expandedPersonas, setExpandedPersonas] = useState<Record<string, boolean>>({})
 
 	const personas = personasData as Persona[]
@@ -67,27 +68,37 @@ export default function Personas() {
 		try {
 			const saved = localStorage.getItem('targetMix')
 			if (saved) {
-				setTargetMix(JSON.parse(saved))
+				const parsed = JSON.parse(saved)
+				setTargetMix(parsed)
+				setSavedTargetMix(parsed)
 			} else {
 				// seed with suggestions on first load
 				setTargetMix(suggestedMix)
+				setSavedTargetMix(suggestedMix)
 				localStorage.setItem('targetMix', JSON.stringify(suggestedMix))
 			}
 		} catch {
 			setTargetMix(suggestedMix)
+			setSavedTargetMix(suggestedMix)
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	function applySuggestions() {
+	function resetToSuggested() {
 		setTargetMix(suggestedMix)
+		setSavedTargetMix(suggestedMix)
 		localStorage.setItem('targetMix', JSON.stringify(suggestedMix))
 	}
 
 	function updateMix(id: string, value: number) {
 		const next = { ...targetMix, [id]: value }
 		setTargetMix(next)
-		localStorage.setItem('targetMix', JSON.stringify(next))
+		// Don't save to localStorage automatically
+	}
+
+	function saveMix() {
+		setSavedTargetMix(targetMix)
+		localStorage.setItem('targetMix', JSON.stringify(targetMix))
 	}
 
 	function toggleExpand(id: string) {
@@ -95,6 +106,11 @@ export default function Personas() {
 	}
 
 	const total = Object.values(targetMix).reduce((a, b) => a + (b || 0), 0)
+	
+	// Check if there are unsaved changes
+	const hasUnsavedChanges = useMemo(() => {
+		return JSON.stringify(targetMix) !== JSON.stringify(savedTargetMix)
+	}, [targetMix, savedTargetMix])
 
 	return (
 		<section className="grid gap-6">
@@ -104,8 +120,10 @@ export default function Personas() {
 					<p className="mt-1 text-sm text-muted-foreground">Analyze and optimize persona mix for maximum profitability</p>
 				</div>
 				<div className="flex gap-2">
-					<Button variant="outline" onClick={applySuggestions}>Apply suggestions</Button>
-					<Button variant="outline" onClick={() => { localStorage.removeItem('targetMix'); setTargetMix(suggestedMix) }}>Reset</Button>
+					{hasUnsavedChanges && (
+						<Button variant="default" onClick={saveMix}>Save Changes</Button>
+					)}
+					<Button variant="outline" onClick={resetToSuggested}>Reset to suggested</Button>
 				</div>
 			</div>
 
