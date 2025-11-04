@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { Link, useLocation } from 'react-router-dom'
-import { LayoutGrid, Settings, Users2, PenSquare, BarChart3, Download } from 'lucide-react'
+import { LayoutGrid, Settings, Users2, PenSquare, BarChart3, Download, ChevronRight } from 'lucide-react'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 const nav = [
@@ -8,12 +9,24 @@ const nav = [
 	{ to: '/settings', label: 'Settings', icon: Settings },
 	{ to: '/personas', label: 'Personas', icon: Users2 },
 	{ to: '/creative', label: 'Creative', icon: PenSquare },
-	{ to: '/dashboard', label: 'Reports', icon: BarChart3 },
 	{ to: '/exports', label: 'Exports', icon: Download },
+]
+
+const reportsGroup = [
+	{ to: '/dashboard', label: 'Revenue Health' },
+	{ to: '/dashboard/customer', label: 'Customer Health' },
+	{ to: '/dashboard/merchandise', label: 'Merchandise Health' },
+	{ to: '/dashboard/site', label: 'Site Health' },
+	{ to: '/dashboard/competitors', label: 'Competitors' },
 ]
 
 export function Sidebar() {
 	const { pathname } = useLocation()
+	const [reportsOpen, setReportsOpen] = useState(() => {
+		// Open if current path is a report
+		return pathname.startsWith('/dashboard')
+	})
+
 	return (
 		<aside className="fixed inset-y-0 left-0 z-40 hidden w-60 bg-surface/80 backdrop-blur-md supports-[backdrop-filter]:bg-surface/80 shadow-sm md:flex md:flex-col">
 			<div className="flex-1 overflow-y-auto">
@@ -39,6 +52,47 @@ export function Sidebar() {
 							</Link>
 						)
 					})}
+
+					{/* Reports Group */}
+					<div className="mt-2">
+						<button
+							onClick={() => setReportsOpen(!reportsOpen)}
+							className={cn(
+								'w-full flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200',
+								'text-muted-foreground hover:bg-accent/50 hover:text-foreground',
+								pathname.startsWith('/dashboard') && 'bg-accent/30 text-foreground'
+							)}
+						>
+							<BarChart3 className="h-4 w-4" />
+							<span className="flex-1 text-left">Reports</span>
+							<ChevronRight
+								className={cn(
+									'h-4 w-4 transition-transform duration-200',
+									reportsOpen && 'rotate-90'
+								)}
+							/>
+						</button>
+						{reportsOpen && (
+							<div className="ml-4 mt-1 space-y-1 border-l border-muted/30 pl-2">
+								{reportsGroup.map(({ to, label }) => {
+									const active = pathname === to || (pathname === '/dashboard' && to === '/dashboard')
+									return (
+										<Link
+											key={to}
+											to={to}
+											className={cn(
+												'flex items-center rounded-md px-3 py-2 text-sm transition-colors',
+												'text-muted-foreground hover:bg-accent/50 hover:text-foreground',
+												active && 'bg-accent text-foreground'
+											)}
+										>
+											{label}
+										</Link>
+									)
+								})}
+							</div>
+						)}
+					</div>
 				</nav>
 			</div>
 			<div className="bg-muted/30 p-3">

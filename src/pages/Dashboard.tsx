@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import mixOverTime from '@/data/mock/mixOverTime.json'
 import revenueHealth from '@/data/mock/revenueHealth.json'
 import profitabilityBridge from '@/data/mock/profitabilityBridge.json'
@@ -282,55 +282,20 @@ export default function Dashboard() {
 	}
 
 	return (
-		<div className="flex gap-6">
-			{/* Nested Sidebar */}
-			<aside className="hidden md:block w-56 flex-shrink-0">
-				<Card>
-					<CardHeader>
-						<CardTitle className="text-base">Reports</CardTitle>
-					</CardHeader>
-					<CardContent className="p-0">
-						<nav className="space-y-1 p-2">
-							{reports.map((report) => {
-								const isActive = activeReport === report.id
-								return (
-									<Link
-										key={report.id}
-										to={report.path}
-										className={cn(
-											'flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors',
-											isActive
-												? 'bg-accent text-foreground'
-												: 'text-muted-foreground hover:bg-accent/50 hover:text-foreground'
-										)}
-									>
-										{report.label}
-									</Link>
-								)
-							})}
-						</nav>
-					</CardContent>
-				</Card>
-			</aside>
-
-			{/* Report Content */}
-			<div className="flex-1 min-w-0">
-				<section className="grid gap-6">
-					<div>
-						<h2 className="text-2xl font-bold tracking-tight">
-							{reports.find(r => r.id === activeReport)?.label || 'Reports'}
-						</h2>
-						<p className="mt-1 text-sm text-muted-foreground">
-							{activeReport === 'revenue' && 'Track key performance indicators and revenue trends'}
-							{activeReport === 'customer' && 'LTV analysis, churn risk, and product trends per customer segment'}
-							{activeReport === 'merchandise' && 'Product performance, mix analysis, and profitability'}
-							{activeReport === 'site' && 'Conversion funnel, page performance, and site speed metrics'}
-							{activeReport === 'competitors' && 'Competitive analysis and market benchmarks'}
-						</p>
-					</div>
-					{renderReport()}
-				</section>
+		<section className="grid gap-6">
+			<div>
+				<h2 className="text-2xl font-bold tracking-tight">
+					{reports.find(r => r.id === activeReport)?.label || 'Reports'}
+				</h2>
+				<p className="mt-1 text-sm text-muted-foreground">
+					{activeReport === 'revenue' && 'Track key performance indicators and revenue trends'}
+					{activeReport === 'customer' && 'LTV analysis, churn risk, and product trends per customer segment'}
+					{activeReport === 'merchandise' && 'Product performance, mix analysis, and profitability'}
+					{activeReport === 'site' && 'Conversion funnel, page performance, and site speed metrics'}
+					{activeReport === 'competitors' && 'Competitive analysis and market benchmarks'}
+				</p>
 			</div>
-		</div>
+			{renderReport()}
+		</section>
 	)
 }
