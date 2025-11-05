@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { StepIndicator } from '@/components/onboarding/StepIndicator'
 import { DataConnectionsStep } from '@/components/onboarding/DataConnectionsStep'
 import { SurveyUploadStep } from '@/components/onboarding/SurveyUploadStep'
 import { AISurveyGenerationStep } from '@/components/onboarding/AISurveyGenerationStep'
 import { SurveyPreviewStep } from '@/components/onboarding/SurveyPreviewStep'
-import { AIAnalysisReportStep } from '@/components/onboarding/AIAnalysisReportStep'
 
 const STEPS = {
 	DATA_CONNECTIONS: 1,
 	SURVEY_UPLOAD: 2,
 	AI_SURVEY_GENERATION: 3,
 	SURVEY_PREVIEW: 4,
-	AI_ANALYSIS: 5,
 }
 
-const STEP_LABELS = ['Data', 'Upload', 'Generate', 'Preview', 'Analysis']
+const STEP_LABELS = ['Data', 'Upload', 'Generate', 'Preview']
 
 export default function Onboarding() {
+	const navigate = useNavigate()
 	const [currentStep, setCurrentStep] = useState(STEPS.DATA_CONNECTIONS)
 	const [connections, setConnections] = useState<Record<string, boolean>>({
 		Shopify: false,
@@ -57,12 +57,23 @@ export default function Onboarding() {
 		if (currentStep === STEPS.SURVEY_PREVIEW && uploadedFile) {
 			// If we came from upload, go back to upload step
 			setCurrentStep(STEPS.SURVEY_UPLOAD)
-		} else if (currentStep === STEPS.AI_ANALYSIS) {
-			// From analysis, go back to preview
-			setCurrentStep(STEPS.SURVEY_PREVIEW)
 		} else if (currentStep > 1) {
 			setCurrentStep((prev) => prev - 1)
 		}
+	}
+
+	function handleCompleteOnboarding() {
+		// Save onboarding completion and merge connections
+		localStorage.setItem('onboardingCompleted', 'true')
+		try {
+			const onboardingConnections = localStorage.getItem('onboardingConnections')
+			if (onboardingConnections) {
+				localStorage.setItem('connections', onboardingConnections)
+			}
+		} catch {
+			// Ignore
+		}
+		navigate('/dashboard')
 	}
 
 	function handleSkipUpload() {
@@ -104,9 +115,7 @@ export default function Onboarding() {
 			case STEPS.AI_SURVEY_GENERATION:
 				return <AISurveyGenerationStep onComplete={handleSurveyGenerationComplete} />
 			case STEPS.SURVEY_PREVIEW:
-				return <SurveyPreviewStep onNext={handleNext} onBack={handleBack} />
-			case STEPS.AI_ANALYSIS:
-				return <AIAnalysisReportStep onComplete={() => {}} />
+				return <SurveyPreviewStep onNext={handleCompleteOnboarding} onBack={handleBack} />
 			default:
 				return null
 		}
@@ -114,7 +123,7 @@ export default function Onboarding() {
 
 	// Determine total steps and adjust step indicator based on whether file was uploaded
 	const hasFileUploaded = uploadedFile !== null
-	const totalSteps = hasFileUploaded ? 4 : 5
+	const totalSteps = hasFileUploaded ? 3 : 4
 	
 	// Adjust step for indicator display
 	let displayStep = currentStep
@@ -124,7 +133,7 @@ export default function Onboarding() {
 	}
 	
 	const stepLabels = hasFileUploaded 
-		? ['Data', 'Upload', 'Preview', 'Analysis']
+		? ['Data', 'Upload', 'Preview']
 		: STEP_LABELS
 
 	return (
