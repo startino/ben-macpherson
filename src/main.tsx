@@ -5,6 +5,8 @@ import './index.css'
 import { ThemeProvider } from './contexts/ThemeContext'
 import App from './App'
 import Landing from '@/pages/Landing'
+import Onboarding from '@/pages/Onboarding'
+import DashboardHome from '@/pages/DashboardHome'
 import Settings from '@/pages/Settings'
 import Personas from '@/pages/Personas'
 import Creative from '@/pages/Creative'
@@ -22,11 +24,9 @@ const router = createBrowserRouter([
 		element: <App />,
 		children: [
 			{ index: true, element: <Landing /> },
-			{ path: 'settings', element: <Settings /> },
-			{ path: 'personas', element: <Personas /> },
-			{ path: 'creative', element: <Creative /> },
-			{ path: 'surveys', element: <Surveys /> },
-			{ path: 'dashboard', element: <Dashboard /> },
+			{ path: 'onboarding', element: <Onboarding /> },
+			{ path: 'dashboard', element: <DashboardHome /> },
+			{ path: 'dashboard/reports', element: <Dashboard /> },
 			{ path: 'dashboard/customer', element: <Dashboard /> },
 			{ path: 'dashboard/merchandise', element: <Dashboard /> },
 			{ path: 'dashboard/site', element: <Dashboard /> },
@@ -34,6 +34,10 @@ const router = createBrowserRouter([
 			{ path: 'dashboard/profitability', element: <Profitability /> },
 			{ path: 'dashboard/profit-impacts', element: <ProfitImpacts /> },
 			{ path: 'dashboard/ltv-waterfall', element: <LTVWaterfall /> },
+			{ path: 'settings', element: <Settings /> },
+			{ path: 'personas', element: <Personas /> },
+			{ path: 'creative', element: <Creative /> },
+			{ path: 'surveys', element: <Surveys /> },
 			{ path: 'exports', element: <Exports /> },
 			{ path: 'admin', element: <Admin /> },
 		],
