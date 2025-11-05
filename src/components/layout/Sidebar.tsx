@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { Link, useLocation } from 'react-router-dom'
-import { LayoutGrid, Settings, Users2, PenSquare, BarChart3, Download, ChevronRight, ClipboardList } from 'lucide-react'
+import { LayoutGrid, Settings, Users2, PenSquare, BarChart3, Download, ChevronRight, ClipboardList, MessageSquare } from 'lucide-react'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 const nav = [
 	{ to: '/dashboard', label: 'Dashboard', icon: LayoutGrid },
+	{ to: '/chat', label: 'Chat', icon: MessageSquare },
 	{ to: '/settings', label: 'Settings', icon: Settings },
 	{ to: '/personas', label: 'Personas', icon: Users2 },
 	{ to: '/creative', label: 'Creative', icon: PenSquare },

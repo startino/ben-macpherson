@@ -7,6 +7,7 @@ import App from './App'
 import Landing from '@/pages/Landing'
 import Onboarding from '@/pages/Onboarding'
 import DashboardHome from '@/pages/DashboardHome'
+import Chat from '@/pages/Chat'
 import Settings from '@/pages/Settings'
 import Personas from '@/pages/Personas'
 import Creative from '@/pages/Creative'
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
 			{ index: true, element: <Landing /> },
 			{ path: 'onboarding', element: <Onboarding /> },
 			{ path: 'dashboard', element: <DashboardHome /> },
+			{ path: 'chat', element: <Chat /> },
 			{ path: 'dashboard/reports', element: <Dashboard /> },
 			{ path: 'dashboard/customer', element: <Dashboard /> },
 			{ path: 'dashboard/merchandise', element: <Dashboard /> },
