@@ -87,30 +87,32 @@ export default function Settings() {
 												isConnected ? 'bg-accent/30' : 'bg-surface'
 											}`}
 										>
-											<div className="flex items-center gap-3 flex-1">
-												{isConnected ? (
-													<CheckCircle2 className="h-5 w-5 text-emerald-500" />
-												) : (
-													<Circle className="h-5 w-5 text-muted-foreground" />
-												)}
-												<div className="flex-1">
+											<div className="flex items-center gap-3 flex-1 min-w-0">
+												<div className="flex-shrink-0">
+													{isConnected ? (
+														<CheckCircle2 className="h-5 w-5 text-emerald-500" />
+													) : (
+														<Circle className="h-5 w-5 text-muted-foreground" />
+													)}
+												</div>
+												<div className="flex-1 min-w-0">
 													<div className="font-medium">{k}</div>
 													{isConnected && lastSync && (
 														<div className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
-															<Clock className="h-3 w-3" />
-															Last sync: {lastSync}
+															<Clock className="h-3 w-3 flex-shrink-0" />
+															<span>Last sync: {lastSync}</span>
 														</div>
 													)}
 												</div>
 											</div>
-											<div className="flex items-center gap-2">
+											<div className="flex items-center gap-2 flex-shrink-0 ml-4">
 												{isConnected && (
-													<Badge variant="outline" className="text-xs">
+													<Badge variant="outline" className="text-xs whitespace-nowrap">
 														<RefreshCw className="h-3 w-3 mr-1" />
 														Live
 													</Badge>
 												)}
-												<Badge variant={isConnected ? 'success' : 'outline'}>
+												<Badge variant={isConnected ? 'success' : 'outline'} className="whitespace-nowrap">
 													{isConnected ? 'Connected' : 'Connect'}
 												</Badge>
 											</div>
