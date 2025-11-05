@@ -8,6 +8,7 @@ import Landing from '@/pages/Landing'
 import Settings from '@/pages/Settings'
 import Personas from '@/pages/Personas'
 import Creative from '@/pages/Creative'
+import Surveys from '@/pages/Surveys'
 import Dashboard from '@/pages/Dashboard'
 import Profitability from '@/pages/Profitability'
 import ProfitImpacts from '@/pages/ProfitImpacts'
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
 			{ path: 'settings', element: <Settings /> },
 			{ path: 'personas', element: <Personas /> },
 			{ path: 'creative', element: <Creative /> },
+			{ path: 'surveys', element: <Surveys /> },
 			{ path: 'dashboard', element: <Dashboard /> },
 			{ path: 'dashboard/customer', element: <Dashboard /> },
 			{ path: 'dashboard/merchandise', element: <Dashboard /> },
