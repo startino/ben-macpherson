@@ -22,7 +22,7 @@ function KPICard({ label, value, change, format, href }: { label: string; value:
 	}
 
 	const content = (
-		<Card className="transition-shadow">
+		<Card>
 			<CardHeader className="pb-3">
 				<CardDescription className="text-xs">{label}</CardDescription>
 				<CardTitle className="text-2xl">{formatValueWithUnit(value)}</CardTitle>
