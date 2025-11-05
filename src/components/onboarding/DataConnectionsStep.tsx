@@ -67,14 +67,14 @@ export function DataConnectionsStep({ onNext, connections, onConnectionsChange }
 								>
 									<div className="flex items-center gap-3 flex-1">
 										{isConnected ? (
-											<CheckCircle2 className="h-5 w-5 text-emerald-500" />
+											<CheckCircle2 className="h-5 w-5 text-emerald-500 flex-shrink-0" />
 										) : (
-											<Circle className="h-5 w-5 text-muted-foreground" />
+											<Circle className="h-5 w-5 text-muted-foreground flex-shrink-0" />
 										)}
-										<div className="flex-1">
-											<div className="font-medium">{source}</div>
+										<div className="flex-1 text-left">
+											<div className="font-medium text-left">{source}</div>
 											{isConnected && lastSync && (
-												<div className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
+												<div className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5 text-left">
 													<Clock className="h-3 w-3" />
 													Last sync: {lastSync}
 												</div>
