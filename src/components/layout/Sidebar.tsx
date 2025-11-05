@@ -5,7 +5,7 @@ import { LayoutGrid, Settings, Users2, PenSquare, BarChart3, Download, ChevronRi
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 const nav = [
-	{ to: '/', label: 'Dashboard', icon: LayoutGrid },
+	{ to: '/dashboard', label: 'Dashboard', icon: LayoutGrid },
 	{ to: '/settings', label: 'Settings', icon: Settings },
 	{ to: '/personas', label: 'Personas', icon: Users2 },
 	{ to: '/creative', label: 'Creative', icon: PenSquare },
