@@ -47,7 +47,7 @@ function AppContent() {
 				<main
 					className={cn(
 						'mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 py-6 pr-4 transition-all duration-300',
-						activePanel && 'mr-96'
+						activePanel && 'mr-[420px]'
 					)}
 				>
 					<Outlet />
