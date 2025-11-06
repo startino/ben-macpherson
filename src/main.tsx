@@ -18,6 +18,7 @@ import ProfitImpacts from '@/pages/ProfitImpacts'
 import LTVWaterfall from '@/pages/LTVWaterfall'
 import Exports from '@/pages/Exports'
 import Admin from '@/pages/Admin'
+import Inputs from '@/pages/Inputs'
 
 const router = createBrowserRouter([
 	{
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
 			{ path: 'creative', element: <Creative /> },
 			{ path: 'surveys', element: <Surveys /> },
 			{ path: 'exports', element: <Exports /> },
+			{ path: 'inputs', element: <Inputs /> },
 			{ path: 'admin', element: <Admin /> },
 		],
 	},
