@@ -30,7 +30,7 @@ export function SupportResources() {
 	if (activePanel !== 'resources') return null
 
 	return (
-		<div className="fixed right-0 top-0 z-40 flex h-screen w-96 flex-col border-l border-border/40 bg-background/95 shadow-[0_-24px_60px_rgba(0,0,0,0.45)] backdrop-blur">
+		<div className="fixed right-0 top-14 z-40 flex h-[calc(100vh-3.5rem)] w-96 flex-col border-l border-border/40 bg-background/95 shadow-[0_-24px_60px_rgba(0,0,0,0.45)] backdrop-blur">
 			<div className="flex items-center justify-between border-b border-border/40 px-6 py-4">
 				<div className="flex items-center gap-3">
 					<div className="flex h-9 w-9 items-center justify-center rounded-xl border border-border/40 bg-secondary/80">

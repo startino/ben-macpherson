@@ -44,12 +44,13 @@ function AppContent() {
 			<RightSidebar />
 			<div className="flex min-h-screen flex-col md:pl-64">
 				<TopBar />
-				<main
-					className={cn(
-						'flex-1 px-4 py-6 transition-all duration-300 md:pr-20',
-						activePanel === 'assistant' && 'md:pr-[calc(5rem+420px)]'
-					)}
-				>
+			<main
+				className={cn(
+					'flex-1 px-4 py-6 transition-all duration-300 md:pr-20',
+					activePanel === 'assistant' && 'md:pr-[calc(5rem+420px)]',
+					activePanel === 'resources' && 'md:pr-[calc(5rem+384px)]'
+				)}
+			>
 					<div className="mx-auto flex h-full w-full max-w-7xl flex-col">
 						<Outlet />
 					</div>
