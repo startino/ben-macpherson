@@ -26,15 +26,15 @@ interface Message {
 }
 
 const NAV_ITEMS = [
-	{ label: 'PostHog AI', icon: Sparkles, action: 'assistant' as const, isPrimary: true },
+	{ label: 'Growth AI', icon: Sparkles, action: 'assistant' as const, isPrimary: true },
 	{ label: 'Resources', icon: LifeBuoy, action: 'resources' as const },
 ]
 
 const SUGGESTED_PROMPTS = [
-	{ icon: BarChart3, text: 'Analyze performance trends', category: 'Analytics' },
-	{ icon: TrendingUp, text: 'Optimize persona mix', category: 'Strategy' },
-	{ icon: Users, text: 'Generate creative briefs', category: 'Creative' },
-	{ icon: ShoppingBag, text: 'Review product performance', category: 'Insights' },
+	{ icon: BarChart3, text: 'Summarize this week’s revenue drivers', category: 'Growth analytics' },
+	{ icon: TrendingUp, text: 'Optimize persona mix for profitability', category: 'Strategy' },
+	{ icon: Users, text: 'Draft a creative brief for High-Value personas', category: 'Creative operations' },
+	{ icon: ShoppingBag, text: 'Spot product gaps impacting retention', category: 'Merchandise insights' },
 ]
 
 const RECENT_CHATS = [
@@ -133,12 +133,12 @@ export function AIAssistant() {
 				<header className="flex items-center justify-between border-b border-border/40 px-6 py-4">
 					<div className="space-y-1">
 						<div className="flex items-center gap-2">
-							<h2 className="text-sm font-semibold text-foreground">PostHog AI</h2>
+							<h2 className="text-sm font-semibold text-foreground">Growth AI Copilot</h2>
 							<Badge variant="secondary" className="rounded-full bg-primary/10 px-2 text-[10px] font-semibold uppercase tracking-wide text-primary">
 								Beta
 							</Badge>
 						</div>
-						<p className="text-xs text-muted-foreground/80">How can I help you build?</p>
+						<p className="text-xs text-muted-foreground/80">Trained on D.LUX methodology to surface growth-ready insights.</p>
 					</div>
 					<div className="flex items-center gap-2">
 						<Button variant="ghost" size="icon" className="rounded-full border border-border/40">
@@ -157,11 +157,12 @@ export function AIAssistant() {
 						{isEmpty ? (
 							<section className="space-y-6">
 								<div className="space-y-2 text-center">
-									<h3 className="text-lg font-semibold text-foreground">How can I help you build?</h3>
+									<h3 className="text-lg font-semibold text-foreground">How can I help you understand your customers?</h3>
 									<p className="text-sm text-muted-foreground/80">
-										Max is now part of PostHog. Ask a question or try one of these tools.
+										Growth AI connects survey responses, commerce data, and creative performance so you can move faster.
 									</p>
 								</div>
+
 								<div className="rounded-2xl border border-border/40 bg-secondary/40 p-4">
 									<div className="flex items-center justify-between">
 										<Button
@@ -172,12 +173,13 @@ export function AIAssistant() {
 											<span>Add context</span>
 											<ChevronDown className="h-3 w-3" />
 										</Button>
-										<span className="text-xs text-muted-foreground/70">Tools: <span className="text-foreground">Query data + 4 more</span></span>
+										<span className="text-xs text-muted-foreground/70">Tools: <span className="text-foreground">Query personas + 4 more</span></span>
 									</div>
 								</div>
+
 								<div className="space-y-3">
 									<h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
-										Try PostHog AI for…
+										Try Growth AI for…
 									</h4>
 									<div className="grid gap-2">
 										{SUGGESTED_PROMPTS.map((prompt, i) => (
@@ -213,9 +215,9 @@ export function AIAssistant() {
 												</button>
 											))}
 										</div>
-									<Button variant="ghost" className="w-full rounded-full text-xs text-muted-foreground">
-										View all
-									</Button>
+										<Button variant="ghost" className="w-full rounded-full text-xs text-muted-foreground">
+											View recent chats
+										</Button>
 									</div>
 								)}
 							</section>
@@ -298,7 +300,7 @@ export function AIAssistant() {
 							</Button>
 						</div>
 						<p className="pt-2 text-center text-[10px] text-muted-foreground/70">
-							AI can make mistakes — verify critical decisions.
+							Growth AI can miss nuance—validate critical decisions with your team.
 						</p>
 					</div>
 				</footer>
