@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { CheckCircle2, Circle, ExternalLink, Clock, RefreshCw, Zap } from 'lucide-react'
 import surveyAutomation from '@/data/mock/surveyAutomation.json'
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts'
+import { cn } from '@/lib/utils'
 
 export default function Inputs() {
 	const [connected, setConnected] = useState<Record<string, boolean>>({
@@ -67,43 +68,50 @@ export default function Inputs() {
 				</CardHeader>
 				<CardContent>
 					<div className="grid gap-2">
-						{Object.keys(connected).map((k) => {
+					{Object.keys(connected).map((k) => {
 							const isConnected = connected[k as keyof typeof connected]
 							const lastSync = syncTimestamps[k]
 							return (
 								<button
 									key={k}
 									onClick={() => toggleConnection(k)}
-									className={`group flex items-center justify-between rounded-lg px-4 py-3 text-sm transition-all duration-200 hover:bg-accent/50 ${
-										isConnected ? 'bg-accent/30' : 'bg-surface'
-									}`}
+								type="button"
+								className={cn(
+									'group grid grid-cols-[auto,1fr,auto] items-center gap-4 rounded-2xl border px-4 py-3 text-left text-sm transition-colors duration-200',
+									isConnected
+										? 'border-primary/40 bg-primary/15 text-foreground shadow-[0_12px_30px_rgba(0,0,0,0.35)]'
+										: 'border-border/50 bg-background/50 text-foreground/80 hover:border-border/70 hover:bg-secondary/40'
+								)}
 								>
-									<div className="flex items-center gap-3 flex-1">
+								<div className="flex items-center justify-center">
 										{isConnected ? (
-											<CheckCircle2 className="h-5 w-5 text-emerald-500" />
+										<CheckCircle2 className="h-5 w-5 text-emerald-400" />
 										) : (
-											<Circle className="h-5 w-5 text-muted-foreground" />
+										<Circle className="h-5 w-5 text-muted-foreground/60" />
 										)}
-										<div className="flex-1">
-											<div className="font-medium">{k}</div>
-											{isConnected && lastSync && (
-												<div className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
-													<Clock className="h-3 w-3" />
-													Last sync: {lastSync}
-												</div>
-											)}
-										</div>
 									</div>
-									<div className="flex items-center gap-2">
-										{isConnected && (
-											<Badge variant="outline" className="text-xs">
-												<RefreshCw className="h-3 w-3 mr-1" />
-												Live
-											</Badge>
-										)}
-										<Badge variant={isConnected ? 'success' : 'outline'}>
-											{isConnected ? 'Connected' : 'Connect'}
+								<div className="flex flex-col gap-1 text-left">
+									<div className="text-base font-semibold tracking-tight text-foreground">{k}</div>
+									{isConnected && lastSync && (
+										<div className="flex items-center gap-1 text-xs text-muted-foreground/80">
+											<Clock className="h-3 w-3" />
+											Last sync: {lastSync}
+										</div>
+									)}
+								</div>
+								<div className="flex items-center justify-end gap-2">
+									{isConnected && (
+										<Badge variant="outline" className="flex items-center gap-1 rounded-full border-primary/40 bg-background/70 px-2 text-xs text-foreground">
+											<RefreshCw className="h-3 w-3" />
+											Live
 										</Badge>
+									)}
+									<Badge
+										variant={isConnected ? 'success' : 'outline'}
+										className={cn('rounded-full px-3 text-xs', isConnected ? 'bg-emerald-500/20 text-emerald-200' : 'text-foreground')}
+									>
+										{isConnected ? 'Connected' : 'Connect'}
+									</Badge>
 									</div>
 								</button>
 							)
