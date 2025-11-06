@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react'
-import { useAIAssistant } from '@/contexts/AIAssistantContext'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
@@ -13,15 +12,12 @@ import {
 	Plus,
 	ExternalLink,
 	X,
-	NotebookPen,
-	BookOpen,
 	LifeBuoy,
-	MessageCircle,
-	Stethoscope,
 	ChevronDown,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import { useAIAssistant } from '@/contexts/AIAssistantContext'
 
 interface Message {
 	role: 'user' | 'assistant'
@@ -30,12 +26,8 @@ interface Message {
 }
 
 const NAV_ITEMS = [
-	{ label: 'PostHog AI', icon: Sparkles, isPrimary: true },
-	{ label: 'Notebooks', icon: NotebookPen },
-	{ label: 'Docs', icon: BookOpen },
-	{ label: 'Help', icon: LifeBuoy },
-	{ label: 'Discussion', icon: MessageCircle },
-	{ label: 'SDK Doctor', icon: Stethoscope },
+	{ label: 'PostHog AI', icon: Sparkles, action: 'assistant' as const, isPrimary: true },
+	{ label: 'Resources', icon: LifeBuoy, action: 'resources' as const },
 ]
 
 const SUGGESTED_PROMPTS = [
@@ -52,7 +44,7 @@ const RECENT_CHATS = [
 ]
 
 export function AIAssistant() {
-	const { activePanel, closeAssistant, contextData, contextTitle } = useAIAssistant()
+	const { activePanel, closeAssistant, contextData, contextTitle, openResources } = useAIAssistant()
 	const [messages, setMessages] = useState<Message[]>([])
 	const [input, setInput] = useState('')
 	const [isLoading, setIsLoading] = useState(false)
@@ -113,12 +105,20 @@ export function AIAssistant() {
 
 	if (activePanel !== 'assistant') return null
 
+	const handleNavClick = (action: 'assistant' | 'resources') => {
+		if (action === 'resources') {
+			openResources()
+			return
+		}
+	}
+
 	return (
 		<div className="fixed right-0 top-0 z-40 flex h-screen w-[420px] border-l border-border/40 bg-background/95 shadow-[0_-24px_60px_rgba(0,0,0,0.45)] backdrop-blur">
 			<nav className="flex w-16 flex-col items-center gap-4 border-r border-border/40 bg-background/90 px-2 py-6">
-				{NAV_ITEMS.map(({ icon: Icon, label, isPrimary }) => (
+				{NAV_ITEMS.map(({ icon: Icon, label, isPrimary, action }) => (
 					<button
 						key={label}
+						onClick={() => handleNavClick(action)}
 						title={label}
 						className={cn(
 							'flex h-12 w-12 items-center justify-center rounded-xl border border-transparent text-muted-foreground transition-colors',
