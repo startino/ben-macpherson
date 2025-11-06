@@ -42,15 +42,17 @@ function AppContent() {
 		<div className="min-h-screen bg-background text-foreground transition-colors duration-300">
 			<Sidebar />
 			<RightSidebar />
-			<div className="flex min-h-screen flex-col md:pl-64 md:pr-20">
+			<div className="flex min-h-screen flex-col md:pl-64">
 				<TopBar />
 				<main
 					className={cn(
-						'mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 py-6 pr-4 transition-all duration-300',
-						activePanel && 'mr-[420px]'
+						'flex-1 px-4 py-6 transition-all duration-300 md:pr-20',
+						activePanel === 'assistant' && 'md:pr-[calc(5rem+420px)]'
 					)}
 				>
-					<Outlet />
+					<div className="mx-auto flex h-full w-full max-w-7xl flex-col">
+						<Outlet />
+					</div>
 				</main>
 			</div>
 			<AIAssistant />
