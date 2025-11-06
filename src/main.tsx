@@ -22,6 +22,10 @@ import { getBasePath } from '@/lib/utils'
 
 const basePath = getBasePath()
 
+if (typeof window !== 'undefined' && basePath && window.location.pathname === '/') {
+	window.location.replace(`${basePath}/`)
+}
+
 const router = createBrowserRouter([
 	{
 		path: '/',
