@@ -21,6 +21,7 @@ import {
 	ChevronDown,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { ScrollArea } from '@/components/ui/scroll-area'
 
 interface Message {
 	role: 'user' | 'assistant'
@@ -151,158 +152,156 @@ export function AIAssistant() {
 						</Button>
 					</div>
 				</header>
-				<div className="flex flex-1 flex-col">
-					<div className="flex-1 overflow-y-auto px-8 py-6">
-						<div className="space-y-8">
-							{isEmpty ? (
-								<section className="space-y-6">
-									<div className="space-y-2 text-center">
-										<h3 className="text-lg font-semibold text-foreground">How can I help you build?</h3>
-										<p className="text-sm text-muted-foreground/80">
-											Max is now part of PostHog. Ask a question or try one of these tools.
-										</p>
+				<ScrollArea className="flex-1 px-8 py-6">
+					<div className="space-y-8 pr-4">
+						{isEmpty ? (
+							<section className="space-y-6">
+								<div className="space-y-2 text-center">
+									<h3 className="text-lg font-semibold text-foreground">How can I help you build?</h3>
+									<p className="text-sm text-muted-foreground/80">
+										Max is now part of PostHog. Ask a question or try one of these tools.
+									</p>
+								</div>
+								<div className="rounded-2xl border border-border/40 bg-secondary/40 p-4">
+									<div className="flex items-center justify-between">
+										<Button
+											variant="ghost"
+											size="sm"
+											className="flex items-center gap-2 rounded-full border border-border/40 px-3 text-xs text-muted-foreground"
+										>
+											<span>Add context</span>
+											<ChevronDown className="h-3 w-3" />
+										</Button>
+										<span className="text-xs text-muted-foreground/70">Tools: <span className="text-foreground">Query data + 4 more</span></span>
 									</div>
-									<div className="rounded-2xl border border-border/40 bg-secondary/40 p-4">
-										<div className="flex items-center justify-between">
-											<Button
-												variant="ghost"
-												size="sm"
-												className="flex items-center gap-2 rounded-full border border-border/40 px-3 text-xs text-muted-foreground"
+								</div>
+								<div className="space-y-3">
+									<h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
+										Try PostHog AI for…
+									</h4>
+									<div className="grid gap-2">
+										{SUGGESTED_PROMPTS.map((prompt, i) => (
+											<button
+												key={i}
+												onClick={() => handlePromptClick(prompt.text)}
+												className="flex items-center gap-3 rounded-2xl border border-border/40 bg-background/80 p-3 text-left transition-colors hover:border-border/60"
 											>
-												<span>Add context</span>
-												<ChevronDown className="h-3 w-3" />
-											</Button>
-											<span className="text-xs text-muted-foreground/70">Tools: <span className="text-foreground">Query data + 4 more</span></span>
-										</div>
+												<div className="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary">
+													<prompt.icon className="h-4 w-4 text-primary" />
+												</div>
+												<div className="flex-1">
+													<div className="text-sm font-medium text-foreground">{prompt.text}</div>
+													<div className="text-xs text-muted-foreground/80">{prompt.category}</div>
+												</div>
+											</button>
+										))}
 									</div>
+								</div>
+								{RECENT_CHATS.length > 0 && (
 									<div className="space-y-3">
 										<h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
-											Try PostHog AI for…
+											Recent chats
 										</h4>
-										<div className="grid gap-2">
-											{SUGGESTED_PROMPTS.map((prompt, i) => (
+										<div className="space-y-2">
+											{RECENT_CHATS.map((chat, i) => (
 												<button
 													key={i}
-													onClick={() => handlePromptClick(prompt.text)}
-													className="flex items-center gap-3 rounded-2xl border border-border/40 bg-background/80 p-3 text-left transition-colors hover:border-border/60"
+													className="flex w-full items-center justify-between rounded-2xl border border-border/40 bg-background/60 px-3 py-2 text-left transition-colors hover:border-border/60"
 												>
-													<div className="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary">
-														<prompt.icon className="h-4 w-4 text-primary" />
-													</div>
-													<div className="flex-1">
-														<div className="text-sm font-medium text-foreground">{prompt.text}</div>
-														<div className="text-xs text-muted-foreground/80">{prompt.category}</div>
-													</div>
+													<span className="text-sm text-foreground/90">{chat.title}</span>
+													<span className="text-xs text-muted-foreground/70">{chat.time}</span>
 												</button>
 											))}
 										</div>
+									<Button variant="ghost" className="w-full rounded-full text-xs text-muted-foreground">
+										View all
+									</Button>
 									</div>
-									{RECENT_CHATS.length > 0 && (
-										<div className="space-y-3">
-											<h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
-												Recent chats
-											</h4>
-											<div className="space-y-2">
-												{RECENT_CHATS.map((chat, i) => (
-													<button
-														key={i}
-														className="flex w-full items-center justify-between rounded-2xl border border-border/40 bg-background/60 px-3 py-2 text-left transition-colors hover:border-border/60"
-													>
-														<span className="text-sm text-foreground/90">{chat.title}</span>
-														<span className="text-xs text-muted-foreground/70">{chat.time}</span>
-													</button>
-												))}
-											</div>
-										<Button variant="ghost" className="w-full rounded-full text-xs text-muted-foreground">
-											View all
-										</Button>
-										</div>
-									)}
-								</section>
-							) : (
-								<section className="space-y-4">
-									{contextData && (
-										<div className="rounded-2xl border border-border/40 bg-secondary/40 p-3">
-											<div className="flex items-start gap-2">
-												<Badge variant="outline" className="mt-0.5 rounded-full px-3 text-[10px]">
-													Context
-												</Badge>
-												<div className="flex-1 text-xs text-muted-foreground/80">
-													{contextTitle && <div className="mb-1 font-medium text-foreground">{contextTitle}</div>}
-													<div className="line-clamp-3">{contextData}</div>
-												</div>
+								)}
+							</section>
+						) : (
+							<section className="space-y-4">
+								{contextData && (
+									<div className="rounded-2xl border border-border/40 bg-secondary/40 p-3">
+										<div className="flex items-start gap-2">
+											<Badge variant="outline" className="mt-0.5 rounded-full px-3 text-[10px]">
+												Context
+											</Badge>
+											<div className="flex-1 text-xs text-muted-foreground/80">
+												{contextTitle && <div className="mb-1 font-medium text-foreground">{contextTitle}</div>}
+												<div className="line-clamp-3">{contextData}</div>
 											</div>
 										</div>
-									)}
-									{messages.map((message, i) => (
-										<div
-											key={i}
-											className={cn('flex gap-3', message.role === 'user' ? 'justify-end' : 'justify-start')}
-										>
-											{message.role === 'assistant' && (
-												<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border/40 bg-secondary/60">
-													<Sparkles className="h-3.5 w-3.5 text-primary" />
-												</div>
-											)}
-											<div
-												className={cn(
-													'max-w-[85%] rounded-2xl px-4 py-2.5 shadow-sm',
-													message.role === 'user'
-														? 'bg-primary text-primary-foreground'
-														: 'border border-border/40 bg-secondary/40 text-foreground'
-												)}
-											>
-												<p className="whitespace-pre-wrap text-sm">{message.content}</p>
-												<p className="mt-1 text-[10px] text-muted-foreground/60">
-													{message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-												</p>
-											</div>
-											{message.role === 'user' && (
-												<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border/40 bg-secondary/60 text-xs font-semibold text-foreground">
-													You
-												</div>
-											)}
-										</div>
-									))}
-									{isLoading && (
-										<div className="flex gap-3">
+									</div>
+								)}
+								{messages.map((message, i) => (
+									<div
+										key={i}
+										className={cn('flex gap-3', message.role === 'user' ? 'justify-end' : 'justify-start')}
+									>
+										{message.role === 'assistant' && (
 											<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border/40 bg-secondary/60">
-												<Sparkles className="h-3.5 w-3.5 text-primary animate-pulse" />
+												<Sparkles className="h-3.5 w-3.5 text-primary" />
 											</div>
-											<div className="rounded-2xl border border-border/40 bg-secondary/40 px-4 py-2.5">
-												<div className="flex gap-1">
-													<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '0ms' }} />
-													<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '150ms' }} />
-													<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '300ms' }} />
-												</div>
+										)}
+										<div
+											className={cn(
+												'max-w-[85%] rounded-2xl px-4 py-2.5 shadow-sm',
+												message.role === 'user'
+													? 'bg-primary text-primary-foreground'
+													: 'border border-border/40 bg-secondary/40 text-foreground'
+											)}
+										>
+											<p className="whitespace-pre-wrap text-sm">{message.content}</p>
+											<p className="mt-1 text-[10px] text-muted-foreground/60">
+												{message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+											</p>
+										</div>
+										{message.role === 'user' && (
+											<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border/40 bg-secondary/60 text-xs font-semibold text-foreground">
+												You
+											</div>
+										)}
+									</div>
+								))}
+								{isLoading && (
+									<div className="flex gap-3">
+										<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border/40 bg-secondary/60">
+											<Sparkles className="h-3.5 w-3.5 text-primary animate-pulse" />
+										</div>
+										<div className="rounded-2xl border border-border/40 bg-secondary/40 px-4 py-2.5">
+											<div className="flex gap-1">
+												<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '0ms' }} />
+												<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '150ms' }} />
+												<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '300ms' }} />
 											</div>
 										</div>
-									)}
-									<div ref={messagesEndRef} />
-								</section>
-							)}
-						</div>
+									</div>
+								)}
+								<div ref={messagesEndRef} />
+							</section>
+						)}
 					</div>
-					<footer className="border-t border-border/40 bg-background/80 px-6 py-4">
-						<div className="rounded-2xl border border-border/40 bg-secondary/30 p-3">
-							<div className="flex items-center gap-2">
-								<Input
-									placeholder="Ask away (/ for commands)"
-									value={input}
-									onChange={(e) => setInput(e.target.value)}
-									onKeyDown={handleKeyDown}
-									className="flex-1 border-none bg-transparent px-0"
-								/>
-								<Button onClick={handleSend} disabled={!input.trim() || isLoading} size="icon" className="rounded-full">
-									<Send className="h-4 w-4" />
-								</Button>
-							</div>
-							<p className="pt-2 text-center text-[10px] text-muted-foreground/70">
-								AI can make mistakes — verify critical decisions.
-							</p>
+				</ScrollArea>
+				<footer className="border-t border-border/40 bg-background/80 px-6 py-4">
+					<div className="rounded-2xl border border-border/40 bg-secondary/30 p-3">
+						<div className="flex items-center gap-2">
+							<Input
+								placeholder="Ask away (/ for commands)"
+								value={input}
+								onChange={(e) => setInput(e.target.value)}
+								onKeyDown={handleKeyDown}
+								className="flex-1 border-none bg-transparent px-0"
+							/>
+							<Button onClick={handleSend} disabled={!input.trim() || isLoading} size="icon" className="rounded-full">
+								<Send className="h-4 w-4" />
+							</Button>
 						</div>
-					</footer>
-				</div>
+						<p className="pt-2 text-center text-[10px] text-muted-foreground/70">
+							AI can make mistakes — verify critical decisions.
+						</p>
+					</div>
+				</footer>
 			</div>
 		</div>
 	)

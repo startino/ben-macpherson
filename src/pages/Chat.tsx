@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Send, Bot, User, Sparkles } from 'lucide-react'
+import { ScrollArea } from '@/components/ui/scroll-area'
 
 interface Message {
 	id: string
@@ -115,66 +116,68 @@ export default function Chat() {
 			<Card className="flex flex-1 flex-col overflow-hidden">
 				<CardContent className="flex flex-1 flex-col p-0">
 					{/* Messages Area */}
-					<div className="flex-1 overflow-y-auto p-6 space-y-4">
-						{messages.map((message) => (
-							<div
-								key={message.id}
-								className={`flex gap-3 ${
-									message.role === 'user' ? 'justify-end' : 'justify-start'
-								}`}
-							>
-								{message.role === 'assistant' && (
+					<ScrollArea className="flex-1 p-6">
+						<div className="space-y-4 pr-4">
+							{messages.map((message) => (
+								<div
+									key={message.id}
+									className={`flex gap-3 ${
+										message.role === 'user' ? 'justify-end' : 'justify-start'
+									}`}
+								>
+									{message.role === 'assistant' && (
+										<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
+											<Bot className="h-4 w-4 text-primary-foreground" />
+										</div>
+									)}
+									<div
+										className={`flex max-w-[80%] flex-col gap-1 ${
+											message.role === 'user' ? 'items-end' : 'items-start'
+										}`}
+									>
+										<div
+											className={`rounded-lg px-4 py-2.5 ${
+												message.role === 'user'
+													? 'bg-primary text-primary-foreground'
+													: 'bg-muted text-foreground'
+											}`}
+										>
+											<div className="whitespace-pre-wrap text-sm leading-relaxed">
+												{message.content}
+											</div>
+										</div>
+										<div className="text-xs text-muted-foreground">
+											{message.timestamp.toLocaleTimeString([], {
+												hour: '2-digit',
+												minute: '2-digit',
+											})}
+										</div>
+									</div>
+									{message.role === 'user' && (
+										<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted">
+											<User className="h-4 w-4 text-muted-foreground" />
+										</div>
+									)}
+								</div>
+							))}
+							{isLoading && (
+								<div className="flex gap-3 justify-start">
 									<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
 										<Bot className="h-4 w-4 text-primary-foreground" />
 									</div>
-								)}
-								<div
-									className={`flex max-w-[80%] flex-col gap-1 ${
-										message.role === 'user' ? 'items-end' : 'items-start'
-									}`}
-								>
-									<div
-										className={`rounded-lg px-4 py-2.5 ${
-											message.role === 'user'
-												? 'bg-primary text-primary-foreground'
-												: 'bg-muted text-foreground'
-										}`}
-									>
-										<div className="whitespace-pre-wrap text-sm leading-relaxed">
-											{message.content}
-										</div>
-									</div>
-									<div className="text-xs text-muted-foreground">
-										{message.timestamp.toLocaleTimeString([], {
-											hour: '2-digit',
-											minute: '2-digit',
-										})}
-									</div>
-								</div>
-								{message.role === 'user' && (
-									<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted">
-										<User className="h-4 w-4 text-muted-foreground" />
-									</div>
-								)}
-							</div>
-						))}
-						{isLoading && (
-							<div className="flex gap-3 justify-start">
-								<div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary">
-									<Bot className="h-4 w-4 text-primary-foreground" />
-								</div>
-								<div className="flex max-w-[80%] flex-col gap-1 items-start">
-									<div className="rounded-lg bg-muted px-4 py-2.5">
-										<div className="flex items-center gap-2">
-											<Sparkles className="h-4 w-4 animate-pulse text-primary" />
-											<span className="text-sm text-muted-foreground">Thinking...</span>
+									<div className="flex max-w-[80%] flex-col gap-1 items-start">
+										<div className="rounded-lg bg-muted px-4 py-2.5">
+											<div className="flex items-center gap-2">
+												<Sparkles className="h-4 w-4 animate-pulse text-primary" />
+												<span className="text-sm text-muted-foreground">Thinking...</span>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						)}
-						<div ref={messagesEndRef} />
-					</div>
+							)}
+							<div ref={messagesEndRef} />
+						</div>
+					</ScrollArea>
 
 					{/* Input Area */}
 					<div className="border-t border-muted bg-surface p-4">

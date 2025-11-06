@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Download, FileText, Table, Check } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { exportMetaAdsCSV, exportGoogleAdsCSV, exportCreativeBriefsPDF, downloadFile } from '@/lib/campaign-export'
 
 interface CreativeBrief {
@@ -109,15 +110,16 @@ export function ExportDialog({ isOpen, onClose, briefs }: ExportDialogProps) {
 
 	return (
 		<Sheet open={isOpen} onOpenChange={(open) => !open && onClose()}>
-			<SheetContent side="right" className="w-full sm:max-w-2xl overflow-y-auto">
-				<SheetHeader className="mb-6">
+			<SheetContent side="right" className="flex h-full w-full flex-col sm:max-w-2xl">
+				<SheetHeader className="mb-4 shrink-0">
 					<SheetTitle>Export Creative Roadmap</SheetTitle>
 					<SheetDescription>
 						Download campaign files ready for Meta Ads, Google Ads, or share briefs with your team
 					</SheetDescription>
 				</SheetHeader>
 
-				<div className="space-y-4">
+				<ScrollArea className="flex-1 pr-4">
+					<div className="space-y-4 pb-8">
 					<div className="flex items-center justify-between rounded-lg border bg-muted/50 p-4">
 						<div>
 							<div className="font-medium">Ready to export</div>
@@ -206,7 +208,8 @@ export function ExportDialog({ isOpen, onClose, briefs }: ExportDialogProps) {
 							</li>
 						</ol>
 					</div>
-				</div>
+					</div>
+				</ScrollArea>
 			</SheetContent>
 		</Sheet>
 	)

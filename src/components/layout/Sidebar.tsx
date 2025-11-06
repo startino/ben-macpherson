@@ -16,6 +16,7 @@ import {
 	Layers,
 	Gauge,
 } from 'lucide-react'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { WorkspaceSwitcher } from '@/components/layout/WorkspaceSwitcher'
 
 type NavItem = {
@@ -117,14 +118,14 @@ export function Sidebar() {
 				<div className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted-foreground/80">Workspace</div>
 				<WorkspaceSwitcher />
 			</div>
-			<div className="flex-1 overflow-y-auto px-3 py-4">
-				<nav className="space-y-6">
+			<ScrollArea className="flex-1 px-3 py-4">
+				<div className="space-y-6 pr-2">
 					{NAV_SECTIONS.map(({ group, items, collapsible, id }) => {
 						const isOpen = id ? openSections[id] ?? false : true
 						const activeInSection = items.some(({ to }) => pathname === to || pathname.startsWith(to))
 						return (
 							<div key={group}>
-					<div className="mb-2 flex items-center justify-between px-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-muted-foreground/80">
+								<div className="mb-2 flex items-center justify-between px-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-muted-foreground/80">
 									<span>{group}</span>
 									{collapsible && (
 										<button
@@ -150,8 +151,8 @@ export function Sidebar() {
 							</div>
 						)
 					})}
-				</nav>
-			</div>
+				</div>
+			</ScrollArea>
 		</aside>
 	)
 }

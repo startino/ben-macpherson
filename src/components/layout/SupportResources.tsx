@@ -1,6 +1,7 @@
 import { LifeBuoy, BookOpen, MessageSquare, Mail, ArrowUpRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useAIAssistant } from '@/contexts/AIAssistantContext'
+import { ScrollArea } from '@/components/ui/scroll-area'
 
 const RESOURCE_LINKS = [
 	{
@@ -44,8 +45,8 @@ export function SupportResources() {
 					<ArrowUpRight className="h-4 w-4 rotate-45" />
 				</Button>
 			</div>
-			<div className="flex-1 overflow-y-auto px-6 py-8">
-				<div className="space-y-6">
+			<ScrollArea className="flex-1 px-6 py-8">
+				<div className="space-y-6 pr-4">
 					<section className="rounded-2xl border border-border/40 bg-secondary/40 p-4">
 						<h3 className="text-sm font-semibold text-foreground">Need a human?</h3>
 						<p className="mt-1 text-sm text-muted-foreground/80">
@@ -95,7 +96,7 @@ export function SupportResources() {
 						</ul>
 					</section>
 				</div>
-			</div>
+			</ScrollArea>
 		</div>
 	)
 }
