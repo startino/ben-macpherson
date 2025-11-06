@@ -16,7 +16,6 @@ import {
 	Layers,
 	Gauge,
 } from 'lucide-react'
-import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 type NavItem = {
 	to: string
@@ -155,12 +154,6 @@ export function Sidebar() {
 						)
 					})}
 				</nav>
-			</div>
-			<div className="border-t border-border/40 p-3">
-				<div className="flex items-center justify-between rounded-md border border-border/60 bg-secondary/40 px-3 py-2 text-xs text-muted-foreground">
-					<span>Theme</span>
-					<ThemeToggle />
-				</div>
 			</div>
 		</aside>
 	)
