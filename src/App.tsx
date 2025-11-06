@@ -6,7 +6,7 @@ import { SupportResources } from '@/components/layout/SupportResources'
 import { AIAssistantProvider, useAIAssistant } from '@/contexts/AIAssistantContext'
 import { Input } from '@/components/ui/input'
 import { Search } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { cn, getBasePath } from '@/lib/utils'
 
 function TopBar() {
 	return (
@@ -24,8 +24,12 @@ function TopBar() {
 function AppContent() {
 	const location = useLocation()
 	const { activePanel } = useAIAssistant()
-	const isOnboarding = location.pathname === '/onboarding' || location.pathname === '/ben-macpherson/onboarding'
-	const isLanding = location.pathname === '/' || location.pathname === '/ben-macpherson/'
+	const basePath = getBasePath()
+	const normalizedPath = basePath && location.pathname.startsWith(basePath)
+		? location.pathname.slice(basePath.length) || '/'
+		: location.pathname
+	const isOnboarding = normalizedPath === '/onboarding'
+	const isLanding = normalizedPath === '/'
 
 	// Don't show sidebar on onboarding or landing pages
 	if (isOnboarding || isLanding) {
@@ -50,9 +54,7 @@ function AppContent() {
 				)}
 			>
 				<TopBar />
-			<main
-					className="flex-1 px-4 py-6 transition-all duration-300"
-			>
+				<main className="flex-1 px-4 py-6 transition-all duration-300">
 					<div className="mx-auto flex h-full w-full max-w-7xl flex-col">
 						<Outlet />
 					</div>

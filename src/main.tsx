@@ -18,6 +18,9 @@ import ProfitImpacts from '@/pages/ProfitImpacts'
 import LTVWaterfall from '@/pages/LTVWaterfall'
 import Exports from '@/pages/Exports'
 import Inputs from '@/pages/Inputs'
+import { getBasePath } from '@/lib/utils'
+
+const basePath = getBasePath()
 
 const router = createBrowserRouter([
 	{
@@ -45,7 +48,7 @@ const router = createBrowserRouter([
 		],
 	},
 ], {
-	basename: '/ben-macpherson',
+	basename: basePath || '/',
 })
 
 createRoot(document.getElementById('root')!).render(

@@ -3,12 +3,14 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ExternalLink, Zap } from 'lucide-react'
+import { getPublicUrl } from '@/lib/utils'
 import surveyAutomation from '@/data/mock/surveyAutomation.json'
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts'
 
 export default function Surveys() {
 	const [surveyOpen, setSurveyOpen] = useState(false)
 	const { workflows, recentSurveys, automationStats } = surveyAutomation as any
+	const surveyUrl = getPublicUrl('survey/demo')
 
 	return (
 		<section className="grid gap-6">
@@ -103,7 +105,7 @@ export default function Surveys() {
 						</CardHeader>
 						<CardContent className="space-y-4">
 							<div className="break-all rounded-md bg-muted/50 p-3 text-xs font-mono">
-								https://startino.github.io/ben-macpherson/survey/demo
+								{surveyUrl}
 							</div>
 							<div className="flex justify-end gap-2">
 								<Button variant="outline" onClick={() => setSurveyOpen(false)}>Close</Button>
