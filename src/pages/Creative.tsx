@@ -3,6 +3,7 @@ import creativeBriefsData from '@/data/mock/creativeBriefs.json'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { CreativeRoadmap } from '@/components/creative/CreativeRoadmap'
 import { CreativeBrief } from '@/components/creative/CreativeBrief'
 import { ExportDialog } from '@/components/creative/ExportDialog'
@@ -60,74 +61,85 @@ export default function Creative() {
 	}, [briefs])
 
 	return (
-		<section className="grid gap-6">
+		<section className="space-y-6">
 			{/* Header */}
-			<div className="flex items-end justify-between">
+			<div className="flex flex-wrap items-end justify-between gap-4 rounded-2xl border border-border/40 bg-secondary/40 px-6 py-5">
 				<div>
-					<h2 className="text-2xl font-bold tracking-tight">Creative Intelligence</h2>
-					<p className="mt-1 text-sm text-muted-foreground">
-						AI-generated creative briefs and campaign roadmaps optimized for persona profitability
+					<p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">Creative</p>
+					<h2 className="mt-2 text-3xl font-semibold text-foreground">Creative Intelligence Studio</h2>
+					<p className="mt-1 max-w-2xl text-sm text-muted-foreground/80">
+						AI-generated briefs, roadmap governance, and persona-resonant messaging for profitable growth.
 					</p>
 				</div>
-				<div className="flex gap-2">
-					<Button variant="outline" onClick={() => setExportDialogOpen(true)}>
-						<Download className="mr-2 h-4 w-4" />
-						Export Campaigns
-					</Button>
-				</div>
+				<Button
+					variant="ghost"
+					className="rounded-full border border-border/40 px-4"
+					onClick={() => setExportDialogOpen(true)}
+				>
+					<Download className="mr-2 h-4 w-4" />
+					Export Campaigns
+				</Button>
 			</div>
 
 			{/* Stats */}
-			<div className="grid gap-4 md:grid-cols-4">
-				<div className="rounded-lg border bg-card p-4">
-					<div className="flex items-center gap-2 text-sm text-muted-foreground">
-						<FileText className="h-4 w-4" />
-						Total Briefs
-					</div>
-					<div className="mt-2 text-2xl font-bold">{briefs.length}</div>
-					<div className="mt-1 text-xs text-muted-foreground">
-						{stats.activeCount} active, {stats.plannedCount} planned
-					</div>
-				</div>
-				<div className="rounded-lg border bg-card p-4">
-					<div className="flex items-center gap-2 text-sm text-muted-foreground">
-						<Calendar className="h-4 w-4" />
-						Timeline
-					</div>
-					<div className="mt-2 text-2xl font-bold">6 Months</div>
-					<div className="mt-1 text-xs text-muted-foreground">Q1 & Q2 2025 coverage</div>
-				</div>
-				<div className="rounded-lg border bg-card p-4">
-					<div className="flex items-center gap-2 text-sm text-muted-foreground">
-						<Sparkles className="h-4 w-4" />
-						Personas
-					</div>
-					<div className="mt-2 text-2xl font-bold">{stats.personaCount}</div>
-					<div className="mt-1 text-xs text-muted-foreground">Persona segments targeted</div>
-				</div>
-				<div className="rounded-lg border bg-card p-4">
-					<div className="flex items-center gap-2 text-sm text-muted-foreground">
-						<Download className="h-4 w-4" />
-						Total Budget
-					</div>
-					<div className="mt-2 text-2xl font-bold">${(stats.totalBudget / 1000).toFixed(0)}K</div>
-					<div className="mt-1 text-xs text-muted-foreground">Across all campaigns</div>
-				</div>
+			<div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+				<Card className="border-none bg-secondary/40">
+					<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+						<CardDescription className="text-xs uppercase tracking-[0.3em] text-muted-foreground/80">Total Briefs</CardDescription>
+						<FileText className="h-4 w-4 text-muted-foreground" />
+					</CardHeader>
+					<CardContent>
+						<CardTitle className="text-3xl font-semibold">{briefs.length}</CardTitle>
+						<p className="mt-1 text-xs text-muted-foreground/80">
+							{stats.activeCount} active • {stats.plannedCount} planned
+						</p>
+					</CardContent>
+				</Card>
+				<Card className="border-none bg-secondary/40">
+					<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+						<CardDescription className="text-xs uppercase tracking-[0.3em] text-muted-foreground/80">Timeline</CardDescription>
+						<Calendar className="h-4 w-4 text-muted-foreground" />
+					</CardHeader>
+					<CardContent>
+						<CardTitle className="text-3xl font-semibold">6 Months</CardTitle>
+						<p className="mt-1 text-xs text-muted-foreground/80">Q1 &amp; Q2 2025 coverage</p>
+					</CardContent>
+				</Card>
+				<Card className="border-none bg-secondary/40">
+					<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+						<CardDescription className="text-xs uppercase tracking-[0.3em] text-muted-foreground/80">Personas</CardDescription>
+						<Sparkles className="h-4 w-4 text-muted-foreground" />
+					</CardHeader>
+					<CardContent>
+						<CardTitle className="text-3xl font-semibold">{stats.personaCount}</CardTitle>
+						<p className="mt-1 text-xs text-muted-foreground/80">Persona segments targeted</p>
+					</CardContent>
+				</Card>
+				<Card className="border-none bg-secondary/40">
+					<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+						<CardDescription className="text-xs uppercase tracking-[0.3em] text-muted-foreground/80">Total Budget</CardDescription>
+						<Download className="h-4 w-4 text-muted-foreground" />
+					</CardHeader>
+					<CardContent>
+						<CardTitle className="text-3xl font-semibold">${(stats.totalBudget / 1000).toFixed(0)}K</CardTitle>
+						<p className="mt-1 text-xs text-muted-foreground/80">Across all campaigns</p>
+					</CardContent>
+				</Card>
 			</div>
 
 			{/* Main Content */}
 			<Tabs defaultValue="roadmap" className="space-y-6">
-				<TabsList>
-					<TabsTrigger value="roadmap">
-						<Calendar className="mr-2 h-4 w-4" />
+				<TabsList className="justify-start gap-2">
+					<TabsTrigger value="roadmap" className="gap-2">
+						<Calendar className="h-4 w-4" />
 						Roadmap
 					</TabsTrigger>
-					<TabsTrigger value="briefs">
-						<FileText className="mr-2 h-4 w-4" />
+					<TabsTrigger value="briefs" className="gap-2">
+						<FileText className="h-4 w-4" />
 						All Briefs
 					</TabsTrigger>
-					<TabsTrigger value="by-persona">
-						<Sparkles className="mr-2 h-4 w-4" />
+					<TabsTrigger value="by-persona" className="gap-2">
+						<Sparkles className="h-4 w-4" />
 						By Persona
 					</TabsTrigger>
 				</TabsList>
@@ -148,13 +160,13 @@ export default function Creative() {
 				</TabsContent>
 
 				<TabsContent value="briefs" className="space-y-4">
-					<div className="flex items-center justify-between">
-						<p className="text-sm text-muted-foreground">
+					<div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border/40 bg-secondary/30 px-4 py-3">
+						<p className="text-sm text-muted-foreground/80">
 							Showing {briefs.length} creative briefs sorted by quarter and month
 						</p>
-						<div className="flex gap-2">
-							<Badge variant="outline">All Personas</Badge>
-							<Badge variant="outline">All Quarters</Badge>
+						<div className="flex flex-wrap items-center gap-2">
+							<Badge variant="outline" className="rounded-full px-3">All Personas</Badge>
+							<Badge variant="outline" className="rounded-full px-3">All Quarters</Badge>
 						</div>
 					</div>
 
@@ -173,16 +185,16 @@ export default function Creative() {
 
 				<TabsContent value="by-persona" className="space-y-8">
 					{Object.entries(briefsByPersona).map(([personaLabel, personaBriefs]) => (
-						<div key={personaLabel} className="space-y-4">
-							<div className="flex items-center justify-between border-b pb-3">
+						<div key={personaLabel} className="space-y-4 rounded-2xl border border-border/40 bg-secondary/30 p-5">
+							<div className="flex flex-wrap items-center justify-between gap-3">
 								<div>
-									<h3 className="text-lg font-semibold">{personaLabel}</h3>
-									<p className="text-sm text-muted-foreground">
+									<h3 className="text-lg font-semibold text-foreground">{personaLabel}</h3>
+									<p className="text-sm text-muted-foreground/80">
 										{personaBriefs.length} {personaBriefs.length === 1 ? 'brief' : 'briefs'} • $
 										{(personaBriefs.reduce((sum, b) => sum + b.estimatedBudget, 0) / 1000).toFixed(0)}K budget
 									</p>
 								</div>
-								<Badge variant="outline">{personaBriefs.length} briefs</Badge>
+								<Badge variant="outline" className="rounded-full px-3">{personaBriefs.length} briefs</Badge>
 							</div>
 
 							<div className="grid gap-4">

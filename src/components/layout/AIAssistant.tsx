@@ -88,38 +88,41 @@ export function AIAssistant() {
 	if (!isOpen) return null
 
 	return (
-		<div className="fixed right-0 top-0 z-40 flex h-screen w-96 flex-col border-l bg-background shadow-lg">
+		<div className="fixed right-0 top-0 z-40 flex h-screen w-96 flex-col border-l border-border/40 bg-background/95 shadow-[0_-24px_60px_rgba(0,0,0,0.45)] backdrop-blur">
 			{/* Header */}
-			<div className="flex items-center justify-between border-b px-6 py-4">
-				<div className="flex items-center gap-2">
-					<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+			<div className="flex items-center justify-between border-b border-border/40 px-6 py-4">
+				<div className="flex items-center gap-3">
+					<div className="flex h-9 w-9 items-center justify-center rounded-xl border border-border/40 bg-secondary/80">
 						<Sparkles className="h-4 w-4 text-primary" />
 					</div>
 					<div>
-						<h2 className="text-sm font-semibold">DRX AI Assistant</h2>
-						<p className="text-xs text-muted-foreground">
-							Trained on D.LUX methodology
-						</p>
+						<h2 className="text-sm font-semibold text-foreground">DRX AI Assistant</h2>
+						<p className="text-xs text-muted-foreground/80">Trained on D.LUX methodology</p>
 					</div>
 				</div>
-				<Button variant="ghost" size="icon" onClick={closeAssistant}>
-					<X className="h-4 w-4" />
-				</Button>
+				<div className="flex items-center gap-2">
+					<Button variant="ghost" size="sm" className="rounded-full border border-border/40 px-3 text-xs text-muted-foreground">
+						Playbooks
+					</Button>
+					<Button variant="ghost" size="icon" className="rounded-full border border-border/40" onClick={closeAssistant}>
+						<X className="h-4 w-4" />
+					</Button>
+				</div>
 			</div>
 
 			{/* Content */}
 			{isEmpty ? (
 				<div className="flex-1 overflow-y-auto px-6 py-8">
 					<div className="space-y-6">
-						<div className="text-center space-y-2">
-							<h3 className="text-lg font-semibold">How can I help you understand your data?</h3>
-							<p className="text-sm text-muted-foreground">
-								Ask me anything about your personas, performance, or strategy
+						<div className="space-y-2 text-center">
+							<h3 className="text-lg font-semibold text-foreground">How can I help you understand your data?</h3>
+							<p className="text-sm text-muted-foreground/80">
+								Ask me anything about personas, performance, or strategy.
 							</p>
 						</div>
 
 						<div className="space-y-3">
-							<h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+							<h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
 								Try asking about
 							</h4>
 							<div className="grid gap-2">
@@ -127,14 +130,14 @@ export function AIAssistant() {
 									<button
 										key={i}
 										onClick={() => handlePromptClick(prompt.text)}
-										className="flex items-center gap-3 rounded-lg border bg-card p-3 text-left transition-colors hover:bg-accent"
+										className="flex items-center gap-3 rounded-2xl border border-border/40 bg-secondary/40 p-3 text-left transition-colors hover:border-border/60 hover:bg-secondary"
 									>
-										<div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
+										<div className="flex h-9 w-9 items-center justify-center rounded-xl bg-secondary">
 											<prompt.icon className="h-4 w-4 text-primary" />
 										</div>
 										<div className="flex-1">
-											<div className="text-sm font-medium">{prompt.text}</div>
-											<div className="text-xs text-muted-foreground">{prompt.category}</div>
+											<div className="text-sm font-medium text-foreground">{prompt.text}</div>
+											<div className="text-xs text-muted-foreground/80">{prompt.category}</div>
 										</div>
 									</button>
 								))}
@@ -143,22 +146,22 @@ export function AIAssistant() {
 
 						{RECENT_CHATS.length > 0 && (
 							<div className="space-y-3">
-								<h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+								<h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
 									Recent chats
 								</h4>
 								<div className="space-y-2">
 									{RECENT_CHATS.map((chat, i) => (
 										<button
 											key={i}
-											className="flex w-full items-center justify-between rounded-lg border bg-card p-3 text-left transition-colors hover:bg-accent"
+											className="flex w-full items-center justify-between rounded-2xl border border-border/40 bg-background/40 px-3 py-2 text-left transition-colors hover:border-border/60"
 										>
-											<span className="text-sm">{chat.title}</span>
-											<span className="text-xs text-muted-foreground">{chat.time}</span>
+											<span className="text-sm text-foreground/90">{chat.title}</span>
+											<span className="text-xs text-muted-foreground/70">{chat.time}</span>
 										</button>
 									))}
 								</div>
-								<Button variant="ghost" className="w-full text-xs">
-									View all
+								<Button variant="ghost" className="w-full rounded-full text-xs text-muted-foreground">
+									View all conversations
 								</Button>
 							</div>
 						)}

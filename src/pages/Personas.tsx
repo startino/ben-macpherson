@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { PersonaCard } from '@/components/personas/PersonaCard'
 import { PersonaMixVisualizer } from '@/components/personas/PersonaMixVisualizer'
 import { ProfitImpactCalculator } from '@/components/personas/ProfitImpactCalculator'
-import { LayoutGrid, Users, TrendingUp } from 'lucide-react'
+import { LayoutGrid, Users, TrendingUp, AlertTriangle } from 'lucide-react'
 
 interface Persona {
 	id: string
@@ -116,18 +116,23 @@ export default function Personas() {
 	}))
 
 	return (
-		<section className="grid gap-6">
+		<section className="space-y-6">
 			{/* Header */}
-			<div className="flex items-end justify-between">
+			<div className="flex flex-wrap items-end justify-between gap-4 rounded-2xl border border-border/40 bg-secondary/40 px-6 py-5">
 				<div>
-					<h2 className="text-2xl font-bold tracking-tight">Persona Intelligence</h2>
-					<p className="mt-1 text-sm text-muted-foreground">
-						Visual persona analysis with AI-generated avatars and rich data representations
+					<p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">Personas</p>
+					<h2 className="mt-2 text-3xl font-semibold text-foreground">Persona Intelligence Command Center</h2>
+					<p className="mt-1 max-w-2xl text-sm text-muted-foreground/80">
+						Explore persona depth, optimize your acquisition mix, and quantify profit impact with D.LUX heuristics baked in.
 					</p>
 				</div>
-				<div className="flex gap-2">
-					{hasUnsavedChanges && <Button variant="default" onClick={saveMix}>Save Changes</Button>}
-					<Button variant="outline" onClick={resetToSuggested}>
+				<div className="flex flex-wrap items-center gap-2">
+					{hasUnsavedChanges && (
+						<Button variant="default" onClick={saveMix} className="rounded-full px-4">
+							Save Target Mix
+						</Button>
+					)}
+					<Button variant="ghost" onClick={resetToSuggested} className="rounded-full border border-border/40 px-4">
 						Reset to Optimal
 					</Button>
 				</div>
@@ -135,17 +140,17 @@ export default function Personas() {
 
 			{/* Tabs */}
 			<Tabs defaultValue="cards" className="space-y-6">
-				<TabsList>
-					<TabsTrigger value="cards">
-						<LayoutGrid className="mr-2 h-4 w-4" />
+				<TabsList className="justify-start gap-2">
+					<TabsTrigger value="cards" className="gap-2">
+						<LayoutGrid className="h-4 w-4" />
 						Persona Cards
 					</TabsTrigger>
-					<TabsTrigger value="mix">
-						<Users className="mr-2 h-4 w-4" />
+					<TabsTrigger value="mix" className="gap-2">
+						<Users className="h-4 w-4" />
 						Mix Visualizer
 					</TabsTrigger>
-					<TabsTrigger value="impact">
-						<TrendingUp className="mr-2 h-4 w-4" />
+					<TabsTrigger value="impact" className="gap-2">
+						<TrendingUp className="h-4 w-4" />
 						Profit Impact
 					</TabsTrigger>
 				</TabsList>
@@ -166,10 +171,11 @@ export default function Personas() {
 					</div>
 
 					{total !== 100 && (
-						<div className="rounded-lg border-l-4 border-amber-500 bg-amber-500/10 p-4">
-							<div className="text-sm font-medium text-amber-700 dark:text-amber-400">
+						<div className="flex items-center gap-3 rounded-2xl border border-amber-400/50 bg-amber-500/10 px-4 py-3 text-amber-200">
+							<AlertTriangle className="h-4 w-4" />
+							<span className="text-sm font-medium">
 								Target mix totals {total}%. Adjust personas to equal 100% for accurate projections.
-							</div>
+							</span>
 						</div>
 					)}
 				</TabsContent>

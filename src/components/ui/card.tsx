@@ -16,7 +16,7 @@ const Card = React.forwardRef<
 		<div
 			ref={ref}
 			className={cn(
-				'rounded-lg bg-surface text-card-foreground shadow-sm relative group',
+				'relative group rounded-2xl border border-border/40 bg-surface/90 text-card-foreground shadow-[0_18px_45px_rgba(0,0,0,0.24)] transition-colors',
 				className
 			)}
 			{...props}
@@ -24,7 +24,7 @@ const Card = React.forwardRef<
 			{aiContext && (
 				<button
 					onClick={() => openAssistant(aiContext, aiTitle)}
-					className="absolute right-2 top-2 z-10 flex h-7 w-7 items-center justify-center rounded-md opacity-0 transition-all hover:bg-primary/10 group-hover:opacity-100 focus:opacity-100"
+					className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-lg border border-transparent bg-secondary/60 opacity-0 transition-all hover:border-border/60 hover:bg-secondary group-hover:opacity-100 focus:opacity-100"
 					aria-label="Ask AI about this"
 				>
 					<Wand2 className="h-4 w-4 text-primary" />
@@ -38,7 +38,7 @@ Card.displayName = 'Card'
 
 const CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
 	({ className, ...props }, ref) => (
-		<div ref={ref} className={cn('flex flex-col space-y-1.5 p-6', className)} {...props} />
+		<div ref={ref} className={cn('flex flex-col space-y-1.5 px-6 pb-4 pt-6', className)} {...props} />
 	)
 )
 CardHeader.displayName = 'CardHeader'

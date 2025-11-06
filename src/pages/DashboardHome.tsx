@@ -24,23 +24,39 @@ function KPICard({ label, value, change, format }: { label: string; value: numbe
 	const aiContext = `${label}: ${formatValueWithUnit(value)}, Change: ${isPositive ? '+' : ''}${change}% vs last week`
 
 	return (
-		<Card aiContext={aiContext} aiTitle={label}>
-			<CardHeader className="pb-3">
-				<CardDescription className="text-xs">{label}</CardDescription>
-				<CardTitle className="text-2xl">{formatValueWithUnit(value)}</CardTitle>
+		<Card
+			aiContext={aiContext}
+			aiTitle={label}
+			className="border-none bg-gradient-to-br from-secondary/80 via-secondary/40 to-background/60"
+		>
+			<CardHeader className="pb-2">
+				<CardDescription className="text-xs uppercase tracking-[0.24em] text-muted-foreground/80">
+					{label}
+				</CardDescription>
+				<CardTitle className="text-3xl font-semibold text-foreground">
+					{formatValueWithUnit(value)}
+				</CardTitle>
 			</CardHeader>
-			<CardContent>
-				<div className="flex items-center gap-1.5">
+			<CardContent className="flex items-center justify-between pt-0">
+				<div className="flex items-center gap-2">
 					{isPositive ? (
-						<ArrowUpRight className="h-4 w-4 text-emerald-500" />
+						<ArrowUpRight className="h-4 w-4 text-emerald-400" />
 					) : (
-						<ArrowDownRight className="h-4 w-4 text-red-500" />
+						<ArrowDownRight className="h-4 w-4 text-red-400" />
 					)}
-					<span className={cn('text-sm font-medium', isPositive ? 'text-emerald-500' : 'text-red-500')}>
+					<span
+						className={cn(
+							'text-sm font-medium',
+							isPositive ? 'text-emerald-400' : 'text-red-400'
+						)}
+					>
 						{Math.abs(change)}%
 					</span>
 					<span className="text-xs text-muted-foreground">vs last week</span>
 				</div>
+				<Button variant="ghost" size="sm" className="rounded-full px-2 text-xs text-muted-foreground">
+					Details
+				</Button>
 			</CardContent>
 		</Card>
 	)
@@ -90,87 +106,94 @@ export default function DashboardHome() {
 	const totalConnections = 5
 
 	return (
-		<section className="grid gap-6">
-			<div className="flex items-end justify-between">
+		<section className="space-y-6">
+			<div className="flex flex-wrap items-end justify-between gap-4 rounded-2xl border border-border/40 bg-secondary/30 px-6 py-5">
 				<div>
-					<h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-					<p className="mt-1 text-sm text-muted-foreground">Key metrics, insights, and quick actions at a glance</p>
+					<p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">Overview</p>
+					<h1 className="mt-2 text-3xl font-semibold text-foreground">Revenue Health Overview</h1>
+					<p className="mt-1 text-sm text-muted-foreground/80">Understand growth, efficiency, and persona performance in one glance.</p>
 				</div>
-				<Badge variant={connectedCount === totalConnections ? 'success' : 'warning'}>
+				<Badge variant={connectedCount === totalConnections ? 'success' : 'warning'} className="rounded-full px-3 py-1 text-xs">
 					{connectedCount}/{totalConnections} data sources connected
 				</Badge>
 			</div>
 
-		{/* Top KPIs */}
-		<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-			<KPICard label="Sales" value={kpis.sales.value} change={kpis.sales.change} />
-			<KPICard label="Contribution" value={kpis.contribution.value} change={kpis.contribution.change} />
-			<KPICard label="New Customers" value={kpis.newCustomers.value} change={kpis.newCustomers.change} />
-			<KPICard label="CAC" value={kpis.cac.value} change={kpis.cac.change} format={(v) => `$${v}`} />
-		</div>
+			{/* Top KPIs */}
+			<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+				<KPICard label="Sales" value={kpis.sales.value} change={kpis.sales.change} />
+				<KPICard label="Contribution" value={kpis.contribution.value} change={kpis.contribution.change} />
+				<KPICard label="New Customers" value={kpis.newCustomers.value} change={kpis.newCustomers.change} />
+				<KPICard label="CAC" value={kpis.cac.value} change={kpis.cac.change} format={(v) => `$${v}`} />
+			</div>
 
 			{/* Key Insights */}
-			<Card>
+			<Card className="border-none bg-secondary/40">
 				<CardHeader>
-					<CardTitle>Key Insights</CardTitle>
+					<CardTitle className="flex items-center gap-2 text-lg font-semibold">Key Insights</CardTitle>
 					<CardDescription>AI-powered recommendations and alerts</CardDescription>
 				</CardHeader>
-				<CardContent className="space-y-3">
+				<CardContent className="space-y-4">
 					{insights.map((insight, idx) => (
-						<div key={idx} className="bg-surface rounded-lg p-4">
-							<div className="flex items-start gap-3">
-								{insight.type === 'success' && <CheckCircle2 className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />}
-								{insight.type === 'warning' && <AlertTriangle className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />}
-								{insight.type === 'info' && <Lightbulb className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />}
-								<div className="flex-1 min-w-0">
-									<div className="font-medium text-sm mb-1">{insight.title}</div>
-									<p className="text-xs text-muted-foreground mb-2">{insight.message}</p>
-									<Button variant="outline" size="sm" asChild className="h-7 text-xs">
-										<Link to={insight.action.href}>
-											{insight.action.label}
-										</Link>
-									</Button>
-								</div>
+						<div
+							key={idx}
+							className="flex items-start gap-3 rounded-2xl border border-border/40 bg-background/40 p-4"
+						>
+							<div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-secondary/50">
+								{insight.type === 'success' && <CheckCircle2 className="h-5 w-5 text-emerald-400" />}
+								{insight.type === 'warning' && <AlertTriangle className="h-5 w-5 text-amber-400" />}
+								{insight.type === 'info' && <Lightbulb className="h-5 w-5 text-cyan-400" />}
 							</div>
+							<div className="flex-1 min-w-0">
+								<div className="text-sm font-medium text-foreground">{insight.title}</div>
+								<p className="mt-1 text-xs text-muted-foreground/80">{insight.message}</p>
+							</div>
+							<Button variant="secondary" size="sm" asChild className="rounded-full px-3 text-xs">
+								<Link to={insight.action.href}>{insight.action.label}</Link>
+							</Button>
 						</div>
 					))}
 				</CardContent>
 			</Card>
 
 			{/* Persona Mix Summary */}
-			<Card>
+			<Card className="border-none bg-secondary/40">
 				<CardHeader>
-					<div className="flex items-center justify-between">
+					<div className="flex flex-wrap items-center justify-between gap-3">
 						<div>
 							<CardTitle>Current Persona Mix</CardTitle>
 							<CardDescription>Distribution of customer acquisition by persona</CardDescription>
 						</div>
-						<Button variant="outline" size="sm" asChild>
+						<Button variant="ghost" size="sm" className="rounded-full px-3" asChild>
 							<Link to="/personas">Optimize Mix</Link>
 						</Button>
 					</div>
 				</CardHeader>
 				<CardContent>
-					<div className="grid gap-4 md:grid-cols-4">
+					<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 						{personas.map((persona) => {
 							const details = personaDetails.find((pd) => pd.id === persona.id)
 							const profitStatus = persona.profitIndex > 1.2 ? 'success' : persona.profitIndex > 1.0 ? 'outline' : 'warning'
 							return (
-								<div key={persona.id} className="bg-surface rounded-lg p-4">
-									<div className="flex items-center justify-between mb-2">
-										<div className="font-medium text-sm">{persona.label}</div>
-										<Badge variant={profitStatus} className="text-xs">
+								<div
+									key={persona.id}
+									className="flex flex-col gap-3 rounded-2xl border border-border/30 bg-background/40 p-4"
+								>
+									<div className="flex items-center justify-between">
+										<div className="text-sm font-medium text-foreground">{persona.label}</div>
+										<Badge variant={profitStatus} className="rounded-full px-2 py-0.5 text-xs">
 											{persona.profitIndex.toFixed(2)}
 										</Badge>
 									</div>
-									<div className="text-2xl font-bold mb-1">{Math.round(persona.revenueShare * 100)}%</div>
-									<div className="text-xs text-muted-foreground space-y-0.5">
+									<div className="text-3xl font-semibold text-foreground">{Math.round(persona.revenueShare * 100)}%</div>
+									<div className="space-y-1 text-xs text-muted-foreground/80">
 										<div>LTV: ${persona.ltv}</div>
 										<div>Payback: {persona.paybackDays}d</div>
 									</div>
-									<div className="mt-3 pt-3 bg-muted/20 rounded px-2 py-1.5">
-										<div className="text-xs font-medium mb-1">Top Product</div>
-										<div className="text-xs text-muted-foreground">
+									<div className="rounded-xl border border-border/30 bg-secondary/40 p-3">
+										<div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground/70">
+											Top Product
+										</div>
+										<div className="mt-1 text-xs text-foreground/90">
 											{details?.qualitative?.firstPurchase?.[0] || 'N/A'}
 										</div>
 									</div>
@@ -182,20 +205,21 @@ export default function DashboardHome() {
 			</Card>
 
 			{/* Profitability Trend */}
-			<Card>
+			<Card className="border-none bg-secondary/40">
 				<CardHeader>
-					<div className="flex items-center justify-between">
+					<div className="flex flex-wrap items-center justify-between gap-3">
 						<div>
 							<CardTitle>Profitability Trend</CardTitle>
 							<CardDescription>7-day profit and contribution trend</CardDescription>
 						</div>
-						<TrendingUp className="h-5 w-5 text-emerald-500" />
+						<TrendingUp className="h-5 w-5 text-emerald-400" />
 					</div>
 				</CardHeader>
 				<CardContent>
 					<div className="h-64 w-full">
 						<ResponsiveContainer>
-							<LineChart data={[
+							<LineChart
+								data={[
 								{ date: '10/19', profit: 24000, contribution: 44200 },
 								{ date: '10/20', profit: 21280, contribution: 31280 },
 								{ date: '10/21', profit: 34100, contribution: 44100 },
