@@ -168,90 +168,87 @@ export function AIAssistant() {
 					</div>
 				</div>
 			) : (
-				<div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
-						{contextData && (
-							<div className="rounded-lg border bg-muted/50 p-3">
-								<div className="flex items-start gap-2">
-									<Badge variant="outline" className="mt-0.5">
-										Context
-									</Badge>
-									<div className="flex-1 text-xs text-muted-foreground">
-										{contextTitle && <div className="font-medium text-foreground mb-1">{contextTitle}</div>}
-										<div className="line-clamp-3">{contextData}</div>
-									</div>
+				<div className="flex-1 space-y-4 overflow-y-auto px-6 py-4">
+					{contextData && (
+						<div className="rounded-2xl border border-border/40 bg-secondary/40 p-3">
+							<div className="flex items-start gap-2">
+								<Badge variant="outline" className="mt-0.5 rounded-full px-3 text-[10px]">
+									Context
+								</Badge>
+								<div className="flex-1 text-xs text-muted-foreground/80">
+									{contextTitle && <div className="mb-1 font-medium text-foreground">{contextTitle}</div>}
+									<div className="line-clamp-3">{contextData}</div>
 								</div>
 							</div>
-						)}
+						</div>
+					)}
 
-						{messages.map((message, i) => (
+					{messages.map((message, i) => (
+						<div
+							key={i}
+							className={cn('flex gap-3', message.role === 'user' ? 'justify-end' : 'justify-start')}
+						>
+							{message.role === 'assistant' && (
+								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border/40 bg-secondary/60">
+									<Sparkles className="h-3.5 w-3.5 text-primary" />
+								</div>
+							)}
 							<div
-								key={i}
 								className={cn(
-									'flex gap-3',
-									message.role === 'user' ? 'justify-end' : 'justify-start'
+									'max-w-[85%] rounded-2xl px-4 py-2.5 shadow-sm',
+									message.role === 'user'
+										? 'bg-primary text-primary-foreground'
+										: 'border border-border/40 bg-secondary/40 text-foreground'
 								)}
 							>
-								{message.role === 'assistant' && (
-									<div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10">
-										<Sparkles className="h-3.5 w-3.5 text-primary" />
-									</div>
-								)}
-								<div
-									className={cn(
-										'rounded-lg px-4 py-2.5 max-w-[85%]',
-										message.role === 'user'
-											? 'bg-primary text-primary-foreground'
-											: 'bg-muted'
-									)}
-								>
-									<p className="text-sm whitespace-pre-wrap">{message.content}</p>
-									<p className="mt-1 text-[10px] opacity-60">
-										{message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-									</p>
-								</div>
-								{message.role === 'user' && (
-									<div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent">
-										<span className="text-xs font-medium">You</span>
-									</div>
-								)}
+								<p className="whitespace-pre-wrap text-sm">{message.content}</p>
+								<p className="mt-1 text-[10px] text-muted-foreground/60">
+									{message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+								</p>
 							</div>
-						))}
+							{message.role === 'user' && (
+								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border/40 bg-secondary/60 text-xs font-semibold text-foreground">
+									You
+								</div>
+							)}
+						</div>
+					))}
 
-						{isLoading && (
-							<div className="flex gap-3">
-								<div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10">
-									<Sparkles className="h-3.5 w-3.5 text-primary animate-pulse" />
-								</div>
-								<div className="rounded-lg bg-muted px-4 py-2.5">
-									<div className="flex gap-1">
-										<div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-bounce" style={{ animationDelay: '0ms' }} />
-										<div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-bounce" style={{ animationDelay: '150ms' }} />
-										<div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-bounce" style={{ animationDelay: '300ms' }} />
-									</div>
+					{isLoading && (
+						<div className="flex gap-3">
+							<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-border/40 bg-secondary/60">
+								<Sparkles className="h-3.5 w-3.5 text-primary animate-pulse" />
+							</div>
+							<div className="rounded-2xl border border-border/40 bg-secondary/40 px-4 py-2.5">
+								<div className="flex gap-1">
+									<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '0ms' }} />
+									<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '150ms' }} />
+									<div className="h-2 w-2 rounded-full bg-muted-foreground/60 animate-bounce" style={{ animationDelay: '300ms' }} />
 								</div>
 							</div>
-						)}
+						</div>
+					)}
 
 					<div ref={messagesEndRef} />
 				</div>
 			)}
 
 			{/* Input */}
-			<div className="border-t p-4 space-y-2">
+			<div className="border-t border-border/40 bg-secondary/30 p-4">
 				<div className="flex gap-2">
 					<Input
 						placeholder="Ask away (/ for commands)"
 						value={input}
 						onChange={(e) => setInput(e.target.value)}
 						onKeyDown={handleKeyDown}
-						className="flex-1"
+						className="flex-1 rounded-full border-border/40 bg-background/60"
 					/>
-					<Button onClick={handleSend} disabled={!input.trim() || isLoading} size="icon">
+					<Button onClick={handleSend} disabled={!input.trim() || isLoading} size="icon" className="rounded-full">
 						<Send className="h-4 w-4" />
 					</Button>
 				</div>
-				<p className="text-[10px] text-muted-foreground text-center">
-					AI can make mistakes. Verify important information.
+				<p className="pt-1 text-center text-[10px] text-muted-foreground/70">
+					AI can make mistakes — verify critical decisions.
 				</p>
 			</div>
 		</div>
