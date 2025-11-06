@@ -74,7 +74,6 @@ const NAV_SECTIONS: NavSection[] = [
 		group: 'Tools',
 		items: [
 			{ to: '/chat', label: 'AI Assistant', icon: Sparkles },
-			{ to: '/admin', label: 'Admin', icon: Settings },
 		],
 	},
 ]
