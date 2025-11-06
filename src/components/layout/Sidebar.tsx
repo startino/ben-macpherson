@@ -115,7 +115,7 @@ export function Sidebar() {
 	return (
 		<aside className="fixed inset-y-0 left-0 z-40 hidden w-64 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-r border-border/40 md:flex md:flex-col">
 			<div className="border-b border-border/40 px-4 pb-4 pt-6">
-				<div className="text-[10px] uppercase tracking-wide text-muted-foreground">Workspace</div>
+		<div className="text-[11px] font-semibold uppercase tracking-[0.32em] text-muted-foreground/80">Workspace</div>
 				<button className="mt-2 flex w-full items-center justify-between rounded-md border border-border/50 bg-secondary/60 px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary">
 					<span>startino website</span>
 					<ChevronRight className="h-4 w-4 text-muted-foreground" />
@@ -128,7 +128,7 @@ export function Sidebar() {
 						const activeInSection = items.some(({ to }) => pathname === to || pathname.startsWith(to))
 						return (
 							<div key={group}>
-								<div className="mb-2 flex items-center justify-between px-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+					<div className="mb-2 flex items-center justify-between px-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-muted-foreground/80">
 									<span>{group}</span>
 									{collapsible && (
 										<button
