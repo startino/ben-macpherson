@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { useAIAssistant } from '@/contexts/AIAssistantContext'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
-import { Sparkles, Send, BarChart3, TrendingUp, Users, ShoppingBag } from 'lucide-react'
+import { Sparkles, Send, BarChart3, TrendingUp, Users, ShoppingBag, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface Message {
@@ -86,81 +85,87 @@ export function AIAssistant() {
 
 	const isEmpty = messages.length === 0
 
+	if (!isOpen) return null
+
 	return (
-		<Sheet open={isOpen} onOpenChange={(open) => !open && closeAssistant()}>
-			<SheetContent side="right" className="w-full sm:max-w-xl p-0 flex flex-col">
-				<SheetHeader className="px-6 pt-6 pb-4 border-b">
-					<div className="flex items-center gap-2">
-						<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
-							<Sparkles className="h-4 w-4 text-primary" />
-						</div>
-						<div className="flex-1">
-							<SheetTitle className="text-left">DRX AI Assistant</SheetTitle>
-							<SheetDescription className="text-left text-xs">
-								Trained on D.LUX methodology and profit-first strategies
-							</SheetDescription>
-						</div>
+		<div className="fixed right-0 top-0 z-40 flex h-screen w-96 flex-col border-l bg-background shadow-lg">
+			{/* Header */}
+			<div className="flex items-center justify-between border-b px-6 py-4">
+				<div className="flex items-center gap-2">
+					<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+						<Sparkles className="h-4 w-4 text-primary" />
 					</div>
-				</SheetHeader>
+					<div>
+						<h2 className="text-sm font-semibold">DRX AI Assistant</h2>
+						<p className="text-xs text-muted-foreground">
+							Trained on D.LUX methodology
+						</p>
+					</div>
+				</div>
+				<Button variant="ghost" size="icon" onClick={closeAssistant}>
+					<X className="h-4 w-4" />
+				</Button>
+			</div>
 
-				{isEmpty ? (
-					<div className="flex-1 overflow-y-auto px-6 py-8">
-						<div className="space-y-6">
-							<div className="text-center space-y-2">
-								<h3 className="text-lg font-semibold">How can I help you understand your data?</h3>
-								<p className="text-sm text-muted-foreground">
-									Ask me anything about your personas, performance, or strategy
-								</p>
+			{/* Content */}
+			{isEmpty ? (
+				<div className="flex-1 overflow-y-auto px-6 py-8">
+					<div className="space-y-6">
+						<div className="text-center space-y-2">
+							<h3 className="text-lg font-semibold">How can I help you understand your data?</h3>
+							<p className="text-sm text-muted-foreground">
+								Ask me anything about your personas, performance, or strategy
+							</p>
+						</div>
+
+						<div className="space-y-3">
+							<h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+								Try asking about
+							</h4>
+							<div className="grid gap-2">
+								{SUGGESTED_PROMPTS.map((prompt, i) => (
+									<button
+										key={i}
+										onClick={() => handlePromptClick(prompt.text)}
+										className="flex items-center gap-3 rounded-lg border bg-card p-3 text-left transition-colors hover:bg-accent"
+									>
+										<div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
+											<prompt.icon className="h-4 w-4 text-primary" />
+										</div>
+										<div className="flex-1">
+											<div className="text-sm font-medium">{prompt.text}</div>
+											<div className="text-xs text-muted-foreground">{prompt.category}</div>
+										</div>
+									</button>
+								))}
 							</div>
+						</div>
 
+						{RECENT_CHATS.length > 0 && (
 							<div className="space-y-3">
 								<h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-									Try asking about
+									Recent chats
 								</h4>
-								<div className="grid gap-2">
-									{SUGGESTED_PROMPTS.map((prompt, i) => (
+								<div className="space-y-2">
+									{RECENT_CHATS.map((chat, i) => (
 										<button
 											key={i}
-											onClick={() => handlePromptClick(prompt.text)}
-											className="flex items-center gap-3 rounded-lg border bg-card p-3 text-left transition-colors hover:bg-accent"
+											className="flex w-full items-center justify-between rounded-lg border bg-card p-3 text-left transition-colors hover:bg-accent"
 										>
-											<div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
-												<prompt.icon className="h-4 w-4 text-primary" />
-											</div>
-											<div className="flex-1">
-												<div className="text-sm font-medium">{prompt.text}</div>
-												<div className="text-xs text-muted-foreground">{prompt.category}</div>
-											</div>
+											<span className="text-sm">{chat.title}</span>
+											<span className="text-xs text-muted-foreground">{chat.time}</span>
 										</button>
 									))}
 								</div>
+								<Button variant="ghost" className="w-full text-xs">
+									View all
+								</Button>
 							</div>
-
-							{RECENT_CHATS.length > 0 && (
-								<div className="space-y-3">
-									<h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-										Recent chats
-									</h4>
-									<div className="space-y-2">
-										{RECENT_CHATS.map((chat, i) => (
-											<button
-												key={i}
-												className="flex w-full items-center justify-between rounded-lg border bg-card p-3 text-left transition-colors hover:bg-accent"
-											>
-												<span className="text-sm">{chat.title}</span>
-												<span className="text-xs text-muted-foreground">{chat.time}</span>
-											</button>
-										))}
-									</div>
-									<Button variant="ghost" className="w-full text-xs">
-										View all
-									</Button>
-								</div>
-							)}
-						</div>
+						)}
 					</div>
-				) : (
-					<div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
+				</div>
+			) : (
+				<div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
 						{contextData && (
 							<div className="rounded-lg border bg-muted/50 p-3">
 								<div className="flex items-start gap-2">
@@ -224,29 +229,29 @@ export function AIAssistant() {
 							</div>
 						)}
 
-						<div ref={messagesEndRef} />
-					</div>
-				)}
-
-				<div className="border-t p-4 space-y-2">
-					<div className="flex gap-2">
-						<Input
-							placeholder="Ask away (/ for commands)"
-							value={input}
-							onChange={(e) => setInput(e.target.value)}
-							onKeyDown={handleKeyDown}
-							className="flex-1"
-						/>
-						<Button onClick={handleSend} disabled={!input.trim() || isLoading} size="icon">
-							<Send className="h-4 w-4" />
-						</Button>
-					</div>
-					<p className="text-[10px] text-muted-foreground text-center">
-						AI can make mistakes. Verify important information.
-					</p>
+					<div ref={messagesEndRef} />
 				</div>
-			</SheetContent>
-		</Sheet>
+			)}
+
+			{/* Input */}
+			<div className="border-t p-4 space-y-2">
+				<div className="flex gap-2">
+					<Input
+						placeholder="Ask away (/ for commands)"
+						value={input}
+						onChange={(e) => setInput(e.target.value)}
+						onKeyDown={handleKeyDown}
+						className="flex-1"
+					/>
+					<Button onClick={handleSend} disabled={!input.trim() || isLoading} size="icon">
+						<Send className="h-4 w-4" />
+					</Button>
+				</div>
+				<p className="text-[10px] text-muted-foreground text-center">
+					AI can make mistakes. Verify important information.
+				</p>
+			</div>
+		</div>
 	)
 }
 

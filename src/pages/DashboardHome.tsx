@@ -11,7 +11,7 @@ import personaDetailsData from '@/data/mock/personaDetails.json'
 import customerHealth from '@/data/mock/customerHealth.json'
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts'
 
-function KPICard({ label, value, change, format, href }: { label: string; value: number; change: number; format?: (v: number) => string; href?: string }) {
+function KPICard({ label, value, change, format }: { label: string; value: number; change: number; format?: (v: number) => string }) {
 	const isPositive = change > 0
 	const formatValue = format || ((v: number) => v.toLocaleString())
 	const formatValueWithUnit = (v: number) => {
@@ -21,8 +21,10 @@ function KPICard({ label, value, change, format, href }: { label: string; value:
 		return formatValue(v)
 	}
 
-	const content = (
-		<Card>
+	const aiContext = `${label}: ${formatValueWithUnit(value)}, Change: ${isPositive ? '+' : ''}${change}% vs last week`
+
+	return (
+		<Card aiContext={aiContext} aiTitle={label}>
 			<CardHeader className="pb-3">
 				<CardDescription className="text-xs">{label}</CardDescription>
 				<CardTitle className="text-2xl">{formatValueWithUnit(value)}</CardTitle>
@@ -42,11 +44,6 @@ function KPICard({ label, value, change, format, href }: { label: string; value:
 			</CardContent>
 		</Card>
 	)
-
-	if (href) {
-		return <Link to={href}>{content}</Link>
-	}
-	return content
 }
 
 export default function DashboardHome() {
@@ -104,13 +101,13 @@ export default function DashboardHome() {
 				</Badge>
 			</div>
 
-			{/* Top KPIs */}
-			<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-				<KPICard label="Sales" value={kpis.sales.value} change={kpis.sales.change} href="/dashboard" />
-				<KPICard label="Contribution" value={kpis.contribution.value} change={kpis.contribution.change} href="/dashboard" />
-				<KPICard label="New Customers" value={kpis.newCustomers.value} change={kpis.newCustomers.change} href="/dashboard" />
-				<KPICard label="CAC" value={kpis.cac.value} change={kpis.cac.change} format={(v) => `$${v}`} href="/dashboard" />
-			</div>
+		{/* Top KPIs */}
+		<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+			<KPICard label="Sales" value={kpis.sales.value} change={kpis.sales.change} />
+			<KPICard label="Contribution" value={kpis.contribution.value} change={kpis.contribution.change} />
+			<KPICard label="New Customers" value={kpis.newCustomers.value} change={kpis.newCustomers.change} />
+			<KPICard label="CAC" value={kpis.cac.value} change={kpis.cac.change} format={(v) => `$${v}`} />
+		</div>
 
 			{/* Key Insights */}
 			<Card>
