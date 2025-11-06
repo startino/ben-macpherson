@@ -34,7 +34,7 @@ type NavSection = {
 
 const NAV_SECTIONS: NavSection[] = [
 	{
-		group: 'Project',
+		group: 'Brands',
 		items: [
 			{ to: '/dashboard', label: 'Home', icon: LayoutGrid },
 			{ to: '/inputs', label: 'Data Connections', icon: Database },
