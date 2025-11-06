@@ -33,9 +33,9 @@ export function WorkspaceSwitcher() {
 			<SheetTrigger asChild>
 				<Button
 					variant="ghost"
-					className="mt-3 flex w-full items-center justify-between rounded-lg border border-border/50 bg-secondary/60 px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+					className="mt-3 flex w-full items-center justify-between rounded-lg border border-border/50 bg-secondary/60 px-5 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
 				>
-					<span className="flex flex-col text-left">
+					<span className="flex flex-col space-y-0.5 text-left">
 						{selectedWorkspace?.name || 'Select workspace'}
 						<span className="text-xs text-muted-foreground">{selectedWorkspace?.plan}</span>
 					</span>
