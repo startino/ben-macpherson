@@ -1,28 +1,37 @@
 import { createContext, useContext, useState, type ReactNode } from 'react'
 
+type AssistantPanel = 'assistant' | 'resources' | null
+
 interface AssistantContext {
+	activePanel: AssistantPanel
 	isOpen: boolean
+	isResourcesOpen: boolean
 	contextData: string | null
 	contextTitle: string | null
 	openAssistant: (data?: string, title?: string) => void
+	openResources: () => void
 	closeAssistant: () => void
 }
 
 const AIAssistantContext = createContext<AssistantContext | undefined>(undefined)
 
 export function AIAssistantProvider({ children }: { children: ReactNode }) {
-	const [isOpen, setIsOpen] = useState(false)
+	const [activePanel, setActivePanel] = useState<AssistantPanel>(null)
 	const [contextData, setContextData] = useState<string | null>(null)
 	const [contextTitle, setContextTitle] = useState<string | null>(null)
 
 	const openAssistant = (data?: string, title?: string) => {
 		if (data) setContextData(data)
 		if (title) setContextTitle(title)
-		setIsOpen(true)
+		setActivePanel('assistant')
+	}
+
+	const openResources = () => {
+		setActivePanel('resources')
 	}
 
 	const closeAssistant = () => {
-		setIsOpen(false)
+		setActivePanel(null)
 		// Clear context after closing animation
 		setTimeout(() => {
 			setContextData(null)
@@ -33,10 +42,13 @@ export function AIAssistantProvider({ children }: { children: ReactNode }) {
 	return (
 		<AIAssistantContext.Provider
 			value={{
-				isOpen,
+				activePanel,
+				isOpen: activePanel === 'assistant',
+				isResourcesOpen: activePanel === 'resources',
 				contextData,
 				contextTitle,
 				openAssistant,
+				openResources,
 				closeAssistant,
 			}}
 		>

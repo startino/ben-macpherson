@@ -26,7 +26,7 @@ const RECENT_CHATS = [
 ]
 
 export function AIAssistant() {
-	const { isOpen, closeAssistant, contextData, contextTitle } = useAIAssistant()
+	const { activePanel, closeAssistant, contextData, contextTitle } = useAIAssistant()
 	const [messages, setMessages] = useState<Message[]>([])
 	const [input, setInput] = useState('')
 	const [isLoading, setIsLoading] = useState(false)
@@ -42,10 +42,10 @@ export function AIAssistant() {
 
 	// Pre-populate with context when opened
 	useEffect(() => {
-		if (isOpen && contextData && messages.length === 0) {
+		if (activePanel === 'assistant' && contextData && messages.length === 0) {
 			setInput(`Regarding ${contextTitle || 'this data'}: `)
 		}
-	}, [isOpen, contextData, contextTitle, messages.length])
+	}, [activePanel, contextData, contextTitle, messages.length])
 
 	const handleSend = async () => {
 		if (!input.trim()) return
@@ -85,7 +85,7 @@ export function AIAssistant() {
 
 	const isEmpty = messages.length === 0
 
-	if (!isOpen) return null
+	if (activePanel !== 'assistant') return null
 
 	return (
 		<div className="fixed right-0 top-0 z-40 flex h-screen w-96 flex-col border-l border-border/40 bg-background/95 shadow-[0_-24px_60px_rgba(0,0,0,0.45)] backdrop-blur">

@@ -1,38 +1,60 @@
-import { Home, Users, Palette, BarChart3, FileText, Settings } from 'lucide-react'
-import { Link, useLocation } from 'react-router-dom'
+import type { ComponentType } from 'react'
+import { Sparkles, LifeBuoy } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { useAIAssistant } from '@/contexts/AIAssistantContext'
 
-const navItems = [
-	{ to: '/dashboard', icon: Home, label: 'Home' },
-	{ to: '/personas', icon: Users, label: 'Personas' },
-	{ to: '/creative', icon: Palette, label: 'Creative' },
-	{ to: '/dashboard/reports', icon: BarChart3, label: 'Analytics' },
-	{ to: '/exports', icon: FileText, label: 'Exports' },
-	{ to: '/settings', icon: Settings, label: 'Settings' },
+const ITEMS: ReadonlyArray<{
+	action: 'assistant' | 'resources'
+	icon: ComponentType<{ className?: string }>
+	label: string
+}> = [
+	{
+		icon: Sparkles,
+		label: 'AI Assistant',
+		action: 'assistant',
+	},
+	{
+		icon: LifeBuoy,
+		label: 'Resources',
+		action: 'resources',
+	},
 ]
 
 export function RightSidebar() {
-	const location = useLocation()
+	const { activePanel, openAssistant, openResources, closeAssistant } = useAIAssistant()
+
+	const handleClick = (action: 'assistant' | 'resources') => {
+		if (activePanel === action) {
+			closeAssistant()
+			return
+		}
+		if (action === 'assistant') {
+			openAssistant()
+		} else {
+			openResources()
+		}
+	}
 
 	return (
-		<aside className="fixed right-0 top-0 z-30 hidden h-screen w-20 flex-col items-center border-l border-border/40 bg-background/95 py-4 backdrop-blur md:flex">
-			<nav className="flex flex-1 flex-col items-center gap-2">
-				{navItems.map((item) => {
-					const isActive = location.pathname === item.to || location.pathname.startsWith(item.to + '/')
+		<aside className="fixed right-0 top-0 z-30 hidden h-screen w-16 flex-col items-center border-l border-border/40 bg-background/95 py-6 backdrop-blur md:flex">
+			<nav className="flex flex-1 flex-col items-center gap-3">
+			{ITEMS.map(({ icon: Icon, label, action }) => {
+					const isActive = activePanel === action
 					return (
-						<Link
-							key={item.to}
-							to={item.to}
+						<button
+							key={action}
+							onClick={() => handleClick(action)}
 							className={cn(
-								'flex h-12 w-12 items-center justify-center rounded-xl transition-colors',
+								'flex h-12 w-12 items-center justify-center rounded-xl border border-transparent text-muted-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background',
 								isActive
-									? 'bg-primary/10 text-primary'
-									: 'text-muted-foreground hover:bg-secondary/80 hover:text-foreground'
+									? 'border-border/70 bg-primary/10 text-primary'
+									: 'hover:border-border/60 hover:bg-secondary/70 hover:text-foreground'
 							)}
-							title={item.label}
+							title={label}
+							aria-pressed={isActive}
 						>
-							<item.icon className="h-5 w-5" />
-						</Link>
+							<Icon className="h-5 w-5" />
+						</button>
 					)
 				})}
 			</nav>

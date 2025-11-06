@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { AIAssistant } from '@/components/layout/AIAssistant'
 import { RightSidebar } from '@/components/layout/RightSidebar'
+import { SupportResources } from '@/components/layout/SupportResources'
 import { AIAssistantProvider, useAIAssistant } from '@/contexts/AIAssistantContext'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -51,7 +52,7 @@ function TopBar() {
 
 function AppContent() {
 	const location = useLocation()
-	const { isOpen } = useAIAssistant()
+	const { activePanel } = useAIAssistant()
 	const isOnboarding = location.pathname === '/onboarding' || location.pathname === '/ben-macpherson/onboarding'
 	const isLanding = location.pathname === '/' || location.pathname === '/ben-macpherson/'
 
@@ -75,13 +76,14 @@ function AppContent() {
 				<main
 					className={cn(
 						'mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 py-6 pr-4 transition-all duration-300',
-						isOpen && 'mr-96'
+						activePanel && 'mr-96'
 					)}
 				>
 					<Outlet />
 				</main>
 			</div>
 			<AIAssistant />
+			<SupportResources />
 		</div>
 	)
 }
