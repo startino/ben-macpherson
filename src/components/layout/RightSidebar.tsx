@@ -36,7 +36,7 @@ export function RightSidebar() {
 	}
 
 	return (
-		<aside className="fixed right-0 top-0 z-30 hidden h-screen w-16 flex-col items-center border-l border-border/40 bg-background/95 py-6 backdrop-blur md:flex">
+		<aside className="fixed right-0 top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-16 flex-col items-center border-l border-border/40 bg-background/95 py-6 backdrop-blur md:flex">
 			<nav className="flex flex-1 flex-col items-center gap-3">
 			{ITEMS.map(({ icon: Icon, label, action }) => {
 					const isActive = activePanel === action
