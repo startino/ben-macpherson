@@ -5,13 +5,16 @@ import { LayoutGrid, Settings, Users2, PenSquare, BarChart3, Download, ChevronRi
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 const nav = [
-	{ to: '/dashboard', label: 'Dashboard', icon: LayoutGrid },
-	{ to: '/chat', label: 'Chat', icon: MessageSquare },
-	{ to: '/settings', label: 'Settings', icon: Settings },
+	{ to: '/dashboard', label: 'Home', icon: LayoutGrid },
 	{ to: '/personas', label: 'Personas', icon: Users2 },
-	{ to: '/creative', label: 'Creative', icon: PenSquare },
+	{ to: '/creative', label: 'Creative Roadmap', icon: PenSquare },
+]
+
+const secondaryNav = [
 	{ to: '/surveys', label: 'Surveys', icon: ClipboardList },
 	{ to: '/exports', label: 'Exports', icon: Download },
+	{ to: '/chat', label: 'Chat', icon: MessageSquare },
+	{ to: '/settings', label: 'Settings', icon: Settings },
 ]
 
 const reportsGroup = [
@@ -40,6 +43,10 @@ export function Sidebar() {
 					<div className="mt-1 text-xs text-muted-foreground">DigitalRx Revenue Health</div>
 				</div>
 				<nav className="grid gap-1 px-2">
+					{/* Primary Navigation */}
+					<div className="mb-2 px-3 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+						Intelligence
+					</div>
 					{nav.map(({ to, label, icon: Icon }) => {
 						const active = pathname === to
 						return (
@@ -59,7 +66,10 @@ export function Sidebar() {
 					})}
 
 					{/* Reports Group */}
-					<div className="mt-2">
+					<div className="mt-4">
+						<div className="mb-2 px-3 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+							Analytics
+						</div>
 						<button
 							onClick={() => setReportsOpen(!reportsOpen)}
 							className={cn(
@@ -97,6 +107,30 @@ export function Sidebar() {
 								})}
 							</div>
 						)}
+					</div>
+
+					{/* Secondary Navigation */}
+					<div className="mt-4">
+						<div className="mb-2 px-3 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+							Tools
+						</div>
+						{secondaryNav.map(({ to, label, icon: Icon }) => {
+							const active = pathname === to
+							return (
+								<Link
+									key={to}
+									to={to}
+									className={cn(
+										'group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200',
+										'text-muted-foreground hover:bg-accent/50 hover:text-foreground',
+										active && 'bg-accent text-foreground shadow-sm'
+									)}
+								>
+									<Icon className={cn('h-4 w-4 transition-transform duration-200', active && 'scale-110')} />
+									<span>{label}</span>
+								</Link>
+							)
+						})}
 					</div>
 				</nav>
 			</div>

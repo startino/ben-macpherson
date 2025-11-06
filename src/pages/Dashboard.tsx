@@ -20,8 +20,10 @@ function KPICard({ label, value, change, format }: { label: string; value: numbe
 		return formatValue(v)
 	}
 
+	const aiContext = `${label}: ${formatValueWithUnit(value)}, Change: ${isPositive ? '+' : ''}${change}% vs last week`
+
 	return (
-		<Card>
+		<Card aiContext={aiContext} aiTitle={label}>
 			<CardHeader className="pb-3">
 				<CardDescription className="text-xs">{label}</CardDescription>
 				<CardTitle className="text-2xl">{formatValueWithUnit(value)}</CardTitle>
@@ -72,7 +74,10 @@ function RevenueHealthReport() {
 			</div>
 
 			{/* Sales Trend Chart */}
-			<Card>
+			<Card 
+				aiContext="Sales trend data showing current year vs last year comparison" 
+				aiTitle="Sales Trend Analysis"
+			>
 				<CardHeader>
 					<CardTitle>Sales Trended over Time</CardTitle>
 					<CardDescription>Total Sales vs Sales Comparison (Last Year)</CardDescription>
@@ -95,7 +100,10 @@ function RevenueHealthReport() {
 			</Card>
 
 			{/* Contribution Trend Chart */}
-			<Card>
+			<Card 
+				aiContext="Contribution margin trends showing actual dollars and percentage over time"
+				aiTitle="Contribution Analysis"
+			>
 				<CardHeader>
 					<CardTitle>Contribution, Actual and Percent, Trended over Time</CardTitle>
 					<CardDescription>Contribution amount and percentage trend</CardDescription>
@@ -119,7 +127,10 @@ function RevenueHealthReport() {
 			</Card>
 
 			{/* Orders Trend Chart */}
-			<Card>
+			<Card
+				aiContext="Order patterns showing new customer orders vs repeat customer orders over time"
+				aiTitle="Order Analysis"
+			>
 				<CardHeader>
 					<CardTitle>New Orders and Repeat Orders Trended over Time</CardTitle>
 					<CardDescription>Tracking new vs repeat order patterns</CardDescription>
@@ -145,7 +156,10 @@ function RevenueHealthReport() {
 			</Card>
 
 			{/* Customer Acquisition Trend */}
-			<Card>
+			<Card
+				aiContext="Customer acquisition cost (CAC) and new customer volume trends"
+				aiTitle="Customer Acquisition Analysis"
+			>
 				<CardHeader>
 					<CardTitle>CAC and New Customers Trended over Time</CardTitle>
 					<CardDescription>CAC and New Customers acquisition trends</CardDescription>

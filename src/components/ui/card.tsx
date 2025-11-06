@@ -1,18 +1,39 @@
 import * as React from 'react'
+import { Wand2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { useAIAssistant } from '@/contexts/AIAssistantContext'
 
-const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-	({ className, ...props }, ref) => (
+const Card = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement> & {
+		aiContext?: string
+		aiTitle?: string
+	}
+>(({ className, aiContext, aiTitle, children, ...props }, ref) => {
+	const { openAssistant } = useAIAssistant()
+
+	return (
 		<div
 			ref={ref}
 			className={cn(
-				'rounded-lg bg-surface text-card-foreground shadow-sm',
+				'rounded-lg bg-surface text-card-foreground shadow-sm relative group',
 				className
 			)}
 			{...props}
-		/>
+		>
+			{aiContext && (
+				<button
+					onClick={() => openAssistant(aiContext, aiTitle)}
+					className="absolute right-2 top-2 z-10 flex h-7 w-7 items-center justify-center rounded-md opacity-0 transition-all hover:bg-primary/10 group-hover:opacity-100 focus:opacity-100"
+					aria-label="Ask AI about this"
+				>
+					<Wand2 className="h-4 w-4 text-primary" />
+				</button>
+			)}
+			{children}
+		</div>
 	)
-)
+})
 Card.displayName = 'Card'
 
 const CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(

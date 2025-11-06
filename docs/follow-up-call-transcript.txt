@@ -1,0 +1,530 @@
+1:53 - Jonas Lindberg
+Do only you have a Read AI account or do I assume?
+
+1:57 - Jorge Lewis
+Um, I think it's only me.
+
+2:07 - Jonas Lindberg
+Where did you send the link?
+
+2:13 - Jorge Lewis
+An admin, I think, or it'd be.
+
+2:23 - Jonas Lindberg
+Found it. Well, no, it's the notion.
+
+2:33 - Unidentified Speaker
+Yeah, I found it.
+
+2:35 - Jonas Lindberg
+and also. Discord search is very bad. I need to sign in to see it.
+
+5:50 - Jorge Lewis
+Kind of hoping it doesn't join. The headache?
+
+6:16 - Ben Macpherson
+Guys, gentlemen, how are we?
+
+6:20 - Jorge Lewis
+Doing great. Actually, not so good. I have a crazy migraine, like nasal pressure. I'm going to make it through, hopefully.
+
+6:29 - Ben Macpherson
+You sure? You want to do a regroup? I mean, I only want the best of yours.
+
+6:35 - Jorge Lewis
+Let's do the first half, which is just going over a lot of questions I have. And then I think the second half, I'll see how I'm feeling. We can postpone that if necessary.
+
+6:42 - Ben Macpherson
+No problem at all. Good to meet you. Good to meet you, Jonas. I haven't met you before.
+
+6:48 - Jorge Lewis
+Yeah, so this is Jonas. He's my co-founder. We've known each other for about seven, eight years now. Hey, he's just stopping by to say hello today because he has to head to bed soon. He's in Norway at the moment.
+
+7:01 - Ben Macpherson
+Okay, where are you? Where are you based?
+
+7:04 - Jonas Lindberg
+In Norway at the moment, but similar to Jorge, I've been traveling the last couple of years. So we went together to Thailand, Vietnam, and then I stayed in Thailand for a while.
+
+7:17 - Ben Macpherson
+Yeah, amazing. Actually, my family has a house in Thailand, in Koh Samui. Oh, nice. I mentioned to Jorge I spent a bit of time in Asia. So did you have fun in Thailand? Did you love it? Oh, yeah. Vietnam is a great place.
+
+7:36 - Unidentified Speaker
+Yeah, where were you in Vietnam?
+
+7:38 - Ben Macpherson
+No, no, I lived in Hong Kong, but Vietnam is fantastic, right? It's a beautiful place.
+
+7:42 - Unidentified Speaker
+Yeah, where were you in Vietnam?
+
+7:45 - Ben Macpherson
+Oh, I just went to, you know, just when I traveled there when I was, you know, like maybe and just sort of went. Kind of through the country, so I did, you know, did. Saigon and all over.
+
+7:57 - Unidentified Speaker
+A lot of bike rides.
+
+7:58 - Ben Macpherson
+A lot of bike rides, a lot of good food. Yeah, very beautiful actually. Love it. Love the people. And Thailand is lovely too. I go there kind of not so often, you know, maybe once a year or once every two years, but yeah, it's good fun. That's great. And you guys would have had a lot of fun in Thailand. I mean, fuck, there's a lot of beer drinking going on among other things. Cool, that's great. I understand you're in Norway, so it's late for you.
+
+8:28 - Unidentified Speaker
+Thanks so much for just wrapping on.
+
+8:29 - Jonas Lindberg
+Yeah, it's been very nice to meet you. I'll see you hopefully soon.
+
+8:37 - Unidentified Speaker
+Yeah, nice to meet you too.
+
+8:42 - Jorge Lewis
+All right.
+
+8:45 - Jorge Lewis
+So the first part, so I sensed a little bit of an agenda in the Call. Basically, I want to go through the demo and and when I was making the demo I was like I have a lot of questions in terms how this is work and more more so in this the Strategic aspect like what are the decisions we want to make? And then also go I wanted to go over a proposal, but I'm like, I want to first figure out all these All these decisions first and then figure out. Oh, you invited another figure. Yeah figure out figure out from there what what's the plan so yet to start us off with let me go ahead and share my screen and we can go through this demo. So actually, I'll go through some questions first that I have. So you gave some reviews on the product brief, but overall, one big question, like overall, is in a few years time, is the goal. So we mentioned last time, there's two options are we sell, we try to convert the agency into a, or what are your goals in like three to five years?
+
+9:46 - Ben Macpherson
+Well, they're probably a little, there's two options, right? One option is, as it pertains to this project, you know, there's two options. One is, all that together with the agency, you know, essentially almost re-rating the agency revenue as sort of more not necessarily SaaS revenue, but kind of tech enabled revenue, you know, so it's, it became, you know, we're, we're essentially sort of lifting the multiple from, you know, five to eight or something like that.
+
+10:24 - Jorge Lewis
+I mean, in, in theory, would the goal be to have it as the agency just literally be turned into a SaaS product, like a Yeah.
+
+10:35 - Ben Macpherson
+So that, that would be the kind of ultimate goal, whether or not you fully get there. What I think is interesting. What I think is interesting. I think if you sign up to persona, to the persona, you know, it's a DRX. And it essentially starts really intelligently tracking who your customers are, what motivates them, etc. And then feeds that into creative, which is then, which you then build automatically on a percentage of spend behind that or revenue even, you know, it becomes almost like a self-managing, it becomes like a SaaS product, right? There's like a fixed component and a variable component. The creative, you know, now with AI, we can get a lot of leverage in building that creative, you know, really quickly. So yes, we'd still need to have people, but I believe that that's actually the right model, which is AI automation and Strategy people, right? So I do think that that's an interesting model. We can essentially end up in that place. And so the question would be then, okay, let's try and rewrite the revenue and earnings we've got with the existing business, Call it a tech and SaaS business, and exit that much sooner. So we kind of go out to market like next year, early-ish, after having sort of done this, built out a product, you know, restructured our client contracts, no big deal, we're kind of like almost there. And sort of take it to market, you know, that kind of makes it look different. Now, the other option is that we say no, no, no. Actually, the agency just is going to drag down the valuation. And, you know, we will, we'll separate the two, you know, now we'll probably sell the agency first thing next year anyway. And, you know, take some of that cash and, you know, pile it into, you know, of this product and then kind of build it over the next couple of years.
+
+12:35 - Jorge Lewis
+and if you sell the agency, like let's just say next year and try to use that first test product, what are your motivations around selling that and then starting something new again?
+
+12:45 - Ben Macpherson
+Yeah, I mean, look, we have found two things. One is, these are great questions, but they're super thoughtful and speak to your super thoughtful. So the rationale is, There's a couple of factors. One is just the people factor, which is we've got partners. We've been in this since 2018, really, because we started investing in 2018. We fired up the agency in 2020. Really 2022, but 2020 we started. And so the thinking is like, hey, look, let's get some liquidity. We've been in it for a while. Of this is personally motivated. And then, and then build the kind of blank sheet of paper next business. And don't forget, like, I'm a serial entrepreneur, I'm like, I'm eight businesses in, right. So, so there is an element here, when you have a clean sheet of paper, that you can build something better, because you start with, you start with the why and that, you know, before you kind of get to the how. And so you kind of like you can and you're Free of constraints. Kind of shoehorn this into the existing business might not be the best thing for it, right? Or it could be brilliant and genius because all of a sudden we've now got a really seriously great asset. But that's TBD. But I do think that exiting a little bit sooner generally is actually not a bad move. Here's my take for consideration. If you had something that you said, this is a multi hundred million dollar slash billion dollar business, and it's going to go the distance in this really is the future. And we're not going to get disrupt, you know, we're going to, there's going to be very little disruption. You know, there's a, you know, you you kind of like want to build the thing, then what we're more prone to in this environment now is disruption. And what that means is that the kind of, and I spent a lot of time with venture capital firms and investors, and it's kind of my thing, I'm on the boards of different companies, is the investment cycles, investment and exit cycles are getting shorter, right? And part of the reason why is because Founders and shareholders are getting, recognizing that they need to kind of, there's an element of kind of risk of kind of letting the model run too long. And so they just, you just have to be pragmatic around timing. So anyway, that's a long winded way of saying that I think it makes sense to exit sooner, but I think if you had it as a standalone SaaS product, you wouldn't exit that quickly, right? You'd need a couple of years. Is that still considering the fact that within the next year we try to productise it? Yeah, my view on it is like, my view is that we should take all the IP that we've got, we should productise it today. We already have, you know, 800 grand in recurring revenue, you know, from selling our current platform. And albeit with existing clients, and, you know, kind of some external clients. And we should have that, you know, we should sort of, you know, really, really beat that up and kind of, you know, put it to market. I think that really, you know, regardless of whether we sell the agency or not, I don't think that they're too contingent, you know, upon each other. So, as I said, a couple of ways to go.
+
+17:04 - Jorge Lewis
+One is, you know, embed it into the agency. By the way, like, there's no certain to these answers. I understand. So just Exactly what you're saying is what I'm looking for. Yeah, yeah, yeah.
+
+17:18 - Ben Macpherson
+So, you know, as I said, two parts. One, rewrite the agency business as a SaaS business, you know, wind it all together. Two, you know, kind of separate out the two and sort of see where they come together. And either way, you need to productize it. So, you know, in my mind, like the ideal case scenario here is that we get this looking like a product, you know, in a relatively short period of time. And then we just, you know, we really finesse it over, you know, kind of through the first part of 2026, you know, Q1, Q2. But I think, you know, we need to be out in market pretty quickly. I've got some really interesting resources in the agency space that might actually be out, you know, I think we could sell it into the agency market pretty quickly as an agency tool. I think we could sell it to direct to consumer brands that we've got, you know, some amazing partners in that space that could really bring it to a lot of people. I actually think that there's a really, the product is so unique. I think that you get a lot of traction very quickly. So marketers need this now more than ever. What I would say to you, Jorge, is that now is the time to do it because Meta is making changes and they're making changes every six weeks. That almost mandate what we're doing. It's needed and no one has it. And so the smartest thing we could do is spin up an MVP of this in a week and be out in market talking to people soon because Meta is actually driving and someone else may do this. So speed is really important here. I think there's a really interesting opportunity. And by the way, you know, there's businesses that are like, I don't think there's products as good as this that have got pretty meaningful valuations, you know, out in the marketplace. So, you know, what we could do, one thing is we could do is we could kind of get it up, get the MVP working, and we could actually go and raise a really decent round, go and put 5 million into it. I've got the, you know, I know, you know, a lot of the SaaS slash tech investors that would do this sort of deal. And, you know, we could actually kind of go lean in as its own product. That's another way to go too.
+
+19:48 - Jorge Lewis
+I mean, just a thought is that I don't even think you need to raise funding with the resources that you have as an agency, not only just the revenue, but also the connections and everything like getting to market will be easy because of how well put you are in the industry.
+
+20:04 - Ben Macpherson
+No, I agree. I think it should be. Super capital line, just because a lot of the IP, the expenses, I mean, we spent millions of dollars over the last few years, the staff and projects and time to try and sort of get this stuff right, you know, and that IP is sitting there embedded, ready to roll.
+
+20:22 - Jorge Lewis
+Yeah, so it would make sense now for us to kind of go down the demo route, talking a bit more about the product. So before we do that, you mentioned, so last time we talked, you talked about a bunch of different products that we could build, like churn risk analysis, kind of productizing DRX and persona identification thing. And so is that, do you envision all of those being in one product at the end? Like one SaaS product that is essentially an agency that can do everything from end to end, like what you guys are doing?
+
+20:56 - Ben Macpherson
+I tell you what I think we should go with it. I think we should take the current DRX reporting and we should wind in personas, right, and organize it in a smarter way and start there. I don't think trying to sort of build the kind of virtual Asian city in a box, you know, with every component added right out of the gate makes sense. Yeah, but I do think that the persona leading with the persona But with the analytics platform at the back end, I tell you why, because brands are paying a few thousand bucks a month or 2000 bucks a month for their analytics, you know, kind of platforms. And ours essentially replaces those. Plus you get the personas. So it gives you much more pricing power on the market. And so we may as well just take what we've already built, but just like clean it up. But we still make it persona friendly. And we still like, it's still a persona product, but let's bring all of the supporting reporting that sits around it that shows you that it can throw away all their other platforms. Oh, yeah, we got first order profitability. All that ties back to our personas this way. And then we've got, you know, and then we've got our profit bridge. Oh, we can see now that, you know, bad personas equals worse profit. You know what I mean? So I think we can take everything that we've got fully, you know, fully integrated.
+
+22:26 - Jorge Lewis
+Um, and then, so, okay, that makes sense. Um, yeah, starting off with something really small and getting it out there and kind of what you described the persona, the focus on the persona plus, um, all the backend analytics thing. That's kind of like nowadays it's a, it's a norm, right. To have those.
+
+22:43 - Ben Macpherson
+A hundred percent. Yeah, it is. Um, but the thing is, is that, you know, a lot of companies are using, you know, they're using sort of like, last gen, you know, kind of analytics tools, they're starting to, there's some analytics tools are now starting to kind of wind in AI insights into their tools. And so it's getting better. I mean, you know, I kind of used to describe this as like the clock, which is like, we started with the data, and we started like the reporting, then we, you know, more analytics, and then the kind of insights, and then there's the actual, you know, recommendations, then there's the actual action, right. And so, you You know, we're kind of now at the, they're kind of leaning into the insights phase, right? Where we're taking the, you know, the insights. We're not necessarily fully in a recommendation page yet, and we're not fully into the, you know, kind of the, we're just starting to kind of, you know, teach the recommendations.
+
+23:39 - Jorge Lewis
+That part, the recommendation phase. So it's, is this product going to need, what additional support are you need along with this product because for most, like most people would hire you because they don't want to look at these charts for like 10 hours a day trying to figure out what the heck does this mean? What, how, and in my head, it wouldn't be so hard to have an agent kind of do the thing that you do with your clients explaining, this is what this means. This is what you should do. Um, yeah, that's because I'm an AI guy, but no, no, I think this is absolutely right.
+
+24:12 - Ben Macpherson
+and it's not, not a big deal to kind of get there. Um, and and, you know, what we need is just to take, you know, essentially, there's some frameworks and training that we'll need to do at our end. You know, we kind of built out, you know, a bit of that. So yes, I think the recommendations piece, but I think the biggest recommendation right out of the gate is the way you described the scope or the kind of MVP was really interesting, which is what you can do, purely just utilizing kind of like AI now, because we do it with a series of prompts, is you can just take the persona outputs, right, and convert them into creative roadmaps and creative briefs automatically. So, you know, even before you get to kind of the overall marketing growth recommendations, even if they're just the persona component that said, okay, you know, here's the persona again. And it's like, okay, here's our creative roadmap page. And on the roadmap page, it's got like, you know, 16 ad briefs, click, you know, okay, here's all of the ad briefs, you know, export, you know, here's, you know, and then, you know, you take that, those ad briefs.
+
+25:33 - Jorge Lewis
+Are ad briefs just text, like describing the ads?
+
+25:40 - Ben Macpherson
+It's like, now we know who the customers are. Now let's run a series of prompts. We do research. We then do competitor analysis. We then do messaging angles based on kind of motivators, blockers. And so all that stuff is just like a series of prompts, right? And if those series of prompts were running in the back and the output was, okay, here's the ad that we need, or the ads that we need to kind of address the high, you know, personas, the mid personas, et cetera. Then that's just like all of a sudden a short circuit, it's the whole creative process, right? And you know, you're sort of sitting there going, unbelievable, I plug this thing in and it tells me what ads to make.
+
+26:29 - Unidentified Speaker
+Or it gives you the ads.
+
+26:31 - Ben Macpherson
+and that's the next step. I mean, ideally it'll give you the ads. That would be awesome. You kind of give it the raw assets and it gives you the ads. That would be great. And that's like the next step. And by the way, when we kind of like building out the business, it's like, okay, phase one, phase two, phase five, you know, and phase five is like completely autonomous. We plug into the paid media platform and we're telling them what to do. You know, that's kind of like where- Yeah, yeah.
+
+26:54 - Jorge Lewis
+No, that makes sense. That's kind of what I was thinking.
+
+26:58 - Ben Macpherson
+But I do think that the missing link. So here's the value. Gap in the market is deeply understanding who your customers are and converting that to creative. And the conversion is actually all in the grief. The actual creative itself, honestly, is going to get super commoditized over time because the tools can kind of build it. And frankly, they can do a fucking good job. And from what I'm seeing now, they're doing a better job than we could do manually.
+
+27:31 - Jorge Lewis
+Okay, cool. So, I mean, in my head, it's a lot more, it makes a lot more sense now. I can show you the demo, but to be honest, I think it's misaligned to what we had, what you guys have planned. So I wouldn't mind just putting that into the next Call. In the next Call, we can go to the demo.
+
+27:44 - Ben Macpherson
+Is this a demo of the value tracker?
+
+27:47 - Jorge Lewis
+No, no, this is a demo of your, of DRX, basically. The persona, the thing that I put in the product brief. Persona thing.
+
+27:55 - Unidentified Speaker
+Oh, you want me to demo it to you?
+
+27:57 - Jorge Lewis
+No, no, I have a demo. My screen right now. I'll make a better version after this, but I'm not really too proud of this one. But basically, the main aspect is this. So let me actually...
+
+28:15 - Ben Macpherson
+Yeah, this is super cool.
+
+28:18 - Jorge Lewis
+It's supposed to take me to the Linux.
+
+28:28 - Unidentified Speaker
+One second. Sorry, man.
+
+28:42 - Jorge Lewis
+The, when I was making this demo, I was like, I actually don't really understand what the, even though I had the product brief and you said it was like almost spot on. It was a lot of the question that I asked today, kind of, it's a lot more clear now.
+
+28:53 - Ben Macpherson
+Um, yeah, I can show you what you want me. Can I just show you like a few sample materials to kind of give you a better idea?
+
+28:59 - Jorge Lewis
+Yeah, in the meantime, that'd be great while I fix this up.
+
+29:01 - Unidentified Speaker
+Yeah, let me do that. One sec.
+
+29:03 - Jorge Lewis
+By the way, the presentation I asked for was the, in the last Call, you showed me the Looker Studio and then you showed me like a PowerPoint presentation.
+
+29:11 - Ben Macpherson
+Oh, was the PowerPoint presentation of the personas?
+
+29:15 - Jorge Lewis
+Yeah, it was of the personas. And I think it was just also going over general analytics.
+
+29:22 - Ben Macpherson
+Yeah, there's there's a couple. Yeah, I mean, I don't want to kind of over confuse it. But the other one that's kind of I think Yeah, let me just have a quick, quick, I'll show you.
+
+29:58 - Jorge Lewis
+and in the meantime, I can ask some questions. So where's the, so you have five customers using you last time you said you have five clients using that and paying for this platform independently. But they're also paying you guys for your consulting and your execution on top, right?
+
+30:15 - Ben Macpherson
+So they're, they're completely different. We have 20. I'll show you how many customers we have on, uh, let's see. Let me just pull this up. So I'll do two things. One second, let me just show you. Share my screen. So yeah, I mean, the number of brands that are on, can you see the right hand side where I'm scrolling? So there's 30 on DRX at the moment, right? Of those, about are just DRX only.
+
+31:26 - Unidentified Speaker
+and are they direct to consumer or are they an agency?
+
+31:29 - Ben Macpherson
+So like, you know, um, uh, yeah, I mean, a bunch of them are direct to consumer only.
+
+31:39 - Jorge Lewis
+So, and do they, do they have in-house people that like are dedicated for this or how, what do you mean? Are they just using this platform out of the box to make their decisions? Like as a, basically they, they purchased this as a template look or studio for themselves.
+
+31:59 - Ben Macpherson
+No, no, we, we provide access to it like a staff product, but it's just, yeah. So we give them access that is, um, you know, we give them access to it. Uh, you know, um, Second, let me just quickly. I just noticed that it's not populating a screen. Where has it gone now? I'll get back to you here. Yeah, this is weird yeah, it's this happened last time I was showing you the the This page for some reason is not working on on Google Meets Presentation there must be something like a filter like a filter or a blocker didn't I mean anyway? So They're all so the way that it works is that we're actually charging like a SAS base this, right? So, you know, here you want access to it. Here it is. Now, the key to these sorts of platforms is the data transformation. So, you know, like, you know, you want to make sure that and I'm showing you this page because, for example, Shopify, everyone names their products differently. But, you know, for example, women's tops might also be you know, women's long sleeve tops. So you kind of have to do this data transformation exercise where you take all the data and using sort of machine learning, you need to kind of like organize it so that it presents cleanly. And so the kind of key here is the data source. So in our data warehouse, all of that transformation is done. So you can load on, we can have you up and in an hour and it's clean. So that's a really important kind of piece here. Cause you know, otherwise, you know, most, most people in their Shopify product feeds will have like, you know, hundreds of products, but they're actually really only 11 products because they've launched, you know, multiple products that are signed with different products. Anyway, that's one, one example. So this, this, this dashboard here, just, just so you know, kind of covers this profit impacts, page, which is a waterfall page, which you can't see, which shows you what the change over a period is of profit impact. So that's like a set of bar charts there. Then there's revenue health. So this is, you know, revenue overview. You know, repeat versus new last year comparison, you know, net sales returns, all the things that make up net sales, efficiency, profitability, how efficient are we acquiring customers, AOV, profitability, then we can go to go into paid media, are we going to customer value and so forth.
+
+35:12 - Jorge Lewis
+Would you say there's anything unique about DRM versus other analytic platforms?
+
+35:20 - Ben Macpherson
+Yeah, look, the biggest thing that's different, right, is that is just our knowledge and taxonomy of building a business, we've embedded into this business for brands to focus on profitability first. So it, you know, is this a good, is this a good analytics platform? Nah, it's, it's like, whatever, you know what I mean? It's like, not great, but what it is when you combine it with personas becomes really good.
+
+35:52 - Jorge Lewis
+If I understood you, you said it's, it's great because of basically what you guys are able to do with it as an agency.
+
+36:01 - Ben Macpherson
+It's great because of the framework that we, that we, um, that we, our methodology for growing brands is, um, you know, kind of makes it great.
+
+36:17 - Jorge Lewis
+But you'd be able to use another analytics platform and apply your, um, your methodology to that. If, if the, if they have the right features.
+
+36:27 - Ben Macpherson
+Uh, yeah. Yeah, of course. What you need to find is, but in order to get that though, you need to basically do a lot of customization. So you need to build it and sort of, you know what I mean?
+
+36:40 - Unidentified Speaker
+That makes sense.
+
+36:44 - Ben Macpherson
+I'll show you this as well now. So, one second. This is an order. This is our sort of general order. That we take, you know, which is a much more detailed, you know, kind of roadmap. So we'll do, you know, this is like a recap. This is like an extra cap. By the way, this is, that's not the profit bridge. So, you know, we kind of go through this process of reviewing the business, comparing it, benchmarking it to the standards in the market. You know, kind of like, here's the profit bridge actually that I was talking about. This is just an, so, you know, like the total profit change is $3.4 million. The biggest negatives are new orders, customer acquisition costs, discount rate, but the biggest positives are paid sessions and repeat orders. So they're the things that are driving profitability as an example. And this presentation you show We show clients this, we do this audit, and a lot of it's automated, because we have all the charts, and then we just, between Google Looker and Google, between Looker slides, or between Google slides, we just kind of export a lot of these. And then that tells a story, right? And so we talk about customer values, and we've got through this. So this is like a hundred page report. You know, this is a customer analysis.
+
+38:29 - Jorge Lewis
+Out of curiosity, how long does it take to go through this with the client? Do you do it in a Call or?
+
+38:33 - Ben Macpherson
+We do it in a Call and it typically takes two hours. Here's the thing. We do have a shortened version of this, which we can actually send and we don't even need to talk to them. So they could get it. They could get it. And then we can do a follow up Call and we should essentially be like a pitch Call and sign them up to the agency.
+
+38:56 - Jorge Lewis
+A pitch for the services to execute on this.
+
+39:02 - Ben Macpherson
+So, you know, we kind of market intelligence section. So a lot of this, for example, we would incorporate into the DRX persona, right? So what are the general trends? And then we get into things like, you know, uh, switching, you know, competitor ads, you know, competitors. Keeps going.
+
+39:32 - Jorge Lewis
+If I installed value tracker onto your team's computers, um, over two weeks, I would see you guys essentially build this entire thing, like from start to finish.
+
+39:43 - Ben Macpherson
+So on that, I wanted to talk about How do you get around the privacy security issues?
+
+39:54 - Jorge Lewis
+We were talking to another guy about it and he didn't have concerns regarding privacy or data and I was the one with the concerns because this is typically what I'd be asked about this. We take screenshots of your laptop and that's a big no-no in terms of data privacy. The two things that we do to prevent What are your actual concerns with the data? That we see something, or?
+
+40:20 - Ben Macpherson
+I think it would be more around us getting the team to agree to have their training recorded. Because if you think about it, they've got their personal emails, and I've got 30 people running around, and they're all very American and sensitive to everything. You're not just going to say, yeah, look, you guys can Free run and record my screen. The way to do it instead of saying, look, guys, this is completely private, confidential, no one's going to see what's on the screen. This is purely for analysis. But I don't know how you get around that.
+
+40:56 - Jorge Lewis
+So on our side, there's two layers involved in it, like kind of two aspects. The first one is the data privacy so that we don't get confidential information like credit cards, passwords, things that even we as a service provider shouldn't see. And that's more for our security in case we don't have that information. And the second one is with this data that we get from the screenshots, we are technically able to do a performance review across everyone. We can see Tommy did four hours of browsing on Instagram during work. That could be used to fire him. And that depends totally on you and how you guys want to set it up. But if that's the case, So you don't want that to be the case. We anonymize all the information. So on our reports, it would show team member four spent four hours building this pitch deck, and then he did this, and then he did this. And that way, you're not going to be like, Tommy, hey, we need to talk because we installed this tracker.
+
+41:53 - Ben Macpherson
+So how do you process that? You sort of dump it all into, like, what's the tool that kind of sits behind it to make that happen?
+
+42:00 - Jorge Lewis
+So we built all this from scratch. How it works is from the screenshot, We use an LLM for every screenshot to figure out what's on the screen. So it gives us information like the application that's open and just describe the image basically. And that's the first layer. And then we add layers on top of that. For example, we have the bottom layer is called an event. So it's a screenshot. And then we get into like a block or a task or a workday. And so we kind of, we have these layers where we can figure out, okay, he spent four hours doing this workflow or whatever, but he spent two hours doing this task in between. And that's how we're able to figure out, basically create a map of, of everyone's workday for the minute.
+
+42:47 - Ben Macpherson
+and what do you do? So once, so how long does it typically take like two weeks?
+
+42:52 - Jorge Lewis
+It's, it would depend on the team. Like for example, what we want to, what I really want to capture in that for you guys is the process of going from first contact with the new clients until finishing their, the consulting period and kind of the start of executing on it. And that would give us, I don't know how long that would take. How long does that typically take?
+
+43:14 - Ben Macpherson
+Well, I mean, right now we're just going through, it's a good time to do it because right now we've got three of them going at the same time and it could be two weeks to four weeks, right? So there's some components that already happened that we could kind of like, we could describe those.
+
+43:31 - Jorge Lewis
+So I mean, it's like, we can set it up for one week. And from that, the data that we'd get is more likely going to help us with daily tasks that could be automated, like smaller steps, or even just like steps of the workflow. So let's say, um, migrating the charts to Google slides, kind of automating that little aspect. Um, but what would be really helpful in building these products, this product out is that full end to end process and figure out the best, like the easiest things that we could build into this, that gives the most value.
+
+43:58 - Ben Macpherson
+I mean, I guess. This sort of process, what it would highlight is kind of more like, how do you, particularly if we're gonna focus on the persona and the DRX, how do you essentially automate the manual process for DRX, DRX and DRX persona? That kind of like would be the biggest lift out of it. Generally speaking, I mean, yeah, I would love to kind of have a, you know, kind of like an analysis across the business to kind of work out where to automate and improve. That would be amazing. But for this exercise, it's probably more focused around the persona in TRX. The device, I mean, the software itself, the application itself, what does it look like, So the individuals need to download it onto their platform?
+
+44:51 - Jorge Lewis
+Yeah, so it's basically just an application. You download it from a link that we give you. Double click it. It's a very simple UI with a start, stop button and just showing the status if it's all working fine.
+
+45:03 - Ben Macpherson
+So it shows them that it's recording the screen while it's recording?
+
+45:11 - Unidentified Speaker
+So you said you want to focus on the...
+
+45:12 - Ben Macpherson
+and do they essentially sort of start and stop it when they go and do personal stuff? Is that kind of the way it works?
+
+45:17 - Jorge Lewis
+If they want to. But we also, like for example, this conversation, we're able to personalize the package that we give you guys. To know that, hey, if you guys don't wanna have to turn off the track every time, we can just filter out any personal non-work related stuff. So that we won't know about it, you guys won't know about it.
+
+45:31 - Ben Macpherson
+We can also do that. Yeah, okay. I think that one's gonna be like, it's gonna be tough. Particularly the person I want it most on, she's like the most protective. So I'd need to like describe it in a way that sort of says like, this is a, it's more like a, yeah, I mean, basically, you obviously would describe it as it is, but it'd be more around like, look, there's no, there's no tracking of personal information, you know, where, where it's completely anonymized, you know, it's, you know, there's no storage of any personal data anywhere, you know, The screenshot that's getting processed, like to figure out if it has sensitive data or if it's personal, we send that to Azure and we have it set up so that it doesn't train on the data and it doesn't store the data.
+
+46:32 - Jorge Lewis
+So that's from your laptop. So we never receive the data before their filter. It goes directly to Azure, OpenAI's thing.
+
+46:42 - Unidentified Speaker
+Right, got it.
+
+46:47 - Jorge Lewis
+Maybe it's helpful if I send over like a little minute loom video, just kind of explaining like, here's what Ben would see, here's what we would see, here's what this one.
+
+46:56 - Ben Macpherson
+That'd be super helpful.
+
+46:58 - Ben Macpherson
+I mean, I'd like to try and find a way to embed it. I'm just trying to work out how to get it done without having, you know, kind of like people vomit. For most, for a bunch of the team, for most of the team, probably be absolutely fine. They wouldn't have an issue with it. The ones that I actually, the two, people that really want it on because this will actually tell us and at least one of them will be the most important person will be a fucking nightmare about it. That's something for us to kind of get over, but it totally makes sense and there's got to be a way around that. Okay, so in terms of like next steps other than the value tracker, right? Let me take a step back. So what, let's just say, you know, without value tracker.
+
+47:52 - Unidentified Speaker
+What would things look like,
+
+47:56 - Ben Macpherson
+Yeah, I mean, like, where do you kind of sort of see this? Like, what are some of the kind of, I guess, more like the proposal, commercial slash, and if you can't get to that, like, what does this look like, I mean, like, how fast could we get an MVP up? You know, how fast could we take look at studio and the personas and meld it all together into an MVP, you know?
+
+48:19 - Jorge Lewis
+So in terms of the timeline, I have a couple more technical questions, which we can quickly breeze past those. The data, so the data connections. So for example, I put a list in there. Is that all only quantitative data? And the only source of qualitative data comes from surveys?
+
+48:41 - Ben Macpherson
+Here's the other thing that we could do. I don't know whether it's qualitative or quantitative, but third party qualitative data, we always get gender demos, et cetera, from the platforms, but some of the third party data from credit card companies and whatnot, some of the psychographics of those general personas could be included, but you've pretty much got it. It's just those platforms So the quantitative and then, you know, qualitative is the, okay.
+
+49:16 - Jorge Lewis
+and then let's say, so let me show you the demo. Cause I think that was about time. So yeah, just imagine this is a very simple landing page. So you start off by connecting data sources. That's like the main thing that we need. So whatever you want to connect, and then if they have any pre surveys that they've already done or that you have done for them. They can upload it here or they can skip it. And based on all the data that we get from their connections, so like for example Shopify, we can access the product listings they have, right? And all that, everything, right? So we'd be able to create surveys directly from that. And in a perfect case scenario, we can just like, they select where to send it to and it launches it for them. These are all like add-ins. So the main focus would be the personas thing. So basically from all that data, we're like, okay, these are the personas that we have. And I built this with keeping in mind, like it's more of a full suite of things. So I think there should be more of a focus on the persona aspect where it's like all revolving around how can we use personas to make more money. So it gives you suggested mixes based on all the data and you can change it if you want. But I think honestly, we just remove this because like there's one right answer mathematically to be most profitable. We would have wanted them to change that. And then yeah, it kind of gives the description, like all the kind of basically what you showed me from the presentation, the Google slide. This is a word cloud, if you can tell. So yeah, that's basically what I had in my mind. And then of course, here's all the reporting from DRX, where it's just like a bunch of the, all the different things that they can go through themselves. But I don't, I don't know, but I think if we have this platform, built out, most people won't be spending most of their time here. Ideally, they'd just be spending it in personas or through an AI chat that interacts with all their data for them. Kind of like a personal ban.
+
+51:19 - Ben Macpherson
+I mean, dude, it's like with a week of team's time on this, this thing's pretty close. Pretty amazing that you can spend spin this up that quick. Like, what the fuck? Is this just, you know, this is like, seriously, this is just where Corda and everyone is at, right? What tool did you use to spin this up, by the way? Cursor, got it.
+
+51:45 - Jorge Lewis
+I mean, that's my specialty. But Jonas' specialty is definitely making better code.
+
+51:51 - Ben Macpherson
+Right, right, right, right. Okay, so you like design it, you're like the product guy, and you get it to a state, and then he like takes it and says, okay, now let's actually do this properly sort of thing.
+
+52:03 - Jorge Lewis
+So I'm the guy like, we're going to get it to the market right now today. And then Jonas is going to take a look at it and be like, okay, while you're putting that to users, I'm going to take some time to make sure this actually can last us. I love it. It's a beautiful balance that we have.
+
+52:19 - Ben Macpherson
+Honestly, I just, you know, I'll be led by you, but I got to tell you, like, I think that what we have in the market, Every time we show it to someone, they flip out. And the biggest, the next level is this, having it live. And if we could deliver that to the market, it's a market beater. I mean, it really is. No one has this. And if you could kind of like on the creative piece, it's like, okay, yeah. I mean, all of a sudden messaging I mean, like, fuck, this is crazy, right?
+
+53:00 - Jorge Lewis
+It's not.
+
+53:00 - Jorge Lewis
+I was trying to, I wanted to add images as well, like, that we could generate, but
+
+53:05 - Ben Macpherson
+Yeah, yeah, yeah, yeah. I mean, that's, that's a, that's a definite, right? It's like, here, you know, name it, like, come up with a name for it. I had a question, wasn't it?
+
+53:21 - Jorge Lewis
+No, I guess not.
+
+53:24 - Ben Macpherson
+Yeah, you know what I've got too? This is the other thing. I've got all these amazing CMOs that we could give as a beta this too, and they could kind of like, you know, essentially sort of just lay into it and kind of, you know, give every recommendation they've got, and then we could kind of prioritize it. It feels like, would we need like a product manager on our side? Like how would you work this? Would you be the product manager? Like how would it work?
+
+53:55 - Jorge Lewis
+The cool thing about a product like this is that I know nothing about e-commerce or anything like that, but through the data through Valley Tracker, I can just, I know what the process looks like, So I can build something. What, what this product is, is mimicking the processes you guys already do. And so it's, there's no, there's no, I think it's this way or I think it's this way. It's this is what you guys are currently doing. Maybe there's a better way that we could do it, but at least we have a baseline. So it's not like, it's not like we're going to have a product manager being like, Hmm, I wonder what. Feature we could add. It's like, no, what is Ben already doing? And how can we make that better with AI? That's the case.
+
+54:31 - Unidentified Speaker
+Yeah, yeah, yeah.
+
+54:34 - Jorge Lewis
+But I think at some point, a product manager would help. But we personally like to work very, very lean, just because, like, we had a team of seven engineers back in the day, back in the day, like a year ago, and we fired them all because it just wasn't efficient. Like, me and Jonas alone, we can build something that's probably me alone, I I could probably build something that three or four of them could build. And my time managing them wasn't worth it. And so we had this approach where we're just like super lean and making sure that that leanness equivalents to like speed, getting to markets and yeah.
+
+55:08 - Ben Macpherson
+Have you built, yeah, have you built sort of, we have a Shopify app that's approved, right? You know, so you can kind of connect, you know, Shopify data. We have, I think, you know, we have existing connections into Meta, Google, et cetera. So we can potentially leverage some of those pipelines. But if we don't, we probably need to build, you know, build some new ones.
+
+55:34 - Jorge Lewis
+Yeah, I think all the AI stuff involved with this, like in my head, I'm like, this is very easy. It would take a bit of time, but very easy. The thing that I would take a lot of time is probably connecting all the data, like the data sources, since there's just so much like different But like, if you guys are able to send me exactly what you guys are doing on the back end to create these charts and things like that, as long as I don't have to like create things from scratch, it's going to be very helpful to just wrap this up.
+
+56:04 - Ben Macpherson
+It feels like I need to kind of, you know, get together. It feels like I need to kind of get one person internally who is sort of owns this and becomes like the key champion point person. And it's kind of like running through a sorry.
+
+56:21 - Jorge Lewis
+The way we would like to work is that we are that point person and it sounds kind of, it might sound a bit like how can we be the point person when we're the other party? The goal is that we are in your business and we're able to talk to anyone like, Hey, you know, how do you guys do this? And, um, yeah, the, the value checker will just help us save time from having to talk to your, your people. But if it takes four weeks for us to get the data, it's better to have a 30 minute Call.
+
+56:47 - Ben Macpherson
+Yeah, I mean, look, I think we could get, I think we could get, I think as long as, you know, if you could send me a summary of the value program and say, hey, you know, just so you know, we've developed, you know, this, it anonymizes the information, it excludes any personal information on the screen. None of this gets stored and kept, it gets deleted after analysis. You know, etc, etc, it's, you know, secure, blah, blah, then, then I think, and then, you know, you can sort of say you can set the specific rules. So if the rules are that, you know, you don't want to track time on any particular type on any kind of personal tasks, or you want to ignore those, you can do that. You don't even need to say that. But I think if you could send me like a quick, you know, kind of email that just outlines that I can try and sell it in to internal Yeah, I'll try to make like a, I'll add some visuals.
+
+57:44 - Jorge Lewis
+Cause like people want to see what we're going to, like, if I'm on my screen looking at a report, they want to know what I'm seeing. Or if I'm looking at the raw data, what can I see? Um, yeah, I think that'll be helpful. So I'll send it over.
+
+57:55 - Ben Macpherson
+Um, this headaches take a screenshot every minute or something. Is that what it does?
+
+58:00 - Unidentified Speaker
+Every, every three seconds, actually.
+
+58:02 - Ben Macpherson
+Um, okay. So it's like, it's like really, it's almost like decompressed video. So it doesn't take up a lot of video.
+
+58:12 - Jorge Lewis
+We've tried experimenting a little bit with the frequency, but three seconds seems like a nice sweet spot to make sure we don't lose out like an action.
+
+58:21 - Ben Macpherson
+So literally just screenshots, it loads it into a remote database, analyzes it, and then tells you what's on the screen and then how that fits into the tasks.
+
+58:32 - Jorge Lewis
+Yeah, exactly. And the great part is that we'll be able to all the data, whether it's anonymized or whether it's filtered. And we can manipulate that data how we want. So it's like, since we have to the granular level of what's happening every three seconds, we can be like, okay, are they, you know, switching their, their tabs every three seconds for whatever random reason. Cause I do that. If I have too many tabs open, I'm like looking for a tab and I ended up clicking on five of them. And, um, small things like that. That's really, in the longterm, if you add compounds, those small things, you become a machine, everyone in the team becomes a machine.
+
+59:05 - Ben Macpherson
+So yeah. That's interesting.
+
+59:12 - Jorge Lewis
+Okay, cool. I want to go over like the zero to 10 user Strategy, kind of how do we go to market and the first phase of that. Because this is where there's so many strengths that an agency has that I want to understand how we can utilize that. So you mentioned we can bring it to C, uh, CMOs.
+
+59:36 - Ben Macpherson
+Is so our goal is I think we turn it live on, on 30 clients.
+
+59:44 - Jorge Lewis
+Our typical goal is the first milestone is 10, what we Call evangelists. People that love this so much that they're like, everyone needs to know about this because the reason is because they have results like without the results that they don't care. Um, so the marketing I imagine is something like, This system I've written actually this part uses a Strategy that results in a hundred percent profit increase with within Yeah, and Yes, we can definitely do that There's some amazing CMOs in our mix in our agency But also other ones that we know that we could get them to sort of use it and evangelize it that are actually pretty high Profile and are always, you know kind of writing and posting Yeah, so yeah, we would want to stick to like ten people that we can really give a lot of attention to So they can help us build this into into a dreamy platform. Yeah, whether how simple it is. Yeah So that would be the go on you guys already have contacts like that. So that's fine. And after that it's easy like you just Yeah, I've just scaling after that is easy.
+
+1:00:46 - Ben Macpherson
+Yeah Yeah, I love that and the AI, you know kind of from an AI perspective Sorry the chat and you know kind of so do you what's the best way to train? So that it gives intelligent outcomes. Like, you know, if you're a general, like the chat might be, you know, give me a high level, you know, run through of, you know, performance insights, you know, for last week. So boom. And it says, you know, hey, look, you know, CAC is, you know, CAC is up, you know, because, you know, because the main driver is conversion rates dip. Oh, okay. Tell me why conversion rates dip. Oh, conversion rates dip because you've had 16 hours that have done blah, blah, blah. How do we train it?
+
+1:01:29 - Jorge Lewis
+Great question.
+
+1:01:32 - Jorge Lewis
+There's two aspects to it. The first aspect is what it's saying, is it right? And the second is whatever it's saying, do I trust it? Do I trust that it's right? And for the first one, we're able to use all of your guys' sales calls or as many transcripts that I have of you or any other consultants in your company, answering those type of questions. And we structure that data in a way and give it to the AI. And the trust aspect is we tell the user, this agent was trained on 100, 500 hours of Ben and his team. So the probability that whatever he's saying is at least right is high.
+
+1:02:11 - Ben Macpherson
+and we could continue to, knowing that, we could feed in all of our performance decks and reporting. We could continue, you know, the calls that we have continues to train it.
+
+1:02:27 - Jorge Lewis
+Were you able to check out the video? I don't know if I actually sent it related to AI and agency trends. Let me send it over after this, but it was covering like how AI is changing the agency landscape. And the last step before complete, the agencies are becoming useless is the Strategy aspect. So taking all these calls, these reports, all this data that you guys have and using it to train an agent to become an expert instead of just an agent, he becomes an expert. And, um, that's the last step, which is what we have a, quite a big specialty in. Cause one of the platforms that we're working on is I Call it GPT on steroids because it's like a way easier way to train an agent to do what you want. Cause I think that's the biggest problem we have even today. Like I want an agent to do exactly what I want, but it takes a lot of effort to get to that point.
+
+1:03:19 - Ben Macpherson
+So does that mean that we could, you know, there's training within internally, but does that also mean that we could feed it like selective data? For example, like if we, you know, there's a newsletter from a guy that we really like and we say, hey, these are like four things that we really believe in and we feed into the system or here's, you know, some data from Meta that's inside data that we think is really interesting and worth putting into the platform. Can you essentially sort of like add in any, any information, data, you know, the kind of insights.
+
+1:03:52 - Jorge Lewis
+Yeah, we can, but we just want to make sure that we plan it out at the start. So just at the very start, we want to know, okay, throughout the journey, what data are we going to be updating it with? So likely, or almost surely is the usage data of the platform itself. So we want someone like you or someone else that knows the field, looking at the conversations that our user having and being like, oh, that's, I could have done way and just, that's, that's data that we updated with along with, um, a new feed of, of things or. Things like that. So just making sure that we plan it out properly to understand in three, four months, what's the criteria? What do we, what do we might want to add into it?
+
+1:04:31 - Ben Macpherson
+Um, that makes total sense. All right. Well, listen, what's, so what's the next step for me?
+
+1:04:37 - Jorge Lewis
+So without like, let's kind of put Valley truck out of the picture for a moment, since if we can get that, I can get it done.
+
+1:04:43 - Ben Macpherson
+I'm not saying we can't get it done.
+
+1:04:44 - Jorge Lewis
+If we can get that set up, great. It's just going to speed this whole thing up. So let's assume we have, I'm going to go through or, okay. We start off with going through a proposal, going over the deal structure. Um, I actually have a, I was starting to write our proposal and I was like building with them. I'm like, uh, I want to make sure I've understood everything. I can just. So the deal structure we usually go to, there's two options. The first one is a pure revenue share where we take 50%. It's a ladder. Let me, it's going to be quite a lot of texts. I'll send it on. I don't think you've accepted my LinkedIn request, by the way.
+
+1:05:31 - Ben Macpherson
+It's entirely possible.
+
+1:05:35 - Jorge Lewis
+I'll send over, I'll go through the numbers in the next Call where we can go through a proper one. But basically it's a tiered approach where we start off taking somewhere around 50% of the net revenue and we kind of go down as the product scales. And the goal is to continue, like our goal is so that all you guys have to focus on is the strategic and the expertise aspect. And we do everything from customer support to executing on the go-to-market and all development needs.
+
+1:06:02 - Ben Macpherson
+So when you say executing on the go-to-market, you guys essentially sort of say, hey, look, we're just going to take IP and monetize it, you know, versus, you know, versus, you know, versus, you know, versus you guys take it to market, you know, etc.
+
+1:06:21 - Jorge Lewis
+I want to imagine imagine our business, like, I don't know where it came this analogy. But imagine our business is a massage parlor, we want you to sit down and feel like everything is taken care of and all you have to do is like, Oh, that feels good. That feels good. Oh, no higher, you know. So that's, that's what our dream experience is. Yeah, I guess so no, I love massages But hopefully that was a very visual way to understand like what our goal in terms of your experiences because you're very busy and we wanted to feel like all you're having to do is very high leverage information. They have to give us.
+
+1:06:53 - Ben Macpherson
+Yeah I guess I guess the question for you is is like where do you? Where do you sort of want it to sort of stop and start like, you know, do you I? Sorry, do you want like, I guess, you know, sort of let's just assume, so let's run through the proposal again. So there's a sliding scale of revenue share. Okay, so that's fine. And then, yeah.
+
+1:07:26 - Jorge Lewis
+There's another option, which is mixed in with an upfront fee. But yeah, we prefer like just in the long term, the pure revenue share just makes sense, but they both have revenue shares.
+
+1:07:37 - Unidentified Speaker
+So what does it go from 50 what, is your thing?
+
+1:07:40 - Jorge Lewis
+50 to 20. It kind of just goes down by like 10 across each milestone after we earn out a certain amount.
+
+1:07:46 - Ben Macpherson
+Right, right. And is that like, kind of what level do you need to get to like, you know, to get down to 20? Like what sort of revenue numbers do you come thinking there?
+
+1:07:56 - Jorge Lewis
+So in a previous proposal, and don't take my word for this as final for this one, is 20% until we've earned a million dollars. And then from there, so if we've taken 20% of the total revenue that's been pulled in and we earned a million, you would have made four million.
+
+1:08:16 - Ben Macpherson
+Yeah, four. And then what about equity at the end of the day?
+
+1:08:25 - Jorge Lewis
+So that's where we had a lot of conflicts because it's like with these diminishing, and maybe I could get your input here, I want to say, is with the Finishing revenue share are while the product scales, that's great, but we're also decreasing our revenue share and we're still going to be making good money off of it in theory, but there's so much of a big upside because every year this product is going to be pulling in like a lot of money and we don't have any equity in that. We want to build wealth instead of just a cashflow in business. So we're like, there's a good chance that after a year or two of working with these projects, we probably want to exchange our revenue share for equity. Of buy into that. That's what we're thinking of
+
+1:09:04 - Ben Macpherson
+and kind of, yeah, I think, I think, yeah, I think that it makes sense, right? Like, I think that the challenge is that if you think about it, you know, from a commercial perspective, you've got to monetize the, you know, in order to monetize the asset and sell it and bring in, you know, other investors. At some point in time, you've got to remove like, let's just say it's doing 10 million ARR, right? And, you know, 2 million sort of going out to, you know, by that time, a lot of stuff is going to need to be sort of brought in house, right? So it'll be down the line. So 2 million kind of going out would probably be, will be a challenge, you know, for the business economics, and therefore the kind of like, the sellability of the business, right? So what you want to do is you want to have sort of like a, you know, kind of like we need to earn, you know, a million bucks, after a million bucks, we've got the right to convert it, you know, you've got the right to convert us into equity at A, B or C. And, you know, and then we move into like more of a standard engagement. So we're, you know, we're working, you know, for you, then we kind of build something like that. But I think you definitely need to be able to give the ability for the business to convert it to equity so that it doesn't get in the way of selling the business or on the selling of the business aspect.
+
+1:10:30 - Jorge Lewis
+Um, we understand that. And so as any point that you guys decided to sell a majority equity, we, or even try to get like a funding, I mean, a funding round won't really matter too much, but in case you guys are trying to sell majority, um, our, our deal kind of just goes out the window, but we're going to have a minimum buyout. But ideally before they even want to sell it, we figured out a way to, ideally like a year before that we've talked to them and like, Hey, we want some equity because you're going to sell in a year. We want to go all in and make sure we both make the most out of this.
+
+1:11:01 - Ben Macpherson
+That's fair enough too. I mean, look, I think it's, I think the key thing is, is that like, if you're, I think it's like, you know, if you can kind of, if you can make sure the product's good and then, you know, monetize, you know, kind of take a million down for developing the product and do that 10 times over, I think that's a great outcome. I think if you can kind of have a mechanism for getting a payout when the business is sold on a majority transaction, but also kind of a mechanism for buying out if the company needs to convert it or get rid of the revenue share just because they need to go, you know, they've got different investors or whatever it is, you probably need to provide that flexibility. So, but I like the idea of like a minimum, a minimum amount. I think that's pretty cool. Because then it's like, hey, look, We're a year in, we've paid half a million bucks, but we really want to do this deal. So we now know that the cost of exiting is another half a million bucks. You know what I mean? And that's just, it is what it is. So I think there's a model there. So look, in terms of next steps, I think one, send me through your kind of thoughts on a proposal, two, send me through the value tracker and also send you a video on the AI, on the agency.
+
+1:12:25 - Jorge Lewis
+What I can suggest is we book in another Call to go over an updated demo that's kind of more aligned and make sure that everything's clear, as well as an actual proposal. And in the meantime, I'll send you over the value tracker. When can we do it?
+
+1:12:38 - Ben Macpherson
+Should we do it tomorrow, Friday?
+
+1:12:41 - Jorge Lewis
+I want to do it for tomorrow, but I have no clue how this headache is going to go. It feels like a sinus infection. So I'm gonna, let's book it in for tomorrow and I'll let you know in the morning if, how I'm feeling.
+
+1:12:50 - Ben Macpherson
+Okay, cool. I can do, I can do, I can do 1.30 Pacific.
+
+1:12:59 - Jorge Lewis
+I'm not American enough to know what that means.
+
+1:13:01 - Ben Macpherson
+Oh, okay. You're in Mexico City, right? No, you're in Mexico.
+
+1:13:04 - Jorge Lewis
+Is it a 4.12 PM for you? It's three, it's three, three, Oh, I think your time zone shifted, right? So, so one 30 tomorrow.
+
+1:13:30 - Ben Macpherson
+Okay, cool.
+
+1:13:32 - Ben Macpherson
+All right. Make sure you send over those other items as well.
+
+1:13:37 - Jorge Lewis
+Yeah, sounds good. We'll do. Okay, cool. Is there a better to talk to an email, like WhatsApp or LinkedIn or?
+
+1:13:46 - Ben Macpherson
+Yeah, you can get me on WhatsApp. I'll give you my number, 310-890-5652. Read has got that for me. Thanks so much, man.

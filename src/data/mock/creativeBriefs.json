@@ -1,0 +1,388 @@
+[
+	{
+		"id": "brief-001",
+		"personaId": "high-value",
+		"personaLabel": "High-Value Enthusiasts",
+		"quarter": "Q1",
+		"month": 1,
+		"title": "Quality & Exclusivity Focus",
+		"objective": "Attract high-value customers who prioritize premium quality and exclusive products",
+		"targetAudience": "Affluent shoppers aged 35-55, seeking premium, long-lasting products",
+		"keyMessage": "Invest in quality that lasts. Join an exclusive community of discerning customers.",
+		"hooks": [
+			"Why settle for less when you deserve the best?",
+			"Premium quality, backed by our lifetime guarantee",
+			"Join 10,000+ customers who refuse to compromise on quality",
+			"The difference between good and exceptional? It's in the details."
+		],
+		"messagingAngles": [
+			{
+				"angle": "Quality as Investment",
+				"description": "Position products as long-term investments rather than purchases",
+				"rationale": "Appeals to LTV mindset, reduces price sensitivity"
+			},
+			{
+				"angle": "Exclusivity & Status",
+				"description": "Emphasize limited availability and elite community membership",
+				"rationale": "Triggers FOMO and status-seeking behavior"
+			},
+			{
+				"angle": "Expert Craftsmanship",
+				"description": "Highlight artisanal details and manufacturing excellence",
+				"rationale": "Justifies premium pricing, appeals to connoisseur mindset"
+			}
+		],
+		"motivators": ["Quality", "Exclusivity", "Long-term value", "Status", "Craftsmanship"],
+		"blockers": ["Price concerns", "Availability questions", "Comparison shopping"],
+		"channels": ["Meta", "Google Search", "Email"],
+		"adFormats": ["Carousel", "Video", "Single Image"],
+		"imagePrompts": [
+			"Close-up shot of premium product details, professional studio lighting, shallow depth of field, emphasizing craftsmanship and texture",
+			"Lifestyle shot of sophisticated customer in elegant environment using product, natural lighting, aspirational but authentic",
+			"Flat lay of product with luxury accessories, minimalist composition, high-end editorial style"
+		],
+		"copyVariations": {
+			"headlines": [
+				"Premium Quality. Lifetime Guarantee.",
+				"For Those Who Demand Excellence",
+				"Invest in What Lasts"
+			],
+			"descriptions": [
+				"Join an exclusive community of customers who refuse to compromise. Premium craftsmanship, exceptional materials, backed by our lifetime guarantee.",
+				"Discover why 10,000+ discerning customers choose [Brand]. Superior quality meets timeless design.",
+				"The difference is in the details. Experience the [Brand] standard of excellence."
+			],
+			"cta": ["Shop Premium Collection", "Join the Elite", "Discover Excellence"]
+		},
+		"successMetrics": {
+			"primaryKPI": "Acquisition of high-LTV customers",
+			"targetCAC": 120,
+			"targetLTV": 450,
+			"targetPayback": 45
+		},
+		"estimatedBudget": 15000,
+		"status": "active"
+	},
+	{
+		"id": "brief-002",
+		"personaId": "high-value",
+		"personaLabel": "High-Value Enthusiasts",
+		"quarter": "Q1",
+		"month": 2,
+		"title": "Social Proof & Community",
+		"objective": "Leverage customer testimonials and community to drive high-value acquisitions",
+		"targetAudience": "Affluent shoppers seeking validation and peer recommendations",
+		"keyMessage": "Trusted by thousands of customers who demand the best",
+		"hooks": [
+			"See why Sarah paid $500 for [Product] and calls it her best purchase ever",
+			"10,000+ 5-star reviews can't be wrong",
+			"What do luxury hotel buyers and you have in common?",
+			"The product that converts one-time buyers into lifetime fans"
+		],
+		"messagingAngles": [
+			{
+				"angle": "Customer Success Stories",
+				"description": "Feature real customers and their transformation stories",
+				"rationale": "Builds trust, demonstrates value beyond product features"
+			},
+			{
+				"angle": "Expert Endorsements",
+				"description": "Showcase industry expert recommendations and awards",
+				"rationale": "Adds credibility, appeals to authority-driven decision making"
+			},
+			{
+				"angle": "Community Benefits",
+				"description": "Highlight exclusive access, events, and network effects",
+				"rationale": "Adds intangible value beyond the product itself"
+			}
+		],
+		"motivators": ["Social proof", "Community", "Trust", "Validation", "Expert approval"],
+		"blockers": ["Skepticism", "Risk aversion", "Need for validation"],
+		"channels": ["Meta", "YouTube", "Email"],
+		"adFormats": ["Video testimonials", "UGC", "Case studies"],
+		"imagePrompts": [
+			"Authentic customer photo using product in real setting, genuine smile, natural environment, relatable but aspirational",
+			"Before/after comparison showing product impact, clean layout, professional but authentic photography",
+			"Group shot of diverse customers at exclusive brand event, candid moments, high-quality event photography"
+		],
+		"copyVariations": {
+			"headlines": [
+				"Why 10,000+ Customers Choose [Brand]",
+				"Rated 4.9/5 by Discerning Customers",
+				"Join a Community That Demands Excellence"
+			],
+			"descriptions": [
+				"Don't just take our word for it. Hear from Sarah, Michael, and 10,000+ customers who call [Brand] their go-to choice for premium quality.",
+				"Featured in [Publication], trusted by [Expert], chosen by customers who refuse to settle.",
+				"More than a product, it's a community. Get exclusive access to events, early releases, and a network of like-minded enthusiasts."
+			],
+			"cta": ["Read Customer Stories", "See What They Say", "Join the Community"]
+		},
+		"successMetrics": {
+			"primaryKPI": "Conversion rate increase",
+			"targetCAC": 115,
+			"targetLTV": 450,
+			"targetPayback": 42
+		},
+		"estimatedBudget": 12000,
+		"status": "active"
+	},
+	{
+		"id": "brief-003",
+		"personaId": "mid-value",
+		"personaLabel": "Value Seekers",
+		"quarter": "Q1",
+		"month": 1,
+		"title": "Quality Meets Value",
+		"objective": "Position brand as the smart choice that balances quality and affordability",
+		"targetAudience": "Price-conscious shoppers aged 25-45 who want quality without premium pricing",
+		"keyMessage": "Premium quality at a price that makes sense",
+		"hooks": [
+			"Why pay 2x for the same quality?",
+			"The smart shopper's secret: Premium features, fair price",
+			"Quality doesn't have to break the bank",
+			"Compare us to brands charging double. We dare you."
+		],
+		"messagingAngles": [
+			{
+				"angle": "Value Comparison",
+				"description": "Direct comparison with premium brands, highlighting price advantage",
+				"rationale": "Appeals to rational decision-making, justifies purchase"
+			},
+			{
+				"angle": "Smart Shopping",
+				"description": "Position customers as savvy shoppers who found the best deal",
+				"rationale": "Makes them feel clever, not cheap"
+			},
+			{
+				"angle": "Hidden Gem",
+				"description": "Frame brand as an insider secret or discovery",
+				"rationale": "Creates exclusivity feeling without premium pricing"
+			}
+		],
+		"motivators": ["Value", "Smart shopping", "Quality assurance", "Comparison validation"],
+		"blockers": ["Quality skepticism", "Too good to be true concerns", "Hidden costs fears"],
+		"channels": ["Meta", "Google Shopping", "TikTok"],
+		"adFormats": ["Comparison posts", "Educational content", "Value highlights"],
+		"imagePrompts": [
+			"Side-by-side comparison of product vs premium competitor, clean infographic style, highlighting similarities",
+			"Product in use showing durability and quality, lifestyle setting, relatable customer, emphasis on functionality",
+			"Price breakdown infographic showing value proposition, clean design, trust-building elements"
+		],
+		"copyVariations": {
+			"headlines": [
+				"Premium Quality Without the Premium Price",
+				"Smart Shoppers Choose [Brand]",
+				"Why Pay More for the Same Thing?"
+			],
+			"descriptions": [
+				"Same quality as brands charging 2x more. We cut the middleman and marketing fluff to bring you fair prices on premium products.",
+				"Join 50,000+ smart shoppers who discovered the best-kept secret in [Category]. Premium features, honest pricing.",
+				"Compare our [Product] to any $200 competitor. Same materials, same quality, better price. That's the [Brand] promise."
+			],
+			"cta": ["Compare Now", "Shop Smart", "See the Difference"]
+		},
+		"successMetrics": {
+			"primaryKPI": "Volume growth",
+			"targetCAC": 45,
+			"targetLTV": 180,
+			"targetPayback": 30
+		},
+		"estimatedBudget": 20000,
+		"status": "active"
+	},
+	{
+		"id": "brief-004",
+		"personaId": "low-value",
+		"personaLabel": "Bargain Hunters",
+		"quarter": "Q1",
+		"month": 1,
+		"title": "Limited Time Value Proposition",
+		"objective": "Drive immediate conversions with urgency and clear value",
+		"targetAudience": "Price-sensitive shoppers looking for deals and promotions",
+		"keyMessage": "Get more for less - limited time offer",
+		"hooks": [
+			"40% off ends tonight",
+			"Flash sale: Premium [Product] for under $50",
+			"Last chance: Save big before price increases",
+			"Only 100 left at this price"
+		],
+		"messagingAngles": [
+			{
+				"angle": "Urgency & Scarcity",
+				"description": "Time-limited offers and limited inventory messaging",
+				"rationale": "Drives immediate action, reduces consideration time"
+			},
+			{
+				"angle": "Deal Framing",
+				"description": "Show original vs sale price, emphasize savings",
+				"rationale": "Triggers deal-seeking behavior, justifies impulse purchase"
+			},
+			{
+				"angle": "First Purchase Incentive",
+				"description": "Special offer for new customers, trial pricing",
+				"rationale": "Lowers barrier to entry, starts customer relationship"
+			}
+		],
+		"motivators": ["Price", "Deals", "Urgency", "Fear of missing out"],
+		"blockers": ["Shipping costs", "Return policy concerns", "Hidden fees"],
+		"channels": ["Meta", "Google Shopping", "Display Ads"],
+		"adFormats": ["Promotional ads", "Countdown timers", "Product showcases"],
+		"imagePrompts": [
+			"Product with bold sale badge or discount callout, bright attention-grabbing colors, clear pricing display",
+			"Product collection showing value pack or bundle, clean product photography, emphasis on quantity/value",
+			"Urgency-focused visual with countdown or limited stock indicator, professional but energetic style"
+		],
+		"copyVariations": {
+			"headlines": [
+				"40% Off Premium [Product] - Today Only",
+				"Flash Sale: Limited Stock Available",
+				"Save Big Before Price Increases"
+			],
+			"descriptions": [
+				"Premium [Product] now 40% off for new customers. Free shipping on orders over $50. Limited time only.",
+				"Flash sale alert: Get [Product] for under $50. Usually $79, now just $49. Only 100 left at this price.",
+				"Last chance to save. Prices increase next week. Order now and lock in today's low price + free shipping."
+			],
+			"cta": ["Shop Sale", "Claim Offer", "Save Now"]
+		},
+		"successMetrics": {
+			"primaryKPI": "Conversion volume",
+			"targetCAC": 25,
+			"targetLTV": 85,
+			"targetPayback": 14
+		},
+		"estimatedBudget": 25000,
+		"status": "active",
+		"notes": "Monitor contribution margin closely - may need to reduce budget if unprofitable"
+	},
+	{
+		"id": "brief-005",
+		"personaId": "high-value",
+		"personaLabel": "High-Value Enthusiasts",
+		"quarter": "Q1",
+		"month": 3,
+		"title": "Seasonal Collection Launch",
+		"objective": "Drive early adoption of new seasonal collection among best customers",
+		"targetAudience": "Existing high-value customers + lookalikes",
+		"keyMessage": "Be first to experience our Spring Collection",
+		"hooks": [
+			"Early access: Spring Collection available now for VIP customers",
+			"New season, elevated standards",
+			"The collection everyone will be talking about - get it first",
+			"Limited quantities: Our most exclusive launch yet"
+		],
+		"messagingAngles": [
+			{
+				"angle": "Early Access",
+				"description": "VIP early access before public launch",
+				"rationale": "Rewards loyalty, creates exclusivity"
+			},
+			{
+				"angle": "Seasonal Renewal",
+				"description": "Fresh start, new season, upgrade your collection",
+				"rationale": "Natural purchase trigger, timely relevance"
+			},
+			{
+				"angle": "Limited Edition",
+				"description": "Seasonal items won't be available year-round",
+				"rationale": "Creates urgency without discounting"
+			}
+		],
+		"motivators": ["Newness", "Early access", "Exclusivity", "Seasonal relevance", "FOMO"],
+		"blockers": ["Already own similar items", "Waiting for reviews", "Budget timing"],
+		"channels": ["Email", "Meta", "Instagram"],
+		"adFormats": ["Lookbook style", "Video reveal", "Instagram Stories"],
+		"imagePrompts": [
+			"Spring collection lifestyle shot, fresh bright lighting, seasonal colors, editorial fashion photography style",
+			"Detail shot of new collection features, clean minimalist background, emphasizing newness and premium quality",
+			"Collection flat lay with seasonal elements, professional styling, bright and fresh color palette"
+		],
+		"copyVariations": {
+			"headlines": [
+				"Spring Collection: Now Available",
+				"Early Access for VIP Customers",
+				"New Season, New Standards"
+			],
+			"descriptions": [
+				"Be among the first to experience our Spring Collection. Elevated designs, premium materials, limited quantities. VIP early access ends this week.",
+				"Fresh styles for a new season. Our Spring Collection combines timeless elegance with modern innovation. Shop before the public launch.",
+				"The collection everyone will be talking about. Limited edition seasonal pieces, available now for our best customers."
+			],
+			"cta": ["Shop Spring Collection", "Get Early Access", "Explore New Arrivals"]
+		},
+		"successMetrics": {
+			"primaryKPI": "Repeat purchase rate from high-LTV segment",
+			"targetCAC": 90,
+			"targetLTV": 600,
+			"targetPayback": 35
+		},
+		"estimatedBudget": 18000,
+		"status": "planned"
+	},
+	{
+		"id": "brief-006",
+		"personaId": "mid-value",
+		"personaLabel": "Value Seekers",
+		"quarter": "Q2",
+		"month": 4,
+		"title": "Educational Content Campaign",
+		"objective": "Build trust and establish expertise through educational content",
+		"targetAudience": "Research-oriented shoppers in consideration phase",
+		"keyMessage": "Make informed decisions with our expert guides",
+		"hooks": [
+			"The ultimate guide to choosing [Product Category]",
+			"7 things experts look for before buying [Product]",
+			"How to spot quality: A buyer's guide",
+			"Don't buy [Product] until you read this"
+		],
+		"messagingAngles": [
+			{
+				"angle": "Expert Education",
+				"description": "How-to guides, buying guides, educational content",
+				"rationale": "Builds authority, captures research traffic"
+			},
+			{
+				"angle": "Comparison Framework",
+				"description": "Teach them how to evaluate options (favoring our strengths)",
+				"rationale": "Influences criteria, positions us as thought leader"
+			},
+			{
+				"angle": "Common Mistakes",
+				"description": "Warn about pitfalls and mistakes to avoid",
+				"rationale": "Creates fear, positions our product as solution"
+			}
+		],
+		"motivators": ["Education", "Informed decision", "Avoiding mistakes", "Expert guidance"],
+		"blockers": ["Information overload", "Analysis paralysis", "Conflicting advice"],
+		"channels": ["Google Search", "YouTube", "Blog"],
+		"adFormats": ["Article ads", "Video guides", "Infographics"],
+		"imagePrompts": [
+			"Educational infographic showing product comparison framework, clean design, easy to understand visuals",
+			"Expert demonstrating product features, professional setting, trustworthy and authoritative feel",
+			"Step-by-step visual guide, clear numbered steps, professional photography, educational focus"
+		],
+		"copyVariations": {
+			"headlines": [
+				"The Complete Buyer's Guide to [Product]",
+				"Expert Tips: How to Choose [Product]",
+				"7 Red Flags to Avoid When Buying [Product]"
+			],
+			"descriptions": [
+				"Before you buy, read our comprehensive guide. Learn what experts look for, common mistakes to avoid, and how to get the best value.",
+				"15 years of expertise in one guide. Discover the quality indicators, performance factors, and value considerations that matter.",
+				"Don't waste money on the wrong [Product]. Our expert guide reveals what to look for, what to avoid, and why quality matters."
+			],
+			"cta": ["Read Full Guide", "Learn More", "Get Expert Tips"]
+		},
+		"successMetrics": {
+			"primaryKPI": "Content engagement to conversion rate",
+			"targetCAC": 55,
+			"targetLTV": 200,
+			"targetPayback": 38
+		},
+		"estimatedBudget": 10000,
+		"status": "planned"
+	}
+]
+
